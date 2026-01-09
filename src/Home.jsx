@@ -45,7 +45,7 @@ export default function Home() {
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  className="flex items-center justify-center h-14 px-8 rounded-full bg-primary text-base font-bold text-white shadow-xl shadow-blue-500/30 hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300"
+                  className="flex items-center justify-center  bg-blue-600 h-14 px-8 rounded-full bg-primary text-base font-bold text-white shadow-xl shadow-blue-500/30 hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300"
                   href="#portfolio"
                 >
                   Explore Portfolio
@@ -198,8 +198,8 @@ export default function Home() {
                     <span className="text-sm font-semibold text-slate-500">
                       24 Models Available
                     </span>
-                    <div className="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-lg">
+                    <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors">
+                      <span className="material-symbols-outlined text-lg ">
                         <MdArrowOutward />
                       </span>
                     </div>
@@ -231,7 +231,7 @@ export default function Home() {
                     <span className="text-sm font-semibold text-slate-500">
                       18 Models Available
                     </span>
-                    <div className="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors">
                       <span className="material-symbols-outlined text-lg">
                         <MdArrowOutward />
                       </span>
@@ -264,7 +264,7 @@ export default function Home() {
                     <span className="text-sm font-semibold text-slate-500">
                       32 Models Available
                     </span>
-                    <div className="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors">
                       <span className="material-symbols-outlined text-lg">
                         <MdArrowOutward />
                       </span>
