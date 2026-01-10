@@ -35,7 +35,7 @@ export default function Header() {
           </a>
           <a
             class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="#portfolio"
+            href="/portfolio"
           >
             Portfolio
           </a>
@@ -50,6 +50,18 @@ export default function Header() {
             href="/Blog"
           >
             Blog
+          </a>
+           <a
+            class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+            href="/products"
+          >
+            products
+          </a>
+          <a
+            class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+            href="/about"
+          >
+            about
           </a>
         </nav>
         <div class="flex items-center gap-4">
