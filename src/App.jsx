@@ -5,9 +5,9 @@ import Contact from "./Contact";
 import About from "./About";
 import Features from "./Features";
 import Header from "./components/Header";
-import { Import } from "lucide-react";
 import Portfolio from "./Portfolio";
 import Blog from "./Blog";
+import Products from "./products";
 
 export default function App() {
   return (
@@ -18,12 +18,12 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/features" element={<Features />}/>
-          <Route path="/Portfolio" element={<Portfolio/>}/>
-          <Route path="/blog" element={<Blog/>}/>
+          <Route path="/features" element={<Features />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/products" element={<Products/>} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </Router>
-      
     </div>
   );
 }
