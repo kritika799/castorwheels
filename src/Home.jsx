@@ -8,7 +8,6 @@ import {
   MdSupportAgent,
 } from "react-icons/md";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
-<MdOutlinePrecisionManufacturing />;
 import { IoIosMail } from "react-icons/io";
 export default function Home() {
   return (
