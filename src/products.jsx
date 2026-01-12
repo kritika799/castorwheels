@@ -1,6 +1,12 @@
 import { IoSearchSharp } from "react-icons/io5";
 import { TiTick } from "react-icons/ti";
-
+import { MdGridView } from "react-icons/md";
+import { MdViewList } from "react-icons/md";
+import { IoMdFitness } from "react-icons/io";
+import { MdDonutLarge } from "react-icons/md";
+import { MdCategory } from "react-icons/md";
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 function Products() {
   return (
     <main className="flex flex-col min-h-screen">
@@ -52,7 +58,7 @@ function Products() {
               <h3 className="font-bold text-[#0d131b] dark:text-white text-lg">
                 Filters
               </h3>
-              <button className="text-sm font-medium text-primary hover:underline">
+              <button className="font-bold text-[#0d131b] dark:text-white text-lg">
                 Reset
               </button>
             </div>
@@ -122,7 +128,7 @@ function Products() {
                     type="checkbox"
                   />
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">
-                    Nylon
+                    <MdCategory />
                   </span>
                 </label>
                 <label className="flex items-center gap-3 cursor-pointer group">
@@ -210,7 +216,7 @@ function Products() {
           <div className="flex flex-col justify-between gap-4 border-b border-slate-200 pb-4 dark:border-slate-800 sm:flex-row sm:items-center">
             <p className="text-sm font-medium text-[#4c6c9a] dark:text-slate-400">
               Showing
-              <span className="font-bold text-[#0d131b] dark:text-white">1-9</span>
+              <span className="font-bold  dark:text-white">1-9</span>
               of
               <span className="font-bold text-[#0d131b] dark:text-white">156</span>
               products
@@ -232,15 +238,15 @@ function Products() {
                   </span>
                 </div>
               </div>
-              <div className="flex rounded-lg bg-slate-100 p-1 dark:bg-slate-800">
-                <button className="rounded-md bg-white p-1 text-primary shadow-sm dark:bg-slate-700 dark:text-white">
+              <div className="flex rounded-lg bg-slate-100 p-1 ">
+                <button className="rounded-m p-1 text-primary shadow-sm dark:bg-slate-700 dark:text-white">
                   <span className="material-symbols-outlined text-[20px] block">
-                    grid_view
+                    <MdGridView />
                   </span>
                 </button>
-                <button className="rounded-md p-1 text-slate-500 hover:text-[#0d131b] dark:text-slate-400 dark:hover:text-white">
+                <button className="rounded-md p-1  hover:text-[#0d131b]">
                   <span className="material-symbols-outlined text-[20px] block">
-                    view_list
+                    <MdViewList />
                   </span>
                 </button>
               </div>
@@ -271,28 +277,28 @@ function Products() {
                 <div className="mb-4 flex flex-wrap gap-2 text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      fitness_center
+                      <IoMdFitness />
                     </span>
                     <span>300kg</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      donut_large
+                    <MdDonutLarge />
                     </span>
                     <span>100mm</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      category
+                      <MdCategory />
                     </span>
                     <span>PU</span>
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primar text-white px-4 py-2.5 text-sm font-bold transition-colors">
                     View Details
                   </button>
-                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700">
+                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
                     Inquire
                   </button>
                 </div>
@@ -317,28 +323,28 @@ function Products() {
                 <div className="mb-4 flex flex-wrap gap-2 text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      fitness_center
+                      <IoMdFitness />
                     </span>
                     <span>150kg</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      donut_large
+                    <MdDonutLarge />
                     </span>
                     <span>125mm</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      category
+                      <MdCategory />
                     </span>
                     <span>Nylon</span>
                   </div>
                 </div>
-                <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                <div className="mt-auto flex items-center justify-between gap-3 pt-3 border- border-slate-100 border-blue">
+                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primar text-white px-4 py-2.5 text-sm font-bold transition-colors">
                     View Details
                   </button>
-                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700">
+                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
                     Inquire
                   </button>
                 </div>
@@ -368,28 +374,28 @@ function Products() {
                 <div className="mb-4 flex flex-wrap gap-2 text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      fitness_center
+                      <IoMdFitness />
                     </span>
                     <span>50kg</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      donut_large
+                    <MdDonutLarge />
                     </span>
                     <span>50mm</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      category
+                      <MdCategory />
                     </span>
                     <span>Rubber</span>
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primar text-white px-4 py-2.5 text-sm font-bold transition-colors">
                     View Details
                   </button>
-                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700">
+                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
                     Inquire
                   </button>
                 </div>
@@ -414,28 +420,28 @@ function Products() {
                 <div className="mb-4 flex flex-wrap gap-2 text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      fitness_center
+                      <IoMdFitness />
                     </span>
                     <span>80kg</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      donut_large
+                      <MdDonutLarge />
                     </span>
                     <span>75mm</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      category
+                      <MdCategory />
                     </span>
                     <span>TPR</span>
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary text-white px-4 py-2.5 text-sm font-bold transition-colors">
                     View Details
                   </button>
-                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700">
+                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
                     Inquire
                   </button>
                 </div>
@@ -460,28 +466,28 @@ function Products() {
                 <div className="mb-4 flex flex-wrap gap-2 text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      fitness_center
+                      <IoMdFitness />
                     </span>
                     <span>800kg</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      donut_large
+                      <MdDonutLarge />
                     </span>
                     <span>200mm</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      category
+                      <MdCategory />
                     </span>
                     <span>Iron</span>
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary text-white px-4 py-2.5 text-sm font-bold transition-colors">
                     View Details
                   </button>
-                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700">
+                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
                     Inquire
                   </button>
                 </div>
@@ -506,28 +512,28 @@ function Products() {
                 <div className="mb-4 flex flex-wrap gap-2 text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      fitness_center
+                      <IoMdFitness />
                     </span>
                     <span>250kg</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      donut_large
+                      <MdDonutLarge />
                     </span>
                     <span>125mm</span>
                   </div>
                   <div className="flex items-center gap-1 rounded bg-slate-100 px-2 py-1 dark:bg-slate-800">
                     <span className="material-symbols-outlined text-[16px] text-[#4c6c9a]">
-                      category
+                      <MdCategory />
                     </span>
                     <span>Rubber</span>
                   </div>
                 </div>
-                <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-white">
+                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary text-white px-4 py-2.5 text-sm font-bold transition-colors">
                     View Details
                   </button>
-                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700">
+                  <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
                     Inquire
                   </button>
                 </div>
@@ -537,10 +543,10 @@ function Products() {
           <div className="mt-8 flex items-center justify-center gap-2">
             <button className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 hover:text-[#0d131b] dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
               <span className="material-symbols-outlined text-[20px]">
-                chevron_left
+                <FaChevronLeft />
               </span>
             </button>
-            <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white shadow-md shadow-blue-500/20">
+            <button className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-[#0d131b] dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
               1
             </button>
             <button className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-[#0d131b] dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
@@ -557,7 +563,7 @@ function Products() {
             </button>
             <button className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 hover:text-[#0d131b] dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
               <span className="material-symbols-outlined text-[20px]">
-                chevron_right
+                <FaChevronRight />
               </span>
             </button>
           </div>
