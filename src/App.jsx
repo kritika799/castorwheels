@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import Portfolio from "./Portfolio";
 import Blog from "./Blog";
 import Products from "./products";
+import Industries from"./Industries";
+import Capabilities from "./Capabilities";
 
 export default function App() {
   return (
@@ -21,6 +23,8 @@ export default function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/Portfolio" element={<Portfolio />} />
           <Route path="/products" element={<Products/>} />
+           <Route path="/Industries" element={<Industries/>} />
+            <Route path="/Capabilities" element={<Capabilities/>} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
       </Router>
