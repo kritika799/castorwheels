@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <section>
       <main className="flex-1">
-        <section className="relative bg-slate-900 overflow-hidden">
+        <section className="relative bg-slate-900 overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
             <img
               alt="Industrial Castor Background"
