@@ -7,6 +7,10 @@ import { MdDonutLarge } from "react-icons/md";
 import { MdCategory } from "react-icons/md";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
+import { MdExpandMore } from "react-icons/md";
+import { MdOutlineChevronRight } from "react-icons/md";
+import { MdOutlineTrackChanges } from "react-icons/md";
+
 function Products() {
   return (
     <main className="flex flex-col min-h-screen">
@@ -21,7 +25,7 @@ function Products() {
                 Home
               </a>
               <span className="material-symbols-outlined text-[16px] text-[#4c6c9a] dark:text-slate-500">
-                chevron_right
+                <MdOutlineChevronRight />
               </span>
               <a
                 className="text-[#4c6c9a] hover:text-primary dark:text-slate-400"
@@ -30,7 +34,7 @@ function Products() {
                 Products
               </a>
               <span className="material-symbols-outlined text-[16px] text-[#4c6c9a] dark:text-slate-500">
-                chevron_right
+                <MdOutlineChevronRight />
               </span>
               <span className="font-medium text-[#0d131b] dark:text-slate-100">
                 Industrial Series
@@ -128,7 +132,7 @@ function Products() {
                     type="checkbox"
                   />
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">
-                    <MdCategory />
+                    nylon
                   </span>
                 </label>
                 <label className="flex items-center gap-3 cursor-pointer group">
@@ -193,19 +197,19 @@ function Products() {
               <button className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200 hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700 dark:hover:bg-slate-800">
                 Swivel
                 <span className="material-symbols-outlined text-[16px]">
-                  expand_more
+                  <MdExpandMore />
                 </span>
               </button>
               <button className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200 hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700 dark:hover:bg-slate-800">
                 Fixed
                 <span className="material-symbols-outlined text-[16px]">
-                  expand_more
+                  <MdExpandMore />
                 </span>
               </button>
               <button className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200 hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700 dark:hover:bg-slate-800">
                 Braked
                 <span className="material-symbols-outlined text-[16px]">
-                  expand_more
+                  <MdExpandMore />
                 </span>
               </button>
               <button className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200 hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700 dark:hover:bg-slate-800">
@@ -216,9 +220,9 @@ function Products() {
           <div className="flex flex-col justify-between gap-4 border-b border-slate-200 pb-4 dark:border-slate-800 sm:flex-row sm:items-center">
             <p className="text-sm font-medium text-[#4c6c9a] dark:text-slate-400">
               Showing
-              <span className="font-bold  dark:text-white">1-9</span>
+              <span className="font-bold  ">1-9</span>
               of
-              <span className="font-bold text-[#0d131b] dark:text-white">156</span>
+              <span className="font-bold text-[#0d131b]">156</span>
               products
             </p>
             <div className="flex items-center gap-3">
@@ -234,7 +238,7 @@ function Products() {
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
                   <span className="material-symbols-outlined text-[18px]">
-                    expand_more
+                    <MdExpandMore />
                   </span>
                 </div>
               </div>

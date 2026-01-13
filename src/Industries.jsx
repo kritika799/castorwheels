@@ -1,3 +1,17 @@
+import { FaWeightHanging } from "react-icons/fa";
+import { FaRegCircle } from "react-icons/fa";
+import { IoMdBuild } from "react-icons/io";
+import { BsLayersFill } from "react-icons/bs";
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
+import { MdCategory } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlineMarkUnreadChatAlt } from "react-icons/md";
+import { MdOutlineChevronRight } from "react-icons/md";
+
+import { MdOutlineVerified } from "react-icons/md";
+import { IoIosCall } from "react-icons/io";
 import React from "react";
 
 export default function Industries() {
@@ -21,7 +35,7 @@ export default function Industries() {
               <li>
                 <div className="flex items-center">
                   <span className="material-symbols-outlined text-base mx-1">
-                    chevron_right
+                    <MdOutlineChevronRight />
                   </span>
                   <a
                     className="hover:text-primary dark:hover:text-primary transition-colors"
@@ -34,7 +48,7 @@ export default function Industries() {
               <li aria-current="page">
                 <div className="flex items-center">
                   <span className="material-symbols-outlined text-base mx-1">
-                    chevron_right
+                    <MdOutlineChevronRight />
                   </span>
                   <span className="text-text-main-light dark:text-text-main-dark font-medium">
                     5-Inch Swivel PU
@@ -115,7 +129,7 @@ export default function Industries() {
                   <span className="text-slate-300 dark:text-slate-600">|</span>
                   <span className="text-sm text-text-sec-light dark:text-text-sec-dark font-medium flex items-center gap-1">
                     <span className="material-symbols-outlined text-lg text-primary">
-                      category
+                      <MdCategory />
                     </span>
                     Industrial Series
                   </span>
@@ -124,7 +138,9 @@ export default function Industries() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm">
                   <div className="size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined">weight</span>
+                    <span className="material-symbols-outlined">
+                      <FaWeightHanging />
+                    </span>
                   </div>
                   <div>
                     <p className="text-xs text-text-sec-light dark:text-text-sec-dark font-semibold uppercase">
@@ -137,7 +153,9 @@ export default function Industries() {
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm">
                   <div className="size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined">circle</span>
+                    <span className="material-symbols-outlined">
+                      <FaRegCircle />
+                    </span>
                   </div>
                   <div>
                     <p className="text-xs text-text-sec-light dark:text-text-sec-dark font-semibold uppercase">
@@ -150,7 +168,9 @@ export default function Industries() {
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm">
                   <div className="size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined">build</span>
+                    <span className="material-symbols-outlined">
+                      <IoMdBuild />
+                    </span>
                   </div>
                   <div>
                     <p className="text-xs text-text-sec-light dark:text-text-sec-dark font-semibold uppercase">
@@ -163,7 +183,9 @@ export default function Industries() {
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm">
                   <div className="size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined">layers</span>
+                    <span className="material-symbols-outlined">
+                      <BsLayersFill />
+                    </span>
                   </div>
                   <div>
                     <p className="text-xs text-text-sec-light dark:text-text-sec-dark font-semibold uppercase">
@@ -204,7 +226,7 @@ export default function Industries() {
                 <div className="mt-5 pt-5 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-sm">
                   <div className="flex items-center gap-2 text-text-sec-light">
                     <span className="material-symbols-outlined text-primary">
-                      verified
+                      <MdOutlineVerified />
                     </span>
                     <span>Direct Manufacturer</span>
                   </div>
@@ -213,7 +235,8 @@ export default function Industries() {
                     href="#"
                   >
                     <span className="material-symbols-outlined text-lg">
-                      chat
+                      <MdOutlineMarkUnreadChatAlt />
+
                     </span>
                     WhatsApp Inquiry
                   </a>
@@ -389,10 +412,12 @@ export default function Industries() {
             </h2>
             <div className="flex gap-2">
               <button className="size-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-                <span className="material-symbols-outlined">arrow_back</span>
+                <span className="material-symbols-outlined">
+                  <FaArrowLeft />
+                </span>
               </button>
               <button className="size-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-                <span className="material-symbols-outlined">arrow_forward</span>
+                <span className="material-symbols-outlined"><FaArrowRight /></span>
               </button>
             </div>
           </div>
@@ -427,7 +452,7 @@ export default function Industries() {
                     View Specifications
                   </span>
                   <span className="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">
-                    arrow_forward
+                    <FaArrowRight />
                   </span>
                 </div>
               </div>
@@ -462,7 +487,7 @@ export default function Industries() {
                     View Specifications
                   </span>
                   <span className="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">
-                    arrow_forward
+                    <FaArrowRight />
                   </span>
                 </div>
               </div>
@@ -497,7 +522,7 @@ export default function Industries() {
                     View Specifications
                   </span>
                   <span className="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">
-                    arrow_forward
+                    <FaArrowRight />
                   </span>
                 </div>
               </div>
@@ -529,7 +554,7 @@ export default function Industries() {
                     View Specifications
                   </span>
                   <span className="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">
-                    arrow_forward
+                    <FaArrowRight />
                   </span>
                 </div>
               </div>
@@ -619,7 +644,7 @@ export default function Industries() {
               <ul className="space-y-3 text-sm text-text-sec-light">
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined text-lg">
-                    location_on
+                    <FaLocationDot />
                   </span>
                   <span>
                     123 Industrial Area, Phase 2, New Delhi, India 110020
@@ -627,13 +652,13 @@ export default function Industries() {
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-lg">
-                    call
+                    <IoIosCall />
                   </span>
                   <span>+91 98765 43210</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-lg">
-                    mail
+                    <CiMail />
                   </span>
                   <span>sales@comfortcastors.com</span>
                 </li>

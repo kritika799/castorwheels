@@ -1,3 +1,6 @@
+import { MdOutlineTrackChanges } from "react-icons/md";
+import { MdVisibility } from "react-icons/md";
+import { MdVerifiedUser } from "react-icons/md";
 import React from "react";
 
 export default function About() {
@@ -151,7 +154,7 @@ export default function About() {
             <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
               <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
                 <span className="material-symbols-outlined text-3xl">
-                  track_changes
+                  <MdOutlineTrackChanges />
                 </span>
               </div>
               <h3 className="text-xl font-bold mb-3 dark:text-white">
@@ -166,7 +169,7 @@ export default function About() {
             <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
               <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
                 <span className="material-symbols-outlined text-3xl">
-                  visibility
+                  <MdVisibility />
                 </span>
               </div>
               <h3 className="text-xl font-bold mb-3 dark:text-white">
@@ -181,7 +184,7 @@ export default function About() {
             <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
               <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
                 <span className="material-symbols-outlined text-3xl">
-                  verified_user
+                  <MdVerifiedUser />
                 </span>
               </div>
               <h3 className="text-xl font-bold mb-3 dark:text-white">

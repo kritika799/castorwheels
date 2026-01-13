@@ -32,24 +32,14 @@ export default function Header() {
           >
             Home
           </a>
+        
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/portfolio"
+            href="/contact"
           >
-            Portfolio
+            contact
           </a>
-          <a
-            className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/features"
-          >
-            Features
-          </a>
-          <a
-            className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/Blog"
-          >
-            Blog
-          </a>
+      
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
             href="/products"
