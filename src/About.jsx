@@ -25,7 +25,7 @@ export default function About() {
           <div className="max-w-[800px] z-10 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <span className="text-primary font-bold tracking-wider uppercase text-sm">
-                Est. 1995
+                Est. 2026
               </span>
               <h1 className="text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight">
                 Engineering Mobility for
