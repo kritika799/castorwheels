@@ -7,26 +7,28 @@ import Features from "./Features";
 import Header from "./components/Header";
 import Portfolio from "./Portfolio";
 import Blog from "./Blog";
-import Products from "./products";
-import Industries from"./Industries";
+import Products from "./Products";
+import Industries from "./Industries";
 import Capabilities from "./Capabilities";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <div className="font-display bg-background-light text-slate-800 antialiased selection:bg-blue-100 selection:text-primary">
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/features" element={<Features />} />
           <Route path="/Portfolio" element={<Portfolio />} />
-          <Route path="/products" element={<Products/>} />
-           <Route path="/Industries" element={<Industries/>} />
-            <Route path="/Capabilities" element={<Capabilities/>} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/Industries" element={<Industries />} />
+          <Route path="/Capabilities" element={<Capabilities />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
