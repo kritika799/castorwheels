@@ -7,6 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { MdCategory } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlineViewInAr } from "react-icons/md";
 import { MdOutlineMarkUnreadChatAlt } from "react-icons/md";
 import { MdOutlineChevronRight } from "react-icons/md";
 
@@ -236,7 +237,6 @@ export default function Industries() {
                   >
                     <span className="material-symbols-outlined text-lg">
                       <MdOutlineMarkUnreadChatAlt />
-
                     </span>
                     WhatsApp Inquiry
                   </a>
@@ -376,7 +376,7 @@ export default function Industries() {
                   >
                     <div className="text-blue-500">
                       <span className="material-symbols-outlined">
-                        view_in_ar
+                        <MdOutlineViewInAr />
                       </span>
                     </div>
                     <div className="flex flex-col">
@@ -417,7 +417,9 @@ export default function Industries() {
                 </span>
               </button>
               <button className="size-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-                <span className="material-symbols-outlined"><FaArrowRight /></span>
+                <span className="material-symbols-outlined">
+                  <FaArrowRight />
+                </span>
               </button>
             </div>
           </div>
@@ -432,7 +434,7 @@ export default function Industries() {
                   data-alt="Industrial fixed castor wheel"
                   style={{
                     backgroundImage:
-                      "url ('https://lh3.googleusercontent.com/aida-public/AB6AXuA2DdQCTmqKLqyl9xR6zD1RR6-N0J_-jKd9EXRM-gzMvHcc0dQrfalWvJBPXfKWqCnbTcMSMgRy2K4Fg0nNxKBT1o1w-wynM7iNXGZjJ5o2Pcx8Z-SSn6-jkjM62v9L_2fqwUAV-LnacLrQ0-rovXEykKD2yf3msovND0JUQqfsCGJcfSZ8-pV4wxJF8SR8wgQ4aszXYb_BAFJkPHiCZxQYth54Zq_IwtHWtoFRtEIMZrijnfC632npoKKNjQ_bgiVlkrlN1ebC3aXx')",
+                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2DdQCTmqKLqyl9xR6zD1RR6-N0J_-jKd9EXRM-gzMvHcc0dQrfalWvJBPXfKWqCnbTcMSMgRy2K4Fg0nNxKBT1o1w-wynM7iNXGZjJ5o2Pcx8Z-SSn6-jkjM62v9L_2fqwUAV-LnacLrQ0-rovXEykKD2yf3msovND0JUQqfsCGJcfSZ8-pV4wxJF8SR8wgQ4aszXYb_BAFJkPHiCZxQYth54Zq_IwtHWtoFRtEIMZrijnfC632npoKKNjQ_bgiVlkrlN1ebC3aXx')",
                   }}
                   // "background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2DdQCTmqKLqyl9xR6zD1RR6-N0J_-jKd9EXRM-gzMvHcc0dQrfalWvJBPXfKWqCnbTcMSMgRy2K4Fg0nNxKBT1o1w-wynM7iNXGZjJ5o2Pcx8Z-SSn6-jkjM62v9L_2fqwUAV-LnacLrQ0-rovXEykKD2yf3msovND0JUQqfsCGJcfSZ8-pV4wxJF8SR8wgQ4aszXYb_BAFJkPHiCZxQYth54Zq_IwtHWtoFRtEIMZrijnfC632npoKKNjQ_bgiVlkrlN1ebC3aXx');"
                 ></div>
@@ -537,9 +539,8 @@ export default function Industries() {
                   data-alt="Small furniture castor"
                   style={{
                     backgroundImage:
-                      "('https://lh3.googleusercontent.com/aida-public/AB6AXuDM0eni00YL5erMiE9Nsn_VJBrk8c7tRP4iD8p35KZX6SK8MFEp5fvG2b82v4-fqyK0Y-3nlMTTI97ET4FZ3GA1Wl3KZH69ZLao0kUqdhUBTJasWdqd9SMCqBjJijEAV_pO7YR3jkOSt17gh6N6e6MCtEIh4YrBR19j9i8earKkNWYGp9mxH2M_CBxHUVTbwq1dUpogoYwn1DpNeOwbpFlzdu1ZMNlbW9jrnETidn1WSjmnt6MHz1b0zEQsdb-WCL-325qKzlbJ4A96')",
+                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM0eni00YL5erMiE9Nsn_VJBrk8c7tRP4iD8p35KZX6SK8MFEp5fvG2b82v4-fqyK0Y-3nlMTTI97ET4FZ3GA1Wl3KZH69ZLao0kUqdhUBTJasWdqd9SMCqBjJijEAV_pO7YR3jkOSt17gh6N6e6MCtEIh4YrBR19j9i8earKkNWYGp9mxH2M_CBxHUVTbwq1dUpogoYwn1DpNeOwbpFlzdu1ZMNlbW9jrnETidn1WSjmnt6MHz1b0zEQsdb-WCL-325qKzlbJ4A96')",
                   }}
-                  // style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM0eni00YL5erMiE9Nsn_VJBrk8c7tRP4iD8p35KZX6SK8MFEp5fvG2b82v4-fqyK0Y-3nlMTTI97ET4FZ3GA1Wl3KZH69ZLao0kUqdhUBTJasWdqd9SMCqBjJijEAV_pO7YR3jkOSt17gh6N6e6MCtEIh4YrBR19j9i8earKkNWYGp9mxH2M_CBxHUVTbwq1dUpogoYwn1DpNeOwbpFlzdu1ZMNlbW9jrnETidn1WSjmnt6MHz1b0zEQsdb-WCL-325qKzlbJ4A96');"
                 ></div>
               </div>
               <div className="p-4 flex flex-col grow">
@@ -562,125 +563,6 @@ export default function Industries() {
           </div>
         </div>
       </main>
-      <footer className="bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2">
-                <div className="size-6 text-primary">
-                  <svg
-                    fill="currentColor"
-                    viewBox="0 0 48 48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
-                  </svg>
-                </div>
-                <span className="font-bold text-lg">Comfort Castors</span>
-              </div>
-              <p className="text-sm text-text-sec-light leading-relaxed">
-                Leading manufacturer of industrial wheels and castors in India.
-                Providing mobility solutions since 1995.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-text-main-light dark:text-text-main-dark mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-2 text-sm text-text-sec-light">
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Heavy Duty Castors
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Furniture Castors
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Medical Castors
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Download Catalog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-text-main-light dark:text-text-main-dark mb-4">
-                Support
-              </h4>
-              <ul className="space-y-2 text-sm text-text-sec-light">
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Shipping Policy
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Warranty
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-primary" href="#">
-                    Terms &amp; Conditions
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-text-main-light dark:text-text-main-dark mb-4">
-                Contact
-              </h4>
-              <ul className="space-y-3 text-sm text-text-sec-light">
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-lg">
-                    <FaLocationDot />
-                  </span>
-                  <span>
-                    123 Industrial Area, Phase 2, New Delhi, India 110020
-                  </span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-lg">
-                    <IoIosCall />
-                  </span>
-                  <span>+91 98765 43210</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-lg">
-                    <CiMail />
-                  </span>
-                  <span>sales@comfortcastors.com</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-sec-light">
-            <p>© 2023 Comfort Castors India Pvt Ltd. All rights reserved.</p>
-            <div className="flex gap-4">
-              <a className="hover:text-text-main-light" href="#">
-                Privacy
-              </a>
-              <a className="hover:text-text-main-light" href="#">
-                Terms
-              </a>
-              <a className="hover:text-text-main-light" href="#">
-                Sitemap
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

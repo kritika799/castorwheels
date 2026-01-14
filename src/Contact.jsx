@@ -1,6 +1,7 @@
 import { IoStorefront } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
+import { MdOpenInNew } from "react-icons/md";
 import { MdOutlineVerified } from "react-icons/md";
 import React from "react";
 import { MdOutlineSchedule } from "react-icons/md";
@@ -47,7 +48,7 @@ export default function Contact() {
             <form className="bg-white  p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <label className="flex flex-col gap-2 ">
-                  <span className="text-slate-900 dark:text-slate-200 text-sm font-semibold">
+                  <span className="text-black font-semibold">
                     Full Name
                   </span>
                   <input
@@ -57,7 +58,7 @@ export default function Contact() {
                   />
                 </label>
                 <label className="flex flex-col gap-2">
-                  <span className="text-slate-900 dark:text-slate-200 text-sm font-semibold">
+                  <span className="text-slate-900  font-semibold">
                     Company Name
                   </span>
                   <input
@@ -67,7 +68,7 @@ export default function Contact() {
                   />
                 </label>
                 <label className="flex flex-col gap-2">
-                  <span className="text-slate-900 dark:text-slate-200 text-sm font-semibold">
+                  <span className="text-slate-900  text-sm font-semibold">
                     Phone Number
                   </span>
                   <div className="relative">
@@ -82,7 +83,7 @@ export default function Contact() {
                   </div>
                 </label>
                 <label className="flex flex-col gap-2">
-                  <span className="text-slate-900 dark:text-slate-200 text-sm font-semibold">
+                  <span className="text-slate-900 text-sm font-semibold">
                     Email Address
                   </span>
                   <input
@@ -92,10 +93,10 @@ export default function Contact() {
                   />
                 </label>
                 <label className="flex flex-col gap-2 md:col-span-2">
-                  <span className="text-slate-900 dark:text-slate-200 text-sm font-semibold">
+                  <span className="text-slate-900  text-sm font-semibold">
                     Topic
                   </span>
-                  <select className="w-full h-12 px-4 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-700 dark:text-white appearance-none cursor-pointer">
+                  <select className="w-full h-12 px-4 rounded-lg bg-slate-50 dark:bg-slate-800 border-slate-300 border  dark:border-slate-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-700 dark:text-white appearance-none cursor-pointer ">
                     <option disabled="" selected="" value="">
                       Select a topic
                     </option>
@@ -106,11 +107,11 @@ export default function Contact() {
                   </select>
                 </label>
                 <label className="flex flex-col gap-2 md:col-span-2">
-                  <span className="text-slate-900 dark:text-slate-200 text-sm font-semibold">
+                  <span className="text-slate-900 text-sm font-semibold">
                     Message
                   </span>
                   <textarea
-                    className="w-full p-4 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400 resize-none dark:text-white"
+                    className="w-full p-4 rounded-lg bg-slate-50  border dark:bg-slate-800 border-slate-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400 resize-none dark:text-white"
                     placeholder="How can we help you?"
                     rows="4"
                   ></textarea>
@@ -296,7 +297,7 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                   <span className="bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary text-sm">
-                      open_in_new
+                      <MdOpenInNew />
                     </span>
                     View on Google Maps
                   </span>

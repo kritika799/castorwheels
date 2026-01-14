@@ -1,5 +1,4 @@
 import { IoSearchSharp } from "react-icons/io5";
-import { TiTick } from "react-icons/ti";
 import { MdGridView } from "react-icons/md";
 import { MdViewList } from "react-icons/md";
 import { IoMdFitness } from "react-icons/io";
@@ -9,7 +8,6 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { MdExpandMore } from "react-icons/md";
 import { MdOutlineChevronRight } from "react-icons/md";
-import { MdOutlineTrackChanges } from "react-icons/md";
 
 function Products() {
   return (
@@ -268,7 +266,7 @@ function Products() {
                   alt="Castor Wheel"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   data-alt="Close up of an industrial heavy duty castor wheel on concrete"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_ZyJstNGlgpcMhTx0iXP6sHI6MOawF-A2Ms2f-Kjbuoh89XQ5IC2iJzj19TIqEBF0iMchIyjpE2VkuPzF9q84Haih2xnE3z4NSm8yJ1VkoF1SMSDodXZW7DoHTlLFDS7a8eB4xrsMV-9EudHQzQcxmS-K7T9_dmJmv-vObEKKK8c1TXyVFS1VefijrfJiLGdjNJiSoGK53_njFLJvYrP_lwYpobrwgQRVjyP7QmdiH8vh1GqDscpiV7794iROIe2gmCGO8FEDZdFI"
+                  src="src/components/img/medium dutty fixed nylon 1.jpg"
                 />
               </div>
               <div className="flex flex-1 flex-col p-5">
@@ -299,7 +297,7 @@ function Products() {
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primar text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary  px-4 py-2.5 font-bold ">
                     View Details
                   </button>
                   <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
@@ -314,7 +312,7 @@ function Products() {
                   alt="Red PU Castor"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   data-alt="Industrial red polyurethane castor wheel close up"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSROTggoy1WAhk8smxYeIIrwe4qMcFR9kwWdEJJWUxofsjIxxB4iUDknWNPXCoSb8bPiR_wsJSRe9u5ZXBHxw9bhoJSDLQ5o2Y_CinjvCjUse2T7QMWRBkJhTqs4KOVIDYTvsx6QS3yxyCMvzRh4-NWJzuYXOFZNNqAuZAv2VaEO4m1-5M3hG5nZwFKBVfTKq1N2DZ5nSuSONGsyW_FgKX3Ct_EdYeaOK2JLHUh1FkCluq6n8Lq1rwHxLBYV5fu9CyAcNcSVHx0DJ0"
+                  src="src/components/img/medium dutty fixed nylon.jpg"
                 />
               </div>
               <div className="flex flex-1 flex-col p-5">
@@ -345,7 +343,7 @@ function Products() {
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border- border-slate-100 border-blue">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primar text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary  px-4 py-2.5 font-bold">
                     View Details
                   </button>
                   <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
@@ -396,7 +394,7 @@ function Products() {
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primar text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary  px-4 py-2.5 font-bold">
                     View Details
                   </button>
                   <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
@@ -442,7 +440,7 @@ function Products() {
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary  px-4 py-2.5 font-bold">
                     View Details
                   </button>
                   <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
@@ -488,7 +486,7 @@ function Products() {
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary  px-4 py-2.5 font-bold">
                     View Details
                   </button>
                   <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
@@ -534,7 +532,7 @@ function Products() {
                   </div>
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-white">
-                  <button className="flex-1 rounded-lg border border-primary text-primary hover:bg-primary text-white px-4 py-2.5 text-sm font-bold transition-colors">
+                  <button className="flex-1 rounded-lg border border-primary text-primary  px-4 py-2.5 font-bold">
                     View Details
                   </button>
                   <button className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-color bg-blue-700">
