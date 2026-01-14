@@ -35,22 +35,22 @@ export default function Header() {
         
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/contact"
+            href="/About"
           >
-            contact
+            About
           </a>
       
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/products"
+            href="/Products"
           >
-            products
+            Products
           </a>
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/about"
+            href="/Contact"
           >
-            about
+            Contact
           </a>
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
