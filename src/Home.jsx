@@ -1,6 +1,9 @@
 import React from "react";
 import { IoMdArrowDown } from "react-icons/io";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import { IoMdArrowRoundForward } from "react-icons/io";
+import { IoMdStar } from "react-icons/io";
+import { BsStarHalf } from "react-icons/bs";
 import { IoCall } from "react-icons/io5";
 import {
   MdArrowOutward,
@@ -28,7 +31,7 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-3 py-1 mb-6 backdrop-blur-sm">
                 <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
                 <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
-                  New 2024 Collection
+                  New 2026 Collection
                 </span>
               </div>
               <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 leading-tight">
@@ -167,7 +170,7 @@ export default function Home() {
               >
                 View Full Catalog
                 <span className="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">
-                  arrow_forward
+                  <IoMdArrowRoundForward />
                 </span>
               </a>
             </div>
@@ -436,19 +439,19 @@ export default function Home() {
               <div className="rounded-2xl bg-slate-800/50 p-8 border border-slate-700 hover:bg-slate-800 transition-colors">
                 <div className="flex text-amber-400 mb-4">
                   <span className="material-symbols-outlined text-sm">
-                    star
+                  
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                  <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                 </div>
                 <p className="text-slate-300 mb-6 italic">
@@ -471,19 +474,19 @@ export default function Home() {
               <div className="rounded-2xl bg-slate-800/50 p-8 border border-slate-700 hover:bg-slate-800 transition-colors">
                 <div className="flex text-amber-400 mb-4">
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                 </div>
                 <p className="text-slate-300 mb-6 italic">
@@ -508,19 +511,19 @@ export default function Home() {
               <div className="rounded-2xl bg-slate-800/50 p-8 border border-slate-700 hover:bg-slate-800 transition-colors">
                 <div className="flex text-amber-400 mb-4">
                   <span className="material-symbols-outlined text-sm">
-                    star
+                  <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                    star_half
+                    <BsStarHalf />
                   </span>
                 </div>
                 <p className="text-slate-300 mb-6 italic">
@@ -597,7 +600,7 @@ export default function Home() {
                       <div>
                         <label
                           className="mb-2 block text-sm font-bold text-slate-700"
-                          for="name"
+                          htmlFor="name"
                         >
                           Name
                         </label>
@@ -611,7 +614,7 @@ export default function Home() {
                       <div>
                         <label
                           className="mb-2 block text-sm font-bold text-slate-700"
-                          for="company"
+                          htmlFor="company"
                         >
                           Company
                         </label>
@@ -626,7 +629,7 @@ export default function Home() {
                     <div>
                       <label
                         className="mb-2 block text-sm font-bold text-slate-700"
-                        for="email"
+                        htmlFor="email"
                       >
                         Work Email
                       </label>
@@ -640,7 +643,7 @@ export default function Home() {
                     <div>
                       <label
                         className="mb-2 block text-sm font-bold text-slate-700"
-                        for="interest"
+                        htmlFor="interest"
                       >
                         Interested In
                       </label>
@@ -658,7 +661,7 @@ export default function Home() {
                     <div>
                       <label
                         className="mb-2 block text-sm font-bold text-slate-700"
-                        for="message"
+                        htmlFor="message"
                       >
                         Message
                       </label>
