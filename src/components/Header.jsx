@@ -73,7 +73,7 @@ export default function Header() {
           </div>
           <a
             className="hidden sm:flex items-center justify-center h-10 px-6 rounded-full bg-slate-900 text-sm font-bold text-white shadow-lg shadow-slate-900/20 hover:bg-slate-800 hover:scale-105 transition-all duration-200"
-            href="#contact"
+            href="Form"
           >
             Request Info
           </a>
