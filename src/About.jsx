@@ -301,12 +301,12 @@ export default function About() {
                 <img
                   alt="Rajesh Kumar"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi9FdJUvkX2QKUoXNaRKJFEZq-3Xg97hGaTkuNd68I2ZvCfjVv4QdK5rF-w0sBKQ2UI3ysn5FXYN8aYmI3Ae0P4MkTMg_lEH1rvaoshoxrsntDpgUp9efsQ68zvajux25Wrt94-5KE8W0s-7VXRkUrit0qwqktLeusLjNwsI9uEZU1HjHj0QKYuA9k87MQ_Tp34PJDIkmHrpM-xyL4cbE6qcAP-NLLUWPtvDR9m1ieATCibxLpnI8Av1Qc1V6KDA_qwbiXNB8HxTxW"
+                  src="src\components\img\img1.jpg"
                 />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-[#0d131b] dark:text-white">
-                  Rajesh Kumar
+                  Rekha Kumari
                 </h3>
                 <p className="text-primary font-medium text-sm">
                   Managing Director
@@ -321,12 +321,12 @@ export default function About() {
                 <img
                   alt="Priya Sharma"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL_QCZGhWibhmcbI0OCiySt9I0PhoeePtEZ0TwE9NhNTB3Xvam-3XGD92uMEJ3VvJ-FSVIEZr-1bDI8lef08npQ_V17vXcEDyIQd09jn7MH1DMzd5L2Qyxh22STs2534RIcCMZ6uvOvuL7eI3e7MtToxAk0YVsYOQVIyEsMYJsvz_gOdVHCAv8Bo_7gt30-Qi2jtcjGDUjuSE9w0FJkTGBc-vcxAM7ghTYxQcHzyIr5h2HXD1HmOOAdyu33RVBD_fT80fmGtMBznDN"
+                  src="src\components\img\img6.jpg"
                 />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-[#0d131b] dark:text-white">
-                  Priya Sharma
+                  arun Sharma
                 </h3>
                 <p className="text-primary font-medium text-sm">
                   Director of Operations
@@ -341,7 +341,7 @@ export default function About() {
                 <img
                   alt="Amit Singh"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcogYbyvBEwc5-2JXlXepUYi3zJ8Ik5lN1aMFSP5wJykgioOEa2C7zh99JaoMtbJR2hGSPBy__DYq0IHsElZPKXg7vjnZgk_rkTM7cD_tfJI1DDn0iibiOhViZlw4MWmA4UwY2kJC38OsucFdKpyt6nioBHbZ526veMp866CtoZuvwjzmbwzZcU__cEh6StaGgafbZhsgt9Ukwe9gMXGncZJnNctwqJP39xgMM6p-sG3p_JuHisnUP-x-TkE9fz3R_bDbJXHO-9U6G"
+                  src="src\components\img\img22.jpg"
                 />
               </div>
               <div>
@@ -361,7 +361,7 @@ export default function About() {
                 <img
                   alt="Vikram Malhotra"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKMjXehA1FLLTpcnWRPirsjTx0ROhLjHQtww5Ocnl9VPjuTUP4wys4tcyA65AsYCUjGFmtP2CIokofoEyz3-UBP6E1b3PGzt3IHG4zxLoxRWeW8Lhwqfo_2xK4TGxxyutq_e8dtKJcf_olAgc7p4tvxtCp5dpFz2ilGciXVMPkdpq5iXGY9pDZ0QEs9BymGKXzzgiBjHsDNlVsr1IfalI1HLXl4pNu5mhHrbuS818uFHu2_r65Xuu9wvs_cCRQ3B6AakpIjpBAyRJh"
+                  src="src\components\img\img6.jpg"
                 />
               </div>
               <div>

@@ -50,7 +50,11 @@ export default function () {
                 <a className="hover:text-primary" href="Industries">
                   Industries
                 </a>
-             
+              </li>
+              <li>
+                <a className="hover:text-primary" href="product">
+                  Product
+                </a>
               </li>
             </ul>
           </div>
