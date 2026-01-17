@@ -1,6 +1,10 @@
 import { MdOutlineTrackChanges } from "react-icons/md";
 import { MdVisibility } from "react-icons/md";
+import { MdEco } from "react-icons/md";
 import { MdVerifiedUser } from "react-icons/md";
+import { MdOutlineSecurity } from "react-icons/md";
+import { MdVerified } from "react-icons/md";
+import { MdFactory } from "react-icons/md";
 import React from "react";
 
 export default function About() {
@@ -384,23 +388,23 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-4xl">
-                verified
+                <MdVerified />
               </span>
               <span className="font-bold text-xl">ISO 9001</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-4xl">
-                security
+                <MdOutlineSecurity />
               </span>
               <span className="font-bold text-xl">ISI Mark</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-4xl">eco</span>
+              <span className="material-symbols-outlined text-4xl"><MdEco /></span>
               <span className="font-bold text-xl">GreenPro</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-4xl">
-                factory
+                <MdFactory />
               </span>
               <span className="font-bold text-xl">Make in India</span>
             </div>

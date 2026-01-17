@@ -8,6 +8,7 @@ import { CiMail } from "react-icons/ci";
 import { MdCategory } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineViewInAr } from "react-icons/md";
+import { FaPlayCircle } from "react-icons/fa";
 import { MdOutlineMarkUnreadChatAlt } from "react-icons/md";
 import { MdOutlineChevronRight } from "react-icons/md";
 
@@ -113,7 +114,7 @@ export default function Industries() {
                 </button>
                 <button className="aspect-square rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden p-2 bg-white dark:bg-surface-dark hover:border-primary/50 transition-colors flex items-center justify-center bg-slate-50 dark:bg-slate-800">
                   <span className="material-symbols-outlined text-3xl text-text-sec-light">
-                    play_circle
+                    <FaPlayCircle />
                   </span>
                 </button>
               </div>
