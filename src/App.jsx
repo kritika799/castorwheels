@@ -10,7 +10,7 @@ import Blog from "./Blog";
 import Products from "./Products";
 import Industries from "./Industries";
 import Capabilities from "./Capabilities";
-import Form from"./Form";
+import Form from "./Form";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -23,12 +23,12 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/features" element={<Features />} />
-          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/products" element={<Products />} />
           <Route path="/Industries" element={<Industries />} />
           <Route path="/Capabilities" element={<Capabilities />} />
           <Route path="/blog" element={<Blog />} />
-           <Route path="/Form" element={<Form/>} />
+          <Route path="/Form" element={<Form />} />
         </Routes>
         <Footer />
       </Router>
