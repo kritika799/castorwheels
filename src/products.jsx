@@ -263,7 +263,7 @@ function Products() {
               </div>
               <div className="relative aspect-square overflow-hidden bg-slate-100">
                 <img
-                  alt="Castor Wheel"
+                  alt="CastorWheels"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   data-alt="Close up of an industrial heavy duty castor wheel on concrete"
                   src="src/components/img/medium dutty fixed nylon 1.jpg"

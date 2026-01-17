@@ -22,7 +22,7 @@ export default function Home() {
             <img
               alt="Industrial Castor Background"
               className="h-full w-full object-cover opacity-40 mix-blend-overlay"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVMPW5dNRf35bXTeaJavmHaHwJru1KdkmIC5RXG9AluEYf12Kv1jjlfIOWaMN-3h1gpWEIl6qzWDVlQ25MLYA2vB-TqdRHrwW4rpdPG4kJtW7oElN13_nEdDvxybhzc_5CwS_9sFKtjShg8_yiKuTYsw8h9XqpVDK3qewuJXgA6Uowh_JxspO41azSIPSoT4vARJVgRuG-7DuWJbZhe6cz1BGvogJgOyhRHxqEjAb4284BKKGRWb8hkajS7HIyiKP7EG9KMShKvFuz"
+              src="src\components\img\img22.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-900/40"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
@@ -185,7 +185,7 @@ export default function Home() {
                   <img
                     alt="Industrial Series"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVAYbNKLWyK1HAOL6EpPXbr9dICA8aNvriQxsuKD7gPs7OXUOVIOs4bdFSgLBRYa3OoW7HXmdYJXygo9CnmOu43BVo6B_Q_HLtRZ5W5LRzlWyhS1y79l6nA_z2jbVTrgeIk86Y4rW0ziyxUC8V_oRP7L79S8qbgtLqJPZwSjrQTYroxHK2OesELiEcJVp3yCqtjT_uS2yK7W7xMcIsOyr4I6stJ43-4GMo5rNfCZCi4PkCgcN7QR0lBLjTqwRuLAQooP4zBKdpcXeW"
+                    src="src\components\img\medium dutty fixed nylon 1.jpg"
                   />
                   <div className="absolute bottom-0 left-0 p-6 z-20">
                     <h3 className="text-2xl font-bold text-white mb-1">
@@ -218,7 +218,7 @@ export default function Home() {
                   <img
                     alt="Medical Series"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6A_nHPS5gM_Kk9X4aNK4KcO5hxX77HHslB-FJSUxVuEtqG-QZXttDfCHIugRREtQrFhjSqCVzWavvbze9fALlsvk-90SF6qn7b36HJLnovBqEKL9i3T-5s68RWRM6HT7wajZqd8V6UJvzlF6xkWB8LOQYFXczk74kH0AF1kl-VQxxy3IVscu7utnlO3x4C9y0vEM5kzc0jFObKki_dAAKPLVxZb-XRLI6G0eOCBwXEbD7JyY7pK6m9cSeGPmEhcFWhY00KV2Hw-y-"
+                    src="src\components\img\medium dutty fixed nylon 1.jpg"
                   />
                   <div className="absolute bottom-0 left-0 p-6 z-20">
                     <h3 className="text-2xl font-bold text-white mb-1">
@@ -251,7 +251,7 @@ export default function Home() {
                   <img
                     alt="Furniture Series"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJJoDxWl5D3qVni51DF11DLnHxGnIbPbCOGRQDALsGbTmyZ8djbr9XIhKUNuKJUxpq0CM3RbfSr04iD-hSr2jzRmAQLMlg6VGE761QNWq4-2WHRULeICGcTC5AmcgLHSUsoA6YQgy1QDkJza0T7fYoGTjRSL6ciRzK6MyGZTDFUPGCKTlY4-N5NUdlSAdVHPHnFKA3jc9P4DknzWJULktw_UHwkG93pcy8ob2QjFb_fjkkbgw_685-q6zc24GVyzOwuoqY4aACr9u8"
+                    src="src\components\img\laveling castor.jpg"
                   />
                   <div className="absolute bottom-0 left-0 p-6 z-20">
                     <h3 className="text-2xl font-bold text-white mb-1">
@@ -295,7 +295,7 @@ export default function Home() {
                   <div
                     style={{
                       backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuASMfwCVXnv2T15BS2zFOXIQogm0KvT_0jICNsPfVvLV189vb4O5-Ujvx-wFFhouG0L9SER3_IVHaaZLEBt9TpkNSi_xkBwsykfxbAXNVYYXoWJOyERZORCWNxGQJ0279eK5tC-EQIsOIOcPy8Y4TAGp1bMMwuZt4Br-4KX93KGCGKkzfu1i3XywXX5Fgqj_KsENq_hE9XdCI9IbyeJKs_aTLXxjhRHg2a_IP0drlb7xUyi_y8JsY6h38etMzrikdmLCE8ufSDm724u")',
+                        'url("src\components\img\img6.jpg")',
                     }}
                     className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                     // style="
@@ -328,7 +328,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div
                     // style={{
-                    // backgroundImage : 'url  ('https://lh3.googleusercontent.com/aida-public/AB6AXuDYH14qpjPkPbFsKpyBAkbPGfCJZjsAi1nh7yRmN-kOG4608MidSMJbHeu5Cys17Xd-m0Lbm0CDarJb0sBohAYKmzvGlywJdDAC2ktuasVO6DtXDsSnrAQfkgcHbrb9sZkY3n3esaf8bcUm8iybfspSvQtdgHMx48QnW7o1gHSbTSV9hYVLC3Su_WAp47t0nNZGuYiIp2iH0mgVGfd3WuSCctmBXorL5K-FMuSV6kjtsn0Nrwml7VeASXUEunUofG6R0cZaTSyf_gY3")'
+                    // backgroundImage : 'url  ('")'
                     // }}
                     className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                     // style="
@@ -589,7 +589,7 @@ export default function Home() {
                           <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">
                             Email
                           </p>
-                          <p className="font-bold">sales@comfortcastors.com</p>
+                          <p className="font-bold">sales@castorwheels.com</p>
                         </div>
                       </div>
                     </div>

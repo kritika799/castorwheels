@@ -173,13 +173,7 @@ export default function Contact() {
                           className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary transition-colors"
                           href="tel:+919800000000"
                         >
-                          +91 98XXX XXXXX
-                        </a>
-                        <a
-                          className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary transition-colors"
-                          href="tel:+911100000000"
-                        >
-                          +91 11 XXXX XXXX
+                          +91 8826883046
                         </a>
                       </div>
                     </div>

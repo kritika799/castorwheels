@@ -265,9 +265,9 @@ export default function Shop() {
               </div>
               <div className="relative aspect-square overflow-hidden bg-slate-100">
                 <img
-                  alt="Castor Wheel"
+                  alt="CastorWheels"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  data-alt="Close up of an industrial heavy duty castor wheel on concrete"
+                  data-alt="Close up of an industrial heavy duty castorwheels on concrete"
                   src="src/components/img/medium dutty fixed nylon 1.jpg"
                 />
               </div>
@@ -313,7 +313,7 @@ export default function Shop() {
                 <img
                   alt="Red PU Castor"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  data-alt="Industrial red polyurethane castor wheel close up"
+                  data-alt="Industrial red polyurethane castorwheels close up"
                   src="src/components/img/medium dutty fixed nylon.jpg"
                 />
               </div>
@@ -364,7 +364,7 @@ export default function Shop() {
                 <img
                   alt="Furniture Castor"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  data-alt="Small furniture castor wheel on a wooden surface"
+                  data-alt="Small furniture castorwheels on a wooden surface"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6qL92CK6SFplgwABdjxfthZ90KXM9zSpqrqhZhjtb4zmlKJStDSAEaSnXXvdir_6mBFcTXMeHgTm3aDZCbhQ9UdP3jekexT-AX5V7HaeFGoD7gzQZE2LInIr6V5CS23vfmzVHuZT_vGYH8pgkE0d3pUEBcBbvW_jY6euE5LBZGTIx-EDaHJyxCF1obMvIuH19EahqxSBab_s2AJg6wLO1heUBOT2YIUm5c_JnNusr-leoL8lg7XQrwIKyeGW0Qg7Ud1wHeH8gsJTq"
                 />
               </div>
