@@ -21,7 +21,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <h2 className="text-xl font-extrabold leading-none tracking-tight text-slate-900">
-              Castors
+              Castorwheels
             </h2>
           </div>
         </div>
@@ -35,26 +35,26 @@ export default function Header() {
         
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/About"
+            href="/about"
           >
             About
           </a>
       
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/Products"
+            href="/shop"
           >
-            Products
+            Shop
           </a>
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/Contact"
+            href="/contact"
           >
             Contact
           </a>
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/Industries"
+            href="/industries"
           >
             Industries
           </a>

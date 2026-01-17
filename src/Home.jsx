@@ -116,7 +116,7 @@ export default function Home() {
                   Precision Engineering
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Every castor is manufactured with tight tolerances using
+                  Every castorwheel is manufactured with tight tolerances using
                   high-grade steel and polymers for consistent performance.
                 </p>
               </div>

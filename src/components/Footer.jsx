@@ -46,11 +46,7 @@ export default function () {
                   About
                 </a>
               </li>
-              <li>
-                <a className="hover:text-primary" href="Industries">
-                  Industries
-                </a>
-              </li>
+              
               <li>
                 <a className="hover:text-primary" href="product">
                   Product
@@ -109,13 +105,13 @@ export default function () {
                 <span className="material-symbols-outlined text-lg">
                   <CiMail />
                 </span>
-                <span>sales@comfortcastors.com</span>
+                <span>sales@castorwheels.com</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-sec-light">
-          <p>© 2026 Castors India Pvt Ltd. All rights reserved.</p>
+          <p>© 2026 Castorwheels India Pvt Ltd. All rights reserved.</p>
           <div className="flex gap-4">
             <a className="hover:text-text-main-light" href="#">
               Privacy
@@ -123,9 +119,7 @@ export default function () {
             <a className="hover:text-text-main-light" href="#">
               Terms
             </a>
-            <a className="hover:text-text-main-light" href="#">
-              Sitemap
-            </a>
+         
           </div>
         </div>
       </div>

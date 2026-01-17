@@ -195,13 +195,13 @@ export default function Contact() {
                           className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary transition-colors"
                           href="mailto:sales@comfortcastors.com"
                         >
-                          sales@comfortcastors.com
+                          sales@castorwheels.com
                         </a>
                         <a
                           className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary transition-colors"
                           href="mailto:info@comfortcastors.com"
                         >
-                          info@comfortcastors.com
+                          info@castorwheels.com
                         </a>
                       </div>
                     </div>

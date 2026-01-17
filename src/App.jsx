@@ -7,11 +7,12 @@ import Features from "./Features";
 import Header from "./components/Header";
 import Portfolio from "./Portfolio";
 import Blog from "./Blog";
-import Products from "./Products";
+// import Products from "./Products";
 import Industries from "./Industries";
 import Capabilities from "./Capabilities";
 import Form from "./Form";
 import Footer from "./components/Footer";
+import Shop from "./Shop";
 
 export default function App() {
   return (
@@ -24,11 +25,12 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/features" element={<Features />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/products" element={<Products />} />
+          {/* <Route path="/products" element={<Products />} /> */}
           <Route path="/Industries" element={<Industries />} />
           <Route path="/Capabilities" element={<Capabilities />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/Form" element={<Form />} />
+          <Route path="/shop" element={<Shop/>} />
         </Routes>
         <Footer />
       </Router>
