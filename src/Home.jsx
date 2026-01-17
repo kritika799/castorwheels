@@ -295,7 +295,7 @@ export default function Home() {
                   <div
                     style={{
                       backgroundImage:
-                        'url("src\components\img\img6.jpg")',
+                        'url("")',
                     }}
                     className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                     // style="
@@ -327,9 +327,9 @@ export default function Home() {
                 <div className="mb-4 aspect-square w-full rounded-xl bg-slate-50 overflow-hidden relative">
                   <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div
-                    // style={{
-                    // backgroundImage : 'url  ('")'
-                    // }}
+                    style={{
+                    backgroundImage : 'url ("src\components\img\laveling castor.jpg")',
+                    }}
                     className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                     // style="
                     //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYH14qpjPkPbFsKpyBAkbPGfCJZjsAi1nh7yRmN-kOG4608MidSMJbHeu5Cys17Xd-m0Lbm0CDarJb0sBohAYKmzvGlywJdDAC2ktuasVO6DtXDsSnrAQfkgcHbrb9sZkY3n3esaf8bcUm8iybfspSvQtdgHMx48QnW7o1gHSbTSV9hYVLC3Su_WAp47t0nNZGuYiIp2iH0mgVGfd3WuSCctmBXorL5K-FMuSV6kjtsn0Nrwml7VeASXUEunUofG6R0cZaTSyf_gY3');
