@@ -2,6 +2,7 @@ import React from "react";
 import { IoMdArrowDown } from "react-icons/io";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { IoArrowForwardOutline } from "react-icons/io5";
 import { IoMdStar } from "react-icons/io";
 import { BsStarHalf } from "react-icons/bs";
 import { IoCall } from "react-icons/io5";
@@ -17,79 +18,84 @@ export default function Home() {
   return (
     <section>
       <main className="flex-1">
-        <section className="relative bg-slate-900 overflow-hidden bg-white">
+        <section className="relative bg-slate-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               alt="Industrial Castor Background"
-              className="h-full w-full object-cover opacity-40 mix-blend-overlay"
-              src="src\components\img\img22.jpg"
+              className="h-full w-full object-cover opacity-30 mix-blend-overlay"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVMPW5dNRf35bXTeaJavmHaHwJru1KdkmIC5RXG9AluEYf12Kv1jjlfIOWaMN-3h1gpWEIl6qzWDVlQ25MLYA2vB-TqdRHrwW4rpdPG4kJtW7oElN13_nEdDvxybhzc_5CwS_9sFKtjShg8_yiKuTYsw8h9XqpVDK3qewuJXgA6Uowh_JxspO41azSIPSoT4vARJVgRuG-7DuWJbZhe6cz1BGvogJgOyhRHxqEjAb4284BKKGRWb8hkajS7HIyiKP7EG9KMShKvFuz"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-900/40"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-900/20"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
           </div>
-          <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-24 sm:px-6 lg:px-8 lg:py-32 flex flex-col justify-center min-h-[600px]">
-            <div className="max-w-3xl animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-3 py-1 mb-6 backdrop-blur-sm">
-                <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
-                  New 2026 Collection
-                </span>
+          <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-20 sm:px-6 lg:px-8 lg:py-32 flex flex-col justify-center min-h-[700px]">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in-up">
+                <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 mb-8 backdrop-blur-sm">
+                  <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
+                    India's Leading Castor Manufacturer
+                  </span>
+                </div>
+                <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 leading-[1.1]">
+                  Engineering <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
+                    Perfect Mobility
+                  </span>
+                </h1>
+                <p className="mt-4 text-xl text-slate-300 max-w-xl font-light leading-relaxed">
+                  Discover a premium portfolio of heavy-duty industrial,
+                  medical, and specialized castors. Engineered for the Indian
+                  market, built for global standards.
+                </p>
+                <div className="mt-12 flex flex-wrap gap-5">
+                  <a
+                    className="flex items-center justify-center h-16 px-10 rounded-full accent-gradient text-lg font-black  font-bold shadow-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200 hover:scale-105 hover:brightness-110 transition-all duration-300 border border-white/20"
+                    href="#contact"
+                  >
+                    Get a Quote
+                    <span className="material-symbols-outlined ml-2 text-[24px]">
+                      <IoArrowForwardOutline />
+                    </span>
+                  </a>
+                  <a
+                    className="flex items-center justify-center h-16 px-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-lg font-bold text-white hover:bg-white/20 transition-all duration-300"
+                    href="#portfolio"
+                  >
+                    Explore Products
+                  </a>
+                </div>
+                <div className="mt-12 grid grid-cols-3 gap-8">
+                  <div>
+                    <p className="text-3xl font-black text-white">500+</p>
+                    <p className="text-sm text-slate-400 font-medium">
+                      Product Variants
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-3xl font-black text-white">25+</p>
+                    <p className="text-sm text-slate-400 font-medium">
+                      Years Experience
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-3xl font-black text-white">10M+</p>
+                    <p className="text-sm text-slate-400 font-medium">
+                      Units Shipped
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 leading-tight">
-                Engineering <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
-                  Perfect Mobility
-                </span>
-              </h1>
-              <p className="mt-4 text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
-                Discover a premium portfolio of heavy-duty, medical, and
-                furniture castors. Designed for performance, built for
-                durability.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  className="flex items-center justify-center  bg-blue-600 h-14 px-8 rounded-full bg-primary text-base font-bold text-white shadow-xl shadow-blue-500/30 hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300"
-                  href="#portfolio"
-                >
-                  Explore Portfolio
-                  <IoMdArrowDown className="text-2xl ml-2" />
-                </a>
-                <a
-                  className="flex items-center justify-center h-14 px-8 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-base font-bold text-white hover:bg-white/20 transition-all duration-300"
-                  href="#contact"
-                >
-                  Custom Solutions
-                </a>
-              </div>
-            </div>
-            <div className="mt-20 border-t border-white/10 pt-8">
-              <p className="text-sm font-medium text-slate-400 mb-6 uppercase tracking-widest">
-                Trusted by Industry Leaders
-              </p>
-              <div className="flex flex-wrap items-center gap-8 md:gap-12 opacity-60 mix-blend-luminosity">
-                <div
-                  // style={{
-                  //   maskImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMzAiPjxwYXRoIGQ9Ik0xMCwxNWw4MCwwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEwIiAvPjwvc3ZnPg==')"
-
-                  // }}
-                  className="h-8 w-24 bg-slate-400 mask-image"
-                  // style="
-                  //   mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMzAiPjxwYXRoIGQ9Ik0xMCwxNWw4MCwwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEwIiAvPjwvc3ZnPg==');
-                  //   -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMzAiPjxwYXRoIGQ9Ik0xMCwxNWw4MCwwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEwIiAvPjwvc3ZnPg==');
-                  // "
-                ></div>
-                <div className="text-xl font-black text-slate-400">
-                  MEDITECH
+              <div className="hidden lg:block relative">
+                <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 rounded-[40px] p-8 backdrop-blur-sm border border-white/10 shadow-2xl">
+                  <img
+                    alt="Featured Product"
+                    className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform rotate-12"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASMfwCVXnv2T15BS2zFOXIQogm0KvT_0jICNsPfVvLV189vb4O5-Ujvx-wFFhouG0L9SER3_IVHaaZLEBt9TpkNSi_xkBwsykfxbAXNVYYXoWJOyERZORCWNxGQJ0279eK5tC-EQIsOIOcPy8Y4TAGp1bMMwuZt4Br-4KX93KGCGKkzfu1i3XywXX5Fgqj_KsENq_hE9XdCI9IbyeJKs_aTLXxjhRHg2a_IP0drlb7xUyi_y8JsY6h38etMzrikdmLCE8ufSDm724u"
+                  />
                 </div>
-                <div className="text-xl font-black text-slate-400">
-                  FURNI-CO
-                </div>
-                <div className="text-xl font-black text-slate-400">
-                  AUTO-PART
-                </div>
-                <div className="text-xl font-black text-slate-400">
-                  HEAVY-IND
-                </div>
+                <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+                <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px]"></div>
               </div>
             </div>
           </div>
@@ -294,8 +300,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div
                     style={{
-                      backgroundImage:
-                        'url("")',
+                      backgroundImage: 'url("src\components\img\img6.jpg")',
                     }}
                     className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                     // style="
@@ -328,7 +333,8 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div
                     style={{
-                    backgroundImage : 'url ("src\components\img\laveling castor.jpg")',
+                      backgroundImage:
+                        'url ("src\components\img\laveling castor.jpg")',
                     }}
                     className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                     // style="
@@ -372,7 +378,7 @@ export default function Home() {
                     Medical
                   </span>
                   <h3 className="font-bold text-slate-900 truncate">
-                    Twin Wheel Brake
+                    1 Twin Wheel Brake
                   </h3>
                   <div className="mt-2 flex items-center gap-2 text-xs text-slate-500">
                     <span className="bg-slate-100 px-2 py-0.5 rounded">
@@ -439,9 +445,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="rounded-2xl bg-slate-800/50 p-8 border border-slate-700 hover:bg-slate-800 transition-colors">
                 <div className="flex text-amber-400 mb-4">
-                  <span className="material-symbols-outlined text-sm">
-                  
-                  </span>
+                  <span className="material-symbols-outlined text-sm"></span>
                   <span className="material-symbols-outlined text-sm">
                     <IoMdStar />
                   </span>
@@ -449,7 +453,7 @@ export default function Home() {
                     <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
-                  <IoMdStar />
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
                     <IoMdStar />
@@ -512,7 +516,7 @@ export default function Home() {
               <div className="rounded-2xl bg-slate-800/50 p-8 border border-slate-700 hover:bg-slate-800 transition-colors">
                 <div className="flex text-amber-400 mb-4">
                   <span className="material-symbols-outlined text-sm">
-                  <IoMdStar />
+                    <IoMdStar />
                   </span>
                   <span className="material-symbols-outlined text-sm">
                     <IoMdStar />
@@ -576,7 +580,7 @@ export default function Home() {
                           <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">
                             Phone
                           </p>
-                          <p className="font-bold">+91 98765 43210</p>
+                          <p className="font-bold">+91 8826883046</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-4">

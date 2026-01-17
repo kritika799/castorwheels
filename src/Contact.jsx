@@ -153,9 +153,9 @@ export default function Contact() {
                           Our Location
                         </h4>
                         <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                          Plot No. 123, Udyog Vihar Phase IV,
+                          Plot No. 298, 3rd floor 10A ,
                           <br />
-                          Gurugram, Haryana 122015,
+                          Gurugram, Haryana 122001,
                           <br />
                           India
                         </p>

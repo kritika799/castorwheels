@@ -36,14 +36,12 @@ export default function Shop() {
               <span className="material-symbols-outlined text-[16px] text-[#4c6c9a] dark:text-slate-500">
                 <MdOutlineChevronRight />
               </span>
-              <span className="font-medium text-[#0d131b] dark:text-slate-100">
-                Industrial Series
-              </span>
+             
             </div>
             <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
                 <h1 className="text-3xl font-black tracking-tight text-[#0d131b] dark:text-white sm:text-4xl">
-                  Industrial Castor Catalog
+                   Castor Catalog
                 </h1>
                 <p className="mt-2 text-base text-[#4c6c9a] dark:text-slate-400">
                   Browse our comprehensive range of high-quality castors

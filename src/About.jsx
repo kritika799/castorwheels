@@ -41,7 +41,7 @@ export default function About() {
             </h2>
             <div className="flex justify-center gap-4 pt-4">
               <button className="h-12 px-8 bg-primary text-white rounded-lg font-bold hover:bg-blue-600 transition-colors">
-                Explore Capabilities
+                Explore products
               </button>
               <button className="h-12 px-8 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg font-bold hover:bg-white/20 transition-colors">
                 Our Heritage
