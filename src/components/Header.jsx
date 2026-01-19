@@ -1,7 +1,28 @@
 import { Search } from "lucide-react";
+import { useState } from "react";
+import { CiMenuBurger } from "react-icons/ci";
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 export default function Header() {
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (e) => {
+    if (e.key === "Enter" || e.type === "submit") {
+      e.preventDefault();
+      if (searchQuery.trim()) {
+        // Redirect to /shop with ?q=... (or ?search=... — choose one)
+        navigate(`/shop?q=${encodeURIComponent(searchQuery.trim())}`);
+      } else {
+        // Optional: go to shop without query if empty
+        navigate("/shop");
+      }
+      // Optional: clear input after search
+      setSearchQuery("");
+    }
+  };
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -32,14 +53,14 @@ export default function Header() {
           >
             Home
           </a>
-        
+
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
             href="/about"
           >
             About
           </a>
-      
+
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
             href="/shop"
@@ -62,23 +83,24 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <div className="hidden md:block relative w-64">
             <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-              {/* <span className="material-symbols-outlined text-[18px]">search</span> */}
               <Search className="material-symbols-outlined text-[18px]" />
             </span>
             <input
               className="block w-full rounded-full border-0 bg-slate-100 py-2 pl-10 pr-4 text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary transition-all hover:bg-slate-50"
               placeholder="Search castors..."
               type="text"
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleSearch} 
             />
           </div>
           <a
             className="hidden sm:flex items-center justify-center h-10 px-6 rounded-full bg-slate-900 text-sm font-bold text-white shadow-lg shadow-slate-900/20 hover:bg-slate-800 hover:scale-105 transition-all duration-200"
-            href="Form"
+            href="/request-info"
           >
             Request Info
           </a>
           <button className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-            <span className="material-symbols-outlined text-2xl">menu</span>
+            <span className="material-symbols-outlined text-2xl"><CiMenuBurger /></span>
           </button>
         </div>
       </div>

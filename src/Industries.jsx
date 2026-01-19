@@ -65,7 +65,7 @@ export default function Industries() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div className="flex flex-col gap-4">
               <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-800 p-8 flex items-center justify-center group">
-                <div className="absolute top-4 left-4 bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-blue-100 dark:border-blue-900">
+                <div className="absolute z-2 top-4 left-4 bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-blue-100 dark:border-blue-900">
                   Portfolio Highlight
                 </div>
                 <div
@@ -73,7 +73,7 @@ export default function Industries() {
                     backgroundImage:
                       "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRfHZKZ1QxFqwGXJxMAMvpBBbJ5u7cURhHj5oe7DH4YxDSPYDUYgmgIQhQNeXJFFV4BMrBQx36L-Qdf-TjZs99BxUqvwpByZOpbJCi91HjAtTd1wcLHMAsolhYVcl6DbGF6a-aOT0S8lE4ge301HtpCbvjZOw0x-CGRPF7Ti4nm2_AUwWMn8LJpMSDYMNISZtLcUYxEzYEyHcJpDuQ9jhpyqBlk125A96Sklzt5F18MkLy6fu38Hbd3OAM8QOu5XbKgZb6p-jbUll8')",
                   }}
-                  className="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 "
                   data-alt="Close up of a heavy duty industrial castorwheel with metal bracket"
                   // style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRfHZKZ1QxFqwGXJxMAMvpBBbJ5u7cURhHj5oe7DH4YxDSPYDUYgmgIQhQNeXJFFV4BMrBQx36L-Qdf-TjZs99BxUqvwpByZOpbJCi91HjAtTd1wcLHMAsolhYVcl6DbGF6a-aOT0S8lE4ge301HtpCbvjZOw0x-CGRPF7Ti4nm2_AUwWMn8LJpMSDYMNISZtLcUYxEzYEyHcJpDuQ9jhpyqBlk125A96Sklzt5F18MkLy6fu38Hbd3OAM8QOu5XbKgZb6p-jbUll8');"
                 ></div>
@@ -86,7 +86,7 @@ export default function Industries() {
                   <div
                     style={{
                       backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCFI2a5rJYaolh5mEmYEaLnX3wQBXQxNoEG55S0wGfEWiQ-yAgs-efHPolAS0m6KVDsuBNpUHgLo2FqA83LGN7XKCLRZdDmCbn2x-UPu8fdcP8Ym1fZNNHzutkxWqDP-aw8qhZFx7zxmdVXbLNfUcxCBAf-Wam6nrcO9h-I2gUCOM0yH8FqFhBM6uO8oElCfcuPB2ABDLXgoUO3QsJoERtwSOoQudwHlXAjffoUkZbiT5AO5eBkWta-aidZ3KsNZRKK5niPHf9L9t7')",
+                        "url('./src/components/img/castor2.jpg')",
                     }}
                     className="w-full h-full bg-cover bg-center"
                     data-alt="Side view of castor wheel"
@@ -96,7 +96,7 @@ export default function Industries() {
                   <div
                     style={{
                       backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbf_WispC_ZAmI4wAiMWALH0mQPPPLSVeED_A_I8srzbledErA2dF5gQuCvOWjomv5WXSU1p4A8XR8Csb0tAPy1u_5CEocS6FXhdapAhot3o-f0hjYyLiBeVQSUYbDO26kSiVyHgHhpQTBfbH085nLNAzywuepCNMpNd4kj1yUfQHn0Nw_ZMA3T9eybQdU69mBXHsPeZ20Xmw-klBKBpsjq6LGO2IOfIJ8DSGA_FQurujn0pSzGFdJb0e2OIqMYJYgQ28ZCkdacqgq')",
+                        "url('./src/components/img/castor2.jpg')",
                     }}
                     className="w-full h-full bg-cover bg-center"
                     data-alt="Angled view of heavy duty castor"
