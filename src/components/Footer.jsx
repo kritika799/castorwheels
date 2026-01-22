@@ -19,7 +19,9 @@ export default function () {
                   <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
                 </svg>
               </div>
-              <span className="font-bold text-lg">Castorwheels</span>
+              <span className="font-bold text-lg">Casters Global
+
+              </span>
             </div>
             <p className="text-sm text-text-sec-light leading-relaxed">
               Leading manufacturer of industrial wheels and castors in India.
@@ -105,7 +107,7 @@ export default function () {
                 <span className="material-symbols-outlined text-lg">
                   <CiMail />
                 </span>
-                <span>sales@castorwheels.com</span>
+                <span>sales@CastersGlobal.com</span>
               </li>
             </ul>
           </div>

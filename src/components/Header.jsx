@@ -42,7 +42,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <h2 className="text-xl font-extrabold leading-none tracking-tight text-slate-900">
-              Castorwheels
+              Casters Global
             </h2>
           </div>
         </div>

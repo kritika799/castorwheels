@@ -11,11 +11,16 @@ import Industries from "./Industries";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
+import ProductDetail from "./pages/ProductDetail";
+import ScrollToTop from "./components/ScrollToTop";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 export default function App() {
   return (
     <div className="font-display bg-background-light text-slate-800 antialiased selection:bg-blue-100 selection:text-primary">
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +31,10 @@ export default function App() {
           <Route path="/Industries" element={<Industries />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/request-info" element={<Form />} />
-          <Route path="/shop" element={<Shop/>} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:slug" element={<ProductDetail />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/term" element={<TermsConditions />} />
         </Routes>
         <Footer />
       </Router>

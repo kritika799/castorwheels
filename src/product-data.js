@@ -5,7 +5,7 @@ const product = {
   breadcrumb: ["Home", "Heavy Duty Castors", "5-Inch Swivel PU"],
   mainImage: {
     url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCRfHZKZ1QxFqwGXJxMAMvpBBbJ5u7cURhHj5oe7DH4YxDSPYDUYgmgIQhQNeXJFFV4BMrBQx36L-Qdf-TjZs99BxUqvwpByZOpbJCi91HjAtTd1wcLHMAsolhYVcl6DbGF6a-aOT0S8lE4ge301HtpCbvjZOw0x-CGRPF7Ti4nm2_AUwWMn8LJpMSDYMNISZtLcUYxEzYEyHcJpDuQ9jhpyqBlk125A96Sklzt5F18MkLy6fu38Hbd3OAM8QOu5XbKgZb6p-jbUll8",
-    alt: "Close up of a heavy duty industrial castorwheel with metal bracket",
+    alt: "Close up of a heavy duty industrial Casters Global with metal bracket",
     label: "Portfolio Highlight",
   },
   galleryThumbnails: [
@@ -274,3 +274,5 @@ const products = [
     ],
   },
 ];
+
+// https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}

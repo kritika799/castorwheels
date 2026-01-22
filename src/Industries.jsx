@@ -74,7 +74,7 @@ export default function Industries() {
                       "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRfHZKZ1QxFqwGXJxMAMvpBBbJ5u7cURhHj5oe7DH4YxDSPYDUYgmgIQhQNeXJFFV4BMrBQx36L-Qdf-TjZs99BxUqvwpByZOpbJCi91HjAtTd1wcLHMAsolhYVcl6DbGF6a-aOT0S8lE4ge301HtpCbvjZOw0x-CGRPF7Ti4nm2_AUwWMn8LJpMSDYMNISZtLcUYxEzYEyHcJpDuQ9jhpyqBlk125A96Sklzt5F18MkLy6fu38Hbd3OAM8QOu5XbKgZb6p-jbUll8')",
                   }}
                   className="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 "
-                  data-alt="Close up of a heavy duty industrial castorwheel with metal bracket"
+                  data-alt="Close up of a heavy duty industrial Casters Global with metal bracket"
                   // style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRfHZKZ1QxFqwGXJxMAMvpBBbJ5u7cURhHj5oe7DH4YxDSPYDUYgmgIQhQNeXJFFV4BMrBQx36L-Qdf-TjZs99BxUqvwpByZOpbJCi91HjAtTd1wcLHMAsolhYVcl6DbGF6a-aOT0S8lE4ge301HtpCbvjZOw0x-CGRPF7Ti4nm2_AUwWMn8LJpMSDYMNISZtLcUYxEzYEyHcJpDuQ9jhpyqBlk125A96Sklzt5F18MkLy6fu38Hbd3OAM8QOu5XbKgZb6p-jbUll8');"
                 ></div>
                 <div className="absolute bottom-4 right-4 p-2 bg-white/80 dark:bg-black/60 backdrop-blur rounded-full text-text-sec-light dark:text-text-sec-dark opacity-0 group-hover:opacity-100 transition-opacity">
@@ -301,7 +301,7 @@ export default function Industries() {
                         Load Capacity
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-text-main-light dark:text-text-main-dark font-medium">
-                        450 kg per castorwheel
+                        450 kg per Casters Global
                       </td>
                     </tr>
                     <tr className="bg-slate-50 dark:bg-slate-800/50">
@@ -503,7 +503,7 @@ export default function Industries() {
               <div className="relative aspect-[4/3] bg-slate-50 dark:bg-slate-800/50 p-4 flex items-center justify-center overflow-hidden">
                 <div
                   className="w-full h-full bg-contain bg-center bg-no-repeat group-hover:scale-105 transition-transform duration-500"
-                  data-alt="Rubber castorwheel black"
+                  data-alt="Rubber Casters Global black"
                   style={{
                     backgroundImage:
                       "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCpwhE8rcXH6pvb-hTGJV1PpFzXDOnVx9ZHnq8bkY06g4sAqN877RZdWFWeaNKCdmESVgofASs7lNxkAKbSeFVPMVLYI0vXhYlmqXYPHFhSV848BkGdTm3GXqlBx4B7NUK-GmoKhB4T-3h4-vWAv--77T2DAy-fER2xkmzYVuEVEF-dRzh6MMK8lCFubXOHEjH9UI8Z9Tnje4taa4kzxI7bB2f9-Vk43juJy5xT6YneVTqUOl51jmRQx_vBiMv_MhRS6vAE-z3mLV-')",

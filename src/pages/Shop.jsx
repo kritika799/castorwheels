@@ -11,6 +11,8 @@ import {
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdFitness } from "react-icons/io";
 import { useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import products from "../data/product";
 
 // Sample data (in real app → come from API / database)
 const allProducts = [
@@ -18,6 +20,8 @@ const allProducts = [
     id: 1,
     code: "CC-HD-100-PU",
     name: "Heavy Duty Swivel Castor",
+    slug: "5-inch-heavy-duty-swivel-castor-with-brake",
+
     category: "heavy duty",
     material: "Polyurethane (PU)",
     load: 300,
@@ -108,7 +112,7 @@ export default function Shop() {
   };
 
   const filteredProducts = useMemo(() => {
-    let result = [...allProducts];
+    let result = [...products];
 
     // Search
     if (search.trim()) {
@@ -535,9 +539,12 @@ function ProductCard({ product, viewMode }) {
               : "border-t border-gray-200 dark:border-slate-700 pt-3"
           }`}
         >
-          <button className="flex-1 rounded-lg border border-blue-600 px-4 py-2.5 text-sm font-bold text-blue-600 hover:bg-blue-50 dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-950/30">
+          <Link
+            to={`/shop/${product.slug}`}
+            className="flex-1 rounded-lg border border-blue-600 px-4 py-2.5 text-sm font-bold text-blue-600 hover:bg-blue-50 dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-950/30 text-center"
+          >
             View Details
-          </button>
+          </Link>
           <button className="flex-1 rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-bold text-white hover:bg-blue-800">
             Inquire
           </button>

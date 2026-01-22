@@ -6,7 +6,6 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 import { IoMdStar } from "react-icons/io";
 
 import { BsStarHalf } from "react-icons/bs";
-import { IoCall } from "react-icons/io5";
 
 import {
   MdArrowOutward,
@@ -15,6 +14,10 @@ import {
 } from "react-icons/md";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
+import { featuredProducts } from "../data/FeaturedProducts";
+import FeaturedSolutions from "../components/FeaturedSolutions";
+import EnquiryForm from "../components/EnquiryForm";
+
 export default function Home() {
   return (
     <section>
@@ -26,8 +29,8 @@ export default function Home() {
               className="h-full w-full object-cover opacity-30 mix-blend-overlay"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVMPW5dNRf35bXTeaJavmHaHwJru1KdkmIC5RXG9AluEYf12Kv1jjlfIOWaMN-3h1gpWEIl6qzWDVlQ25MLYA2vB-TqdRHrwW4rpdPG4kJtW7oElN13_nEdDvxybhzc_5CwS_9sFKtjShg8_yiKuTYsw8h9XqpVDK3qewuJXgA6Uowh_JxspO41azSIPSoT4vARJVgRuG-7DuWJbZhe6cz1BGvogJgOyhRHxqEjAb4284BKKGRWb8hkajS7HIyiKP7EG9KMShKvFuz"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-900/20"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-slate-950 via-slate-900/90 to-slate-900/20"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent"></div>
           </div>
           <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-20 sm:px-6 lg:px-8 lg:py-32 flex flex-col justify-center min-h-[700px]">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -40,7 +43,7 @@ export default function Home() {
                 </div>
                 <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 leading-[1.1]">
                   Engineering <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-200">
                     Perfect Mobility
                   </span>
                 </h1>
@@ -123,7 +126,7 @@ export default function Home() {
                   Precision Engineering
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Every castorwheel is manufactured with tight tolerances using
+                  Every  Casters Global is manufactured with tight tolerances using
                   high-grade steel and polymers for consistent performance.
                 </p>
               </div>
@@ -299,157 +302,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center">
-              <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-                Featured Solutions
-              </h2>
-              <p className="mt-2 text-slate-500">
-                Browse technical specifications for our most popular models.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4 sm:gap-8 md:grid-cols-4">
-              <div className="group rounded-2xl border border-slate-100 p-4 transition-all hover:border-blue-100 hover:shadow-lg hover:-translate-y-1 bg-white">
-                <div className="mb-4 aspect-square w-full rounded-xl bg-slate-50 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div
-                    // style={{
-                    //   backgroundImage: 'url("src\components\img\castor2.jpg")',
-                    // }}
-                    className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-                    // style="
-                    //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASMfwCVXnv2T15BS2zFOXIQogm0KvT_0jICNsPfVvLV189vb4O5-Ujvx-wFFhouG0L9SER3_IVHaaZLEBt9TpkNSi_xkBwsykfxbAXNVYYXoWJOyERZORCWNxGQJ0279eK5tC-EQIsOIOcPy8Y4TAGp1bMMwuZt4Br-4KX93KGCGKkzfu1i3XywXX5Fgqj_KsENq_hE9XdCI9IbyeJKs_aTLXxjhRHg2a_IP0drlb7xUyi_y8JsY6h38etMzrikdmLCE8ufSDm724u');
-                    // "
-                  >
-                    <img src="./src/components/img/castor1.jpg" alt="" />
-                  </div>
-                  
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">
-                    Industrial
-                  </span>
-                  <h3 className="font-bold text-slate-900 truncate">
-                    Heavy Duty PU
-                  </h3>
-                  <div className="mt-2 flex items-center gap-2 text-xs text-slate-500">
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      500kg
-                    </span>
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      150mm
-                    </span>
-                  </div>
-                  <button className="mt-4 w-full rounded-lg bg-slate-50 py-2 text-xs font-bold text-slate-700 hover:bg-primary hover:text-white transition-colors">
-                    View Specs
-                  </button>
-                </div>
-              </div>
-              <div className="group rounded-2xl border border-slate-100 p-4 transition-all hover:border-blue-100 hover:shadow-lg hover:-translate-y-1 bg-white">
-                <div className="mb-4 aspect-square w-full rounded-xl bg-slate-50 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div
-                    // style={{
-                    //   backgroundImage:
-                    //     "url('./')",
-                    // }}
-                    className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-                    // style="
-                    //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYH14qpjPkPbFsKpyBAkbPGfCJZjsAi1nh7yRmN-kOG4608MidSMJbHeu5Cys17Xd-m0Lbm0CDarJb0sBohAYKmzvGlywJdDAC2ktuasVO6DtXDsSnrAQfkgcHbrb9sZkY3n3esaf8bcUm8iybfspSvQtdgHMx48QnW7o1gHSbTSV9hYVLC3Su_WAp47t0nNZGuYiIp2iH0mgVGfd3WuSCctmBXorL5K-FMuSV6kjtsn0Nrwml7VeASXUEunUofG6R0cZaTSyf_gY3');
-                    // "
-                  >
-                    <img src="./src/components/img/castor1.jpg" alt="" />
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">
-                    Industrial
-                  </span>
-                  <h3 className="font-bold text-slate-900 truncate">
-                    Nylon Swivel
-                  </h3>
-                  <div className="mt-2 flex items-center gap-2 text-xs text-slate-500">
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      300kg
-                    </span>
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      100mm
-                    </span>
-                  </div>
-                  <button className="mt-4 w-full rounded-lg bg-slate-50 py-2 text-xs font-bold text-slate-700 hover:bg-primary hover:text-white transition-colors">
-                    View Specs
-                  </button>
-                </div>
-              </div>
-              <div className="group rounded-2xl border border-slate-100 p-4 transition-all hover:border-blue-100 hover:shadow-lg hover:-translate-y-1 bg-white">
-                <div className="mb-4 aspect-square w-full rounded-xl bg-slate-50 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div
-                    className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-
-                    // style="
-                    //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6QKV4dBeWbc1yb1MptqLEoIXCNT9Okzh1TO5PsvqsHGp5DSwNujKvdULPvL1-HaPSebmwHi5EgqUd-0Kt2NT86W2XVHrpgPmG09g3OHNorCQGJT0HmCSGdbhoynpzn6pgpMsf1C7F5qi4Y48UruZ4O2YY0KRjTCoYWwH9jaahP2pYwvsCJI9pwjnwygBb_yG1CT1UMyYiEgiW4DI4CcJTMBixLD26dCx2D7rRgaUILzIMiA3Z0jOWnFYMq8AAX1gqwemmVeAAlm2H');
-                    // "
-                  >
-                    <img src="./src/components/img/castor1.jpg" alt="" />
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">
-                    Medical
-                  </span>
-                  <h3 className="font-bold text-slate-900 truncate">
-                    1 Twin Wheel Brake
-                  </h3>
-                  <div className="mt-2 flex items-center gap-2 text-xs text-slate-500">
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      120kg
-                    </span>
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      125mm
-                    </span>
-                  </div>
-                  <button className="mt-4 w-full rounded-lg bg-slate-50 py-2 text-xs font-bold text-slate-700 hover:bg-primary hover:text-white transition-colors">
-                    View Specs
-                  </button>
-                </div>
-              </div>
-              <div className="group rounded-2xl border border-slate-100 p-4 transition-all hover:border-blue-100 hover:shadow-lg hover:-translate-y-1 bg-white">
-                <div className="mb-4 aspect-square w-full rounded-xl bg-slate-50 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div
-                    className="h-full w-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-                    // style="
-                    //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2fKRcsPSpkEDW5po1soQxqbwjG1k0oGaPDydwm5aWWl05uKm0UX6cKZu77EIsPZX1CmExhWWT-fLlhdg90T_rQa2LzhPQLZyxNfRuTcGLJbp7VToasRxQzpsFAeTwmveddZKeXuvC1YPkDX5SitV3xOYgKWuQRZVgNsD0jDHkcgrVdiczvgQ4z-JLIXjkCvQh6jtSYJxRpFcl8xNiHHUnda1rdwvajYqPSBKPKvcwlF4Gop6uUxD33NX2K1miKyaV1eEQdVu58YvD');
-                    // "
-                  >
-                    <img src="./src/components/img/castor1.jpg" alt="" />
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">
-                    Furniture
-                  </span>
-                  <h3 className="font-bold text-slate-900 truncate">
-                    Soft Rubber
-                  </h3>
-                  <div className="mt-2 flex items-center gap-2 text-xs text-slate-500">
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      50kg
-                    </span>
-                    <span className="bg-slate-100 px-2 py-0.5 rounded">
-                      50mm
-                    </span>
-                  </div>
-                  <button className="mt-4 w-full rounded-lg bg-slate-50 py-2 text-xs font-bold text-slate-700 hover:bg-primary hover:text-white transition-colors">
-                    View Specs
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
+        <FeaturedSolutions/>
         <section
           className="py-24 bg-slate-900 text-white relative overflow-hidden"
           id="testimonials"
@@ -574,145 +428,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
-          className="py-24 bg-gradient-to-br from-white to-slate-50"
-          id="contact"
-        >
-          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-            <div className="overflow-hidden rounded-3xl bg-blue-400 shadow-2xl ring-1 ring-slate-900/5">
-              <div className="flex flex-col lg:flex-row">
-                <div className="flex-1 bg-primary p-10 lg:p-16 text-white relative overflow-hidden">
-                  <div className="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
-                    <MdOutlineEngineering className="material-symbols-outlined text-[300px]" />
-                  </div>
-                  <div className="relative z-10">
-                    <h2 className="mb-6 text-3xl font-bold lg:text-4xl">
-                      Start Your Project
-                    </h2>
-                    <p className="mb-10 text-blue-100 text-lg leading-relaxed">
-                      Need technical datasheets, bulk pricing, or custom
-                      engineering? Our team is ready to assist you.
-                    </p>
-                    <div className="space-y-6">
-                      <div className="flex items-center gap-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur">
-                          <span className="material-symbols-outlined">
-                            <IoCall />
-                          </span>
-                        </div>
-                        <div>
-                          <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">
-                            Phone
-                          </p>
-                          <p className="font-bold">+91 8826883046</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur">
-                          <span className="material-symbols-outlined">
-                            <IoIosMail />
-                          </span>
-                        </div>
-                        <div>
-                          <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">
-                            Email
-                          </p>
-                          <p className="font-bold">sales@castorwheels.com</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1 p-10 lg:p-16 bg-white">
-                  <form className="flex flex-col gap-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          className="mb-2 block text-sm font-bold text-slate-700"
-                          htmlFor="name"
-                        >
-                          Name
-                        </label>
-                        <input
-                          className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary py-3 px-4 bg-slate-50"
-                          id="name"
-                          placeholder="Your Name"
-                          type="text"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          className="mb-2 block text-sm font-bold text-slate-700"
-                          htmlFor="company"
-                        >
-                          Company
-                        </label>
-                        <input
-                          className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary py-3 px-4 bg-slate-50"
-                          id="company"
-                          placeholder="Company Name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label
-                        className="mb-2 block text-sm font-bold text-slate-700"
-                        htmlFor="email"
-                      >
-                        Work Email
-                      </label>
-                      <input
-                        className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary py-3 px-4 bg-slate-50"
-                        id="email"
-                        placeholder="john@company.com"
-                        type="email"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        className="mb-2 block text-sm font-bold text-slate-700"
-                        htmlFor="interest"
-                      >
-                        Interested In
-                      </label>
-                      <select
-                        className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary py-3 px-4 bg-slate-50"
-                        id="interest"
-                      >
-                        <option>Industrial Castors</option>
-                        <option>Medical Castors</option>
-                        <option>Furniture Castors</option>
-                        <option>Custom Solutions</option>
-                        <option>Other Inquiry</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label
-                        className="mb-2 block text-sm font-bold text-slate-700"
-                        htmlFor="message"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary py-3 px-4 bg-slate-50"
-                        id="message"
-                        placeholder="Describe your requirements..."
-                        rows="3"
-                      ></textarea>
-                    </div>
-                    <button
-                      className="mt-2 w-full rounded-lg bg-slate-900 py-4 text-base font-bold text-white shadow-lg hover:bg-slate-800 transition-all hover:scale-[1.01]"
-                      type="button"
-                    >
-                      Send Inquiry
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      
+      <EnquiryForm/>
       </main>
     </section>
   );
