@@ -3,6 +3,7 @@ import { IoMdArrowDown } from "react-icons/io";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import { AiOutlineGlobal } from "react-icons/ai";
 import { IoMdStar } from "react-icons/io";
 
 import { BsStarHalf } from "react-icons/bs";
@@ -21,7 +22,9 @@ import EnquiryForm from "../components/EnquiryForm";
 export default function Home() {
   return (
     <section>
+      
       <main className="flex-1">
+        
         <section className="relative bg-slate-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
@@ -105,77 +108,7 @@ export default function Home() {
           </div>
         </section>
         <section className="py-20 bg-white" id="features">
-          <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                Why Professionals Choose Us
-              </h2>
-              <p className="mt-4 text-lg text-slate-600">
-                We combine engineering precision with aesthetic design to
-                deliver the best mobility solutions.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap- lg:gap-14">
-              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
-                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl">
-                    <MdOutlinePrecisionManufacturing />
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Precision Engineering
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Every  Casters Global is manufactured with tight tolerances using
-                  high-grade steel and polymers for consistent performance.
-                </p>
-              </div>
-              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
-                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/20 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl">
-                    <IoShieldCheckmarkOutline />
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Quality Assurance
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Rigorously tested for load capacity, abrasion resistance, and
-                  smooth swiveling. ISO 9001 Certified processes.
-                </p>
-              </div>
-              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
-                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-lg shadow-teal-600/20 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl">
-                    <MdSupportAgent />
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Dedicated Support
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  From product selection to after-sales service, our technical
-                  team ensures you find the perfect fit for your needs.
-                </p>
-              </div>
-              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
-                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-lg shadow-teal-600/20 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl">
-                    <MdSupportAgent />
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Dedicated Support
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  From product selection to after-sales service, our technical
-                  team ensures you find the perfect fit for your needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
+             <section
           className="py-24 bg-slate-50 border-t border-slate-200"
           id="portfolio"
         >
@@ -302,6 +235,77 @@ export default function Home() {
             </div>
           </div>
         </section>
+          <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Why Professionals Choose Us
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                We combine engineering precision with aesthetic design to
+                deliver the best mobility solutions.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap- lg:gap-14">
+              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-3xl">
+                    <MdOutlinePrecisionManufacturing />
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Precision Engineering
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Every  Casters Global is manufactured with tight tolerances using
+                  high-grade steel and polymers for consistent performance.
+                </p>
+              </div>
+              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/20 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-3xl">
+                    <IoShieldCheckmarkOutline />
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Quality Assurance
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Rigorously tested for load capacity, abrasion resistance, and
+                  smooth swiveling. ISO 9001 Certified processes.
+                </p>
+              </div>
+              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-lg shadow-teal-600/20 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-3xl">
+                    <MdSupportAgent />
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Dedicated Support
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  From product selection to after-sales service, our technical
+                  team ensures you find the perfect fit for your needs.
+                </p>
+              </div>
+              <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-lg shadow-teal-600/20 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-3xl">
+                    <AiOutlineGlobal />
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Global presence
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  From product selection to after-sales service, our technical
+                  team ensures you find the perfect fit for your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+     
         
         <FeaturedSolutions/>
         <section

@@ -10,11 +10,11 @@ import Blog from "./pages/Blog";
 import Industries from "./Industries";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
-import Shop from "./pages/Shop";
+import Solution from "./pages/Solution";
 import ProductDetail from "./pages/ProductDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsConditions from "./pages/TermsConditions";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 export default function App() {
   return (
@@ -31,10 +31,10 @@ export default function App() {
           <Route path="/Industries" element={<Industries />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/request-info" element={<Form />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/shop/:slug" element={<ProductDetail />} />
+          <Route path="/solution" element={<Solution />} />
+          <Route path="/Solution/:slug" element={<ProductDetail />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/term" element={<TermsConditions />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
         </Routes>
         <Footer />
       </Router>

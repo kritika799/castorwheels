@@ -63,9 +63,9 @@ export default function Header() {
 
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/shop"
+            href="/solution"
           >
-            Shop
+            Solution
           </a>
           <a
             className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"

@@ -113,12 +113,12 @@ export default function () {
           </div>
         </div>
         <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-sec-light">
-          <p>© 2026 Castorwheels India Pvt Ltd. All rights reserved.</p>
+          <p>© 2026 CastersGlobal India Pvt Ltd. All rights reserved.</p>
           <div className="flex gap-4">
-            <a className="hover:text-text-main-light" href="#">
+            <a className="hover:text-text-main-light p-2" href="/privacy">
               Privacy
             </a>
-            <a className="hover:text-text-main-light" href="#">
+            <a className="hover:text-text-main-light p-2" href="/terms">
               Terms
             </a>
          
