@@ -73,12 +73,6 @@ export default function Header() {
           >
             Contact
           </a>
-          <a
-            className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/industries"
-          >
-            Industries
-          </a>
         </nav>
         <div className="flex items-center gap-4">
           <div className="hidden md:block relative w-64">
@@ -90,7 +84,7 @@ export default function Header() {
               placeholder="Search castors..."
               type="text"
               onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={handleSearch} 
+              onKeyDown={handleSearch}
             />
           </div>
           <a
@@ -100,7 +94,9 @@ export default function Header() {
             Request Info
           </a>
           <button className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-            <span className="material-symbols-outlined text-2xl"><CiMenuBurger /></span>
+            <span className="material-symbols-outlined text-2xl">
+              <CiMenuBurger />
+            </span>
           </button>
         </div>
       </div>
