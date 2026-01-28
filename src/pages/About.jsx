@@ -124,7 +124,7 @@ export default function About() {
 
       {/* Core Values */}
       <section className="w-full bg-white dark:bg-[#1a2634] py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Our Core Values
