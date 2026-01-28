@@ -12,6 +12,9 @@ import { CiZoomIn } from "react-icons/ci";
 import { FaPlayCircle } from "react-icons/fa";
 import { MdOutlineMarkUnreadChatAlt } from "react-icons/md";
 import { MdOutlineChevronRight } from "react-icons/md";
+import { MdDescription } from "react-icons/md";
+import { IoMail } from "react-icons/io5";
+import { MdPictureAsPdf } from "react-icons/md";
 
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
@@ -65,7 +68,8 @@ export default function Industries() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div className="flex flex-col gap-4">
               <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-800 p-8 flex items-center justify-center group">
-                <div className="absolute z-2 top-4 left-4 bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-blue-100 dark:border-blue-900">
+                <div className="absolute z-2 top-4  left-4 bg-blue-50 text-blue-600
+                 dark:bg-blue-900/30 dark:text-blue-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-blue-100 dark:border-blue-900">
                   Portfolio Highlight
                 </div>
                 <div
@@ -126,12 +130,13 @@ export default function Industries() {
                   5-Inch Heavy Duty Swivel Castor with Brake
                 </h1>
                 <div className="flex flex-wrap items-center gap-4 mb-4 mt-3">
-                  <span className="text-xs font-bold text-text-main-light bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded border border-slate-200 dark:border-slate-700 font-mono">
+                  <span className="text-xs font-bold text-text-main-light bg-slate-100
+                   dark:bg-slate-800 px-2 py-1 rounded border border-slate-200 dark:border-slate-700 font-mono md:block hidden">
                     SKU: HD-SW-500-PU
                   </span>
                   <span className="text-slate-300 dark:text-slate-600">|</span>
                   <span className="text-sm text-text-sec-light dark:text-text-sec-dark font-medium flex items-center gap-1">
-                    <span className="material-symbols-outlined text-lg text-primary">
+                    <span className="material-symbols-outlined text-lg text-primary ">
                       <MdCategory />
                     </span>
                     Industrial Series
@@ -200,7 +205,7 @@ export default function Industries() {
                   </div>
                 </div>
               </div>
-              <p className="text-text-sec-light dark:text-text-sec-dark mb-8 leading-relaxed">
+              <p className="text-text-sec-light dark:text-text-sec-dark mb-8 leading-relaxed text-black">
                 Engineered for high-load industrial applications. Features a
                 noise-reducing Polyurethane tread bonded to a cast iron core.
                 Ideal for heavy machinery, automotive assembly lines, and
@@ -216,12 +221,12 @@ export default function Industries() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="flex-1 bg-primary hover:bg-primary-dark text-white h-12 rounded-lg font-bold shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2">
-                    <span className="material-symbols-outlined">mail</span>
+                    <span className="material-symbols-outlined"><IoMail /></span>
                     Request Information
                   </button>
                   <button className="flex-1 bg-white dark:bg-transparent border-2 border-primary text-primary dark:text-primary-dark hover:bg-blue-50 dark:hover:bg-blue-900/20 h-12 rounded-lg font-bold transition-all flex items-center justify-center gap-2">
                     <span className="material-symbols-outlined">
-                      description
+                      <MdDescription />
                     </span>
                     Get Brochure
                   </button>
@@ -234,7 +239,7 @@ export default function Industries() {
                     <span>Direct Manufacturer</span>
                   </div>
                   <a
-                    className="flex items-center gap-1 text-green-600 dark:text-green-400 font-medium hover:underline"
+                    className="flex items-center gap-1 text-black-600 dark:text-black-400 font-medium hover:underline"
                     href="#"
                   >
                     <span className="material-symbols-outlined text-lg">
@@ -360,7 +365,8 @@ export default function Industries() {
                   >
                     <div className="text-red-500">
                       <span className="material-symbols-outlined">
-                        picture_as_pdf
+                       <MdPictureAsPdf />
+
                       </span>
                     </div>
                     <div className="flex flex-col">
@@ -413,7 +419,8 @@ export default function Industries() {
               Customers also viewed
             </h2>
             <div className="flex gap-2">
-              <button className="size-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              <button className="size-10 rounded-full border border-slate-200 dark:border-slate-700
+               flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                 <span className="material-symbols-outlined">
                   <FaArrowLeft />
                 </span>
@@ -440,7 +447,7 @@ export default function Industries() {
                   }}
                   // "background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2DdQCTmqKLqyl9xR6zD1RR6-N0J_-jKd9EXRM-gzMvHcc0dQrfalWvJBPXfKWqCnbTcMSMgRy2K4Fg0nNxKBT1o1w-wynM7iNXGZjJ5o2Pcx8Z-SSn6-jkjM62v9L_2fqwUAV-LnacLrQ0-rovXEykKD2yf3msovND0JUQqfsCGJcfSZ8-pV4wxJF8SR8wgQ4aszXYb_BAFJkPHiCZxQYth54Zq_IwtHWtoFRtEIMZrijnfC632npoKKNjQ_bgiVlkrlN1ebC3aXx');"
                 ></div>
-                <span className="absolute top-3 left-3 bg-white/90 dark:bg-black/60 backdrop-blur px-2 py-0.5 text-xs font-bold rounded">
+                <span className="absolute top-3 left-3 bg-white/90 dark:bg-white/60 backdrop-blur px-2 py-0.5 text-xs font-bold rounded">
                   Fixed
                 </span>
               </div>
@@ -475,7 +482,7 @@ export default function Industries() {
                   }}
                   // style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTEnb2iwRypsS26sARiQOQXstvY7XSvP7g8H_-m69uBteR1ilQf79BAGsjBYGATjl_Ln8zA4_VvqrwmPB8vWpyfB6CbDW9Ze2hDq-F814n-bgyYiv4IwtnFNmn55a7f_XcHv0Myd0tP9YLBE7BURTd6-0tulvfL42AzEzYODQx-fUWKyjz6LoPt8OFd7WH5WE-WKXfdw9Z2ILkD_R41RdYvgSOinG0BCnZfkm6QV2y8TJg7XPzGvxbyamlyrNUk-6Wd6baHWfpyjQR');"
                 ></div>
-                <span className="absolute top-3 left-3 bg-white/90 dark:bg-black/60 backdrop-blur px-2 py-0.5 text-xs font-bold rounded">
+                <span className="absolute top-3 left-3 bg-white/90 dark:bg-white/60 backdrop-blur px-2 py-0.5 text-xs font-bold rounded">
                   Swivel
                 </span>
               </div>
@@ -510,7 +517,7 @@ export default function Industries() {
                   }}
                   // style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCpwhE8rcXH6pvb-hTGJV1PpFzXDOnVx9ZHnq8bkY06g4sAqN877RZdWFWeaNKCdmESVgofASs7lNxkAKbSeFVPMVLYI0vXhYlmqXYPHFhSV848BkGdTm3GXqlBx4B7NUK-GmoKhB4T-3h4-vWAv--77T2DAy-fER2xkmzYVuEVEF-dRzh6MMK8lCFubXOHEjH9UI8Z9Tnje4taa4kzxI7bB2f9-Vk43juJy5xT6YneVTqUOl51jmRQx_vBiMv_MhRS6vAE-z3mLV-');"
                 ></div>
-                <span className="absolute top-3 left-3 bg-white/90 dark:bg-black/60 backdrop-blur px-2 py-0.5 text-xs font-bold rounded">
+                <span className="absolute top-3 left-3 bg-white/90 dark:bg-white/60 backdrop-blur px-2 py-0.5 text-xs font-bold rounded">
                   Brake
                 </span>
               </div>

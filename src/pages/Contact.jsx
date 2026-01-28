@@ -38,10 +38,10 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7 xl:col-span-8 flex flex-col gap-6">
             <div>
-              <h2 className="text-slate-900  text-3xl font-bold tracking-tight mb-2">
+              <h2 className="text-slate-900  text-3xl font-bold tracking-tight mb-2 text-center">
                 Request Information
               </h2>
-              <p className="text-slate-500 dark:text-slate-400">
+              <p className="text-slate-900 dark:text-slate-900 text-center">
                 Complete the form below for general inquiries or to learn more
                 about our products.
               </p>
@@ -120,7 +120,7 @@ export default function Contact() {
                 </label>
               </div>
               <div className="flex items-center justify-between mt-4">
-                <div className="hidden md:flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+                <div className="hidden md:flex items-center gap-2 text-slate-500 dark:text-slate-900 text-sm">
                   <span className="material-symbols-outlined text-lg text-green-600">
                     <MdOutlineVerified />
 
@@ -284,19 +284,19 @@ export default function Contact() {
                   data-alt="Map showing location of factory in Gurgaon, India"
                   data-location="Gurgaon, India"
                   style={{
-                    backgroundImage:"url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVheQR2T6lPWXUXuvSdFa6qdP4AN_Cs7TG_snln7i5WmUPnUr6UP96hWrMybFrnMAyNZ_F7svR1U0-w16uZ9tAPPBM7CbQLVzh2NBQMVBcr6URCT1LeMIjyU8z_TCBp3KNeAh69zwVXtx7M6WnM4bf2qjEcg4xYnb919L1YVELza2nPiB2iZFFVQ-w_u5muI87QHAyEiIAhE52FYlRIfv2m_qUSKhxH1M-C3zvbzFcVxQ_Q6kVJrLkR982XVqINsGbGad6uup83CFD')"
+                    backgroundImage:"url('./image.png')"
                   }}
                 //   style="
                 //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVheQR2T6lPWXUXuvSdFa6qdP4AN_Cs7TG_snln7i5WmUPnUr6UP96hWrMybFrnMAyNZ_F7svR1U0-w16uZ9tAPPBM7CbQLVzh2NBQMVBcr6URCT1LeMIjyU8z_TCBp3KNeAh69zwVXtx7M6WnM4bf2qjEcg4xYnb919L1YVELza2nPiB2iZFFVQ-w_u5muI87QHAyEiIAhE52FYlRIfv2m_qUSKhxH1M-C3zvbzFcVxQ_Q6kVJrLkR982XVqINsGbGad6uup83CFD');
                 // "
                 ></div>
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <span className="bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2">
+                  <a href="https://maps.app.goo.gl/FPmrcx5HvcMzmBH1A" className="bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary text-sm">
                       <MdOpenInNew />
                     </span>
                     View on Google Maps
-                  </span>
+                  </a>
                 </div>
               </div>
             </div>
