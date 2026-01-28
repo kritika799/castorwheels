@@ -1,156 +1,155 @@
+import React, { useState, useEffect } from "react";
 import { Search } from "lucide-react";
-import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { CiMenuBurger } from "react-icons/ci";
-import React from "react";
-
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
+
   const handleSearch = (e) => {
-    if (e.key === "Enter" || e.type === "submit") {
+    if (e.key === "Enter") {
       e.preventDefault();
-      if (searchQuery.trim()) {
-        // Redirect to /shop with ?q=... (or ?search=... — choose one)
-        navigate(`/shop?q=${encodeURIComponent(searchQuery.trim())}`);
-      } else {
-        // Optional: go to shop without query if empty
-        navigate("/shop");
-      }
-      // Optional: clear input after search
+      navigate(
+        searchQuery.trim()
+          ? `/shop?q=${encodeURIComponent(searchQuery.trim())}`
+          : "/shop",
+      );
       setSearchQuery("");
+      setOpen(false);
     }
   };
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 relative">
-        <div
-          className="flex items-center gap-2.5 shrink-0 cursor-pointer"
-          // onclick="window.location.href='#'"
-        >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-primary to-blue-600 text-white shadow-lg shadow-blue-500/20">
-            <svg
-              className="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
-            </svg>
-          </div>
-          <div className="flex flex-col">
-            <h2 className="text-xl font-extrabold leading-none tracking-tight text-slate-900">
+    <>
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2.5">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-primary to-blue-600 text-white shadow-lg">
+              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 48 48">
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" />
+              </svg>
+            </div>
+            <h2 className="text-xl font-extrabold text-slate-900">
               Casters Global
             </h2>
-          </div>
-        </div>
-        <nav className="hidden lg:flex items-center gap-8">
-          <a
-            className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/"
-          >
-            Home
-          </a>
+          </Link>
 
-          <a
-            className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/about"
-          >
-            About
-          </a>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {["/", "/about", "/solution", "/contact"].map((path, i) => (
+              <Link
+                key={i}
+                to={path}
+                className="text-sm font-semibold text-slate-600 hover:text-primary"
+              >
+                {path === "/" ? "Home" : path.replace("/", "")}
+              </Link>
+            ))}
+          </nav>
 
-          <a
-            className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/solution"
-          >
-            Solution
-          </a>
-          <a
-            className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
-            href="/contact"
-          >
-            Contact
-          </a>
-        </nav>
-        <div className="flex items-center gap-4">
-          <div className="hidden md:block relative w-64">
-            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-              <Search className="material-symbols-outlined text-[18px]" />
-            </span>
-            <input
-              className="block w-full rounded-full border-0 bg-slate-100 py-2 pl-10 pr-4 text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary transition-all hover:bg-slate-50"
-              placeholder="Search castors..."
-              type="text"
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={handleSearch}
-            />
-          </div>
-          <a
-            className="hidden sm:flex items-center justify-center h-10 px-6 rounded-full bg-slate-900 text-sm font-bold text-white shadow-lg shadow-slate-900/20 hover:bg-slate-800 hover:scale-105 transition-all duration-200"
-            href="/request-info"
-          >
-            Request Info
-          </a>
-          <button className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-            <span className="material-symbols-outlined text-2xl">
-              <CiMenuBurger />
-            </span>
-          </button>
-        </div>
-      </div>
-
-      {/* mobile menu */}
-      <div className={`absolulte h-56 ${open ? "block" : "hidden"} border-2`}>
-        <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50    gap-8 ">
-          <h1>menu</h1>
-          <button className="px-60 mx-5 " onClick={() => setOpen(!open)}>
-            <IoClose />
-          </button>
-          <div>
-            <div className=" bg-white  ">
-              <ul className="flex flex-col space-y-2 px-4 py-6 ">
-                <li>
-                  <a
-                    href="/home"
-                    className="block text-gray-700 hover:text-blue-600"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/about"
-                    className="block text-gray-700 hover:text-blue-600"
-                  >
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/solution"
-                    className="block text-gray-700 hover:text-blue-600"
-                  >
-                    Solution
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/industries"
-                    className="block text-gray-700 hover:text-blue-600"
-                  >
-                    Industries
-                  </a>
-                </li>
-              </ul>
+          {/* Actions */}
+          <div className="flex items-center gap-4">
+            {/* Desktop Search */}
+            <div className="hidden md:block relative w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 h-4 w-4" />
+              <input
+                className="w-full rounded-full bg-slate-100 py-2 pl-9 pr-4 text-sm focus:ring-2 focus:ring-primary"
+                placeholder="Search castors..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={handleSearch}
+              />
             </div>
+
+            <Link
+              to="/request-info"
+              className="hidden sm:flex h-10 items-center rounded-full bg-slate-900 px-6 text-sm font-bold text-white hover:bg-slate-800"
+            >
+              Request Info
+            </Link>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setOpen(true)}
+              className="lg:hidden rounded-lg p-2 hover:bg-slate-100"
+              aria-label="Open menu"
+            >
+              <CiMenuBurger size={24} />
+            </button>
           </div>
-        </nav>
-      </div>
-    </header>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+      </header>
+
+      {open && (
+        <div
+          className="fixed inset-0 z-9999 lg:hidden"
+          role="dialog"
+          aria-modal="true"
+        >
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
+            onClick={() => setOpen(false)}
+          />
+
+          {/* Drawer */}
+          <div className="absolute right-0 top-0 h-full w-80 max-w-[85%] bg-white shadow-2xl p-6 animate-slideIn">
+            {/* Header */}
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-lg font-bold text-slate-900">Menu</h3>
+              <button
+                onClick={() => setOpen(false)}
+                className="rounded-lg p-2 hover:bg-slate-100"
+                aria-label="Close menu"
+              >
+                <IoClose size={24} />
+              </button>
+            </div>
+
+            {/* Search */}
+            <div className="relative mb-8">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 h-4 w-4" />
+              <input
+                type="text"
+                placeholder="Search products..."
+                className="w-full rounded-full bg-slate-100 py-2.5 pl-9 pr-4 text-sm focus:ring-2 focus:ring-primary outline-none"
+                onKeyDown={handleSearch}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+
+            {/* Navigation */}
+            <nav className="flex flex-col gap-1">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About" },
+                { to: "/solution", label: "Solution" },
+                { to: "/industries", label: "Industries" },
+                { to: "/contact", label: "Contact" },
+              ].map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-3 text-slate-700 font-medium hover:bg-slate-100 hover:text-primary transition"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
