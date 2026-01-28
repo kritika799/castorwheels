@@ -7,8 +7,8 @@ export default function () {
   return (
     <footer className="bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          <div className="flex flex-col gap-4">
+        <div className="grid  md:grid-cols-2 grid-cols-2 lg:grid-cols-4 gap-12 mb-12 place-items-center">
+          <div className="flex flex-col gap-4 col-span-2 md:col-span-1 place-items-center text-center md:place-items-start md:text-left">
             <div className="flex items-center gap-2">
               <div className="size-6 text-primary">
                 <svg
@@ -19,16 +19,14 @@ export default function () {
                   <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
                 </svg>
               </div>
-              <span className="font-bold text-lg">Casters Global
-
-              </span>
+              <span className="font-bold text-lg">Casters Global</span>
             </div>
             <p className="text-sm text-text-sec-light leading-relaxed">
               Leading manufacturer of industrial wheels and castors in India.
               Providing mobility solutions since .
             </p>
           </div>
-          <div>
+          <div className="col-span-1">
             <h4 className="font-bold text-text-main-light dark:text-text-main-dark mb-4">
               Quick Links
             </h4>
@@ -48,7 +46,7 @@ export default function () {
                   About
                 </a>
               </li>
-              
+
               <li>
                 <a className="hover:text-primary" href="product">
                   Product
@@ -83,12 +81,12 @@ export default function () {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="col-span-2 md:col-span-1 place-items-center text-center md:place-items-start md:text-left flex flex-col justify-center items-center md:items-start">
             <h4 className="font-bold text-text-main-light dark:text-text-main-dark mb-4">
               Contact
             </h4>
-            <ul className="space-y-3 text-sm text-text-sec-light">
-              <li className="flex items-start gap-3">
+            <ul className="space-y-3 text-sm flex justify-center flex-col items-center md:items-start text-text-sec-light">
+              <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-lg">
                   <FaLocationDot />
                 </span>
@@ -121,7 +119,6 @@ export default function () {
             <a className="hover:text-text-main-light p-2" href="/terms">
               Terms
             </a>
-         
           </div>
         </div>
       </div>
