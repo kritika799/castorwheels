@@ -188,7 +188,7 @@ export default function Shop() {
                 Castor Catalog
               </h1>
               <p className="mt-2 text-base text-gray-600 dark:text-slate-400">
-                High-quality castors for Indian industries — heavy duty, light
+                High-quality castors for Indian industries heavy duty, light
                 duty & specialty.
               </p>
             </div>
@@ -197,9 +197,9 @@ export default function Shop() {
       </div>
 
       {/* Content */}
-      <div className="mx-auto w-full max-w-7xl grow px-4 py-8 sm:px-6 lg:flex lg:gap-8 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl grow px-4 py-8 sm:px-6 lg:flex lg:gap-8 lg:px-8 ">
         {/* Filters Sidebar */}
-        <aside className="w-full lg:w-72 lg:shrink-0">
+        <aside className="w-full lg:w-72 lg:shrink-0 md:block hidden">
           <div className="sticky top-24 rounded-xl bg-white dark:bg-slate-900 p-6 shadow border border-gray-200 dark:border-slate-800">
             <div className="flex items-center justify-between pb-4 border-b dark:border-slate-700">
               <h3 className="font-bold text-lg text-gray-900 dark:text-white">
@@ -327,7 +327,7 @@ export default function Shop() {
               />
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 md:block hidden">
               <button className="rounded-full bg-blue-700 px-4 py-1.5 text-sm font-medium text-white">
                 All
               </button>
@@ -373,7 +373,7 @@ export default function Shop() {
                 <MdExpandMore className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
               </div>
 
-              <div className="flex rounded-lg bg-gray-100 p-1 dark:bg-slate-800">
+              <div className="flex rounded-lg bg-gray-100 p-1 dark:bg-slate-800 md:block hidden">
                 <button
                   onClick={() => setViewMode("grid")}
                   className={`rounded p-2 ${viewMode === "grid" ? "bg-white shadow dark:bg-slate-700" : ""}`}

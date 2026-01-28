@@ -18,13 +18,12 @@ import { IoIosMail } from "react-icons/io";
 import { featuredProducts } from "../data/FeaturedProducts";
 import FeaturedSolutions from "../components/FeaturedSolutions";
 import EnquiryForm from "../components/EnquiryForm";
+import Carousel from "../components/Carousel";
 
 export default function Home() {
   return (
     <section>
-      
       <main className="flex-1">
-        
         <section className="relative bg-slate-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
@@ -57,7 +56,7 @@ export default function Home() {
                 </p>
                 <div className="mt-12 flex flex-wrap gap-5">
                   <a
-                    className="flex items-center justify-center h-16 px-10 rounded-full accent-gradient text-lg font-black  font-bold shadow-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200 hover:scale-105 hover:brightness-110 transition-all duration-300 border border-white/20"
+                    className="flex items-center justify-center h-16 px-10 rounded-full accent-gradient text-lg font-bold shadow-2xl text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-200 hover:scale-105 hover:brightness-110 transition-all duration-300 border border-white/20"
                     href="#contact"
                   >
                     Get a Quote
@@ -94,13 +93,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="hidden lg:block relative">
-                <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 rounded-[40px] p-8 backdrop-blur-sm border border-white/10 shadow-2xl">
+                {/* <div className="relative z-10 bg-linear-to-br from-white/10 to-white/5 rounded-[40px] p-8 backdrop-blur-sm border border-white/10 shadow-2xl">
                   <img
                     alt="Featured Product"
                     className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform rotate-12"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuASMfwCVXnv2T15BS2zFOXIQogm0KvT_0jICNsPfVvLV189vb4O5-Ujvx-wFFhouG0L9SER3_IVHaaZLEBt9TpkNSi_xkBwsykfxbAXNVYYXoWJOyERZORCWNxGQJ0279eK5tC-EQIsOIOcPy8Y4TAGp1bMMwuZt4Br-4KX93KGCGKkzfu1i3XywXX5Fgqj_KsENq_hE9XdCI9IbyeJKs_aTLXxjhRHg2a_IP0drlb7xUyi_y8JsY6h38etMzrikdmLCE8ufSDm724u"
                   />
-                </div>
+                </div> */}
+                <Carousel/>
                 <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
                 <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px]"></div>
               </div>
@@ -108,133 +108,133 @@ export default function Home() {
           </div>
         </section>
         <section className="py-20 bg-white" id="features">
-             <section
-          className="py-24 bg-slate-50 border-t border-slate-200"
-          id="portfolio"
-        >
-          <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-              <div>
-                <span className="text-primary font-bold tracking-wider uppercase text-sm">
-                  Our Portfolio
-                </span>
-                <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                  Explore by Category
-                </h2>
+          <section
+            className="py-24 bg-slate-50 border-t border-slate-200"
+            id="portfolio"
+          >
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                  <span className="text-primary font-bold tracking-wider uppercase text-sm">
+                    Our Portfolio
+                  </span>
+                  <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                    Explore by Category
+                  </h2>
+                </div>
+                <a
+                  className="inline-flex items-center text-sm font-bold text-primary hover:text-blue-700 group transition-colors"
+                  href="#"
+                >
+                  View Full Catalog
+                  <span className="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">
+                    <IoMdArrowRoundForward />
+                  </span>
+                </a>
               </div>
-              <a
-                className="inline-flex items-center text-sm font-bold text-primary hover:text-blue-700 group transition-colors"
-                href="#"
-              >
-                View Full Catalog
-                <span className="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">
-                  <IoMdArrowRoundForward />
-                </span>
-              </a>
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <a
+                  className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                  href="#"
+                >
+                  <div className="relative aspect-4/3 overflow-hidden">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
+                    <img
+                      alt="Industrial Series"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      src="src\components\img\medium dutty fixed nylon 1.jpg"
+                    />
+                    <div className="absolute bottom-0 left-0 p-6 z-20">
+                      <h3 className="text-2xl font-bold text-white mb-1">
+                        Industrial Series
+                      </h3>
+                      <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                        Heavy duty trolleys &amp; machinery
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-semibold text-slate-500">
+                        24 Models Available
+                      </span>
+                      <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center text-slate-600 group-hover:text-white transition-colors">
+                        <span className="material-symbols-outlined text-lg ">
+                          <MdArrowOutward />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                  href="#"
+                >
+                  <div className="relative aspect-4/3 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
+                    <img
+                      alt="Medical Series"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      src="src\components\img\medium dutty fixed nylon 1.jpg"
+                    />
+                    <div className="absolute bottom-0 left-0 p-6 z-20">
+                      <h3 className="text-2xl font-bold text-white mb-1">
+                        Medical Series
+                      </h3>
+                      <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                        Hospital beds &amp; diagnostic carts
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-semibold text-slate-500">
+                        18 Models Available
+                      </span>
+                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600  group-hover:text-white transition-colors">
+                        <span className="material-symbols-outlined text-lg">
+                          <MdArrowOutward />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                  href="#"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
+                    <img
+                      alt="Furniture Series"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      src="src\components\img\laveling castor.jpg"
+                    />
+                    <div className="absolute bottom-0 left-0 p-6 z-20">
+                      <h3 className="text-2xl font-bold text-white mb-1">
+                        Furniture Series
+                      </h3>
+                      <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 ">
+                        Office chairs &amp; home decor
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-semibold text-slate-500">
+                        32 Models Available
+                      </span>
+                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600 group-hover:text-white transition-colors">
+                        <span className="material-symbols-outlined text-lg">
+                          <MdArrowOutward />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <a
-                className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                href="#"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
-                  <img
-                    alt="Industrial Series"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="src\components\img\medium dutty fixed nylon 1.jpg"
-                  />
-                  <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      Industrial Series
-                    </h3>
-                    <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                      Heavy duty trolleys &amp; machinery
-                    </p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-semibold text-slate-500">
-                      24 Models Available
-                    </span>
-                    <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center text-slate-600 group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-lg ">
-                        <MdArrowOutward />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a
-                className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                href="#"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
-                  <img
-                    alt="Medical Series"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="src\components\img\medium dutty fixed nylon 1.jpg"
-                  />
-                  <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      Medical Series
-                    </h3>
-                    <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                      Hospital beds &amp; diagnostic carts
-                    </p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-semibold text-slate-500">
-                      18 Models Available
-                    </span>
-                    <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600  group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-lg">
-                        <MdArrowOutward />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a
-                className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                href="#"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
-                  <img
-                    alt="Furniture Series"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="src\components\img\laveling castor.jpg"
-                  />
-                  <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      Furniture Series
-                    </h3>
-                    <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 ">
-                      Office chairs &amp; home decor
-                    </p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-semibold text-slate-500">
-                      32 Models Available
-                    </span>
-                    <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600 group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-lg">
-                        <MdArrowOutward />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
+          </section>
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -256,8 +256,9 @@ export default function Home() {
                   Precision Engineering
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Every  Casters Global is manufactured with tight tolerances using
-                  high-grade steel and polymers for consistent performance.
+                  Every Casters Global is manufactured with tight tolerances
+                  using high-grade steel and polymers for consistent
+                  performance.
                 </p>
               </div>
               <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
@@ -305,9 +306,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-     
-        
-        <FeaturedSolutions/>
+
+        <FeaturedSolutions />
         <section
           className="py-24 bg-slate-900 text-white relative overflow-hidden"
           id="testimonials"
@@ -432,9 +432,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-      
-      <EnquiryForm/>
+
+        <EnquiryForm />
       </main>
+      {/* <Carousel/> */}
     </section>
   );
 }
