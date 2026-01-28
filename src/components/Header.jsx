@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { IoClose } from "react-icons/io5";
 import { CiMenuBurger } from "react-icons/ci";
 import React from "react";
 
@@ -8,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
+
+  const [open, setOpen] = useState(false);
 
   const handleSearch = (e) => {
     if (e.key === "Enter" || e.type === "submit") {
@@ -25,7 +28,7 @@ export default function Header() {
   };
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 relative">
         <div
           className="flex items-center gap-2.5 shrink-0 cursor-pointer"
           // onclick="window.location.href='#'"
@@ -90,7 +93,7 @@ export default function Header() {
               placeholder="Search castors..."
               type="text"
               onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={handleSearch} 
+              onKeyDown={handleSearch}
             />
           </div>
           <a
@@ -100,9 +103,59 @@ export default function Header() {
             Request Info
           </a>
           <button className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-            <span className="material-symbols-outlined text-2xl"><CiMenuBurger /></span>
+            <span className="material-symbols-outlined text-2xl">
+              <CiMenuBurger onClick={() => setOpen(!open)} />
+            </span>
           </button>
         </div>
+      </div>
+
+      {/* mobile menu */}
+      <div className={`absolulte h-56 ${open ? "block" : "hidden"} border-2`}>
+        <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50    gap-8 ">
+          <h1>menu</h1>
+          <button className="px-60 mx-5 " onClick={() => setOpen(!open)}>
+            <IoClose />
+          </button>
+          <div>
+            <div className=" bg-white  ">
+              <ul className="flex flex-col space-y-2 px-4 py-6 ">
+                <li>
+                  <a
+                    href="/home"
+                    className="block text-gray-700 hover:text-blue-600"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/about"
+                    className="block text-gray-700 hover:text-blue-600"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/solution"
+                    className="block text-gray-700 hover:text-blue-600"
+                  >
+                    Solution
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/industries"
+                    className="block text-gray-700 hover:text-blue-600"
+                  >
+                    Industries
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
   );
