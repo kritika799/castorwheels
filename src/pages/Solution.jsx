@@ -540,7 +540,7 @@ function ProductCard({ product, viewMode }) {
           }`}
         >
           <Link
-            to={`/shop/${product.slug}`}
+            to={`/solution/${product.slug}`}
             className="flex-1 rounded-lg border border-blue-600 px-4 py-2.5 text-sm font-bold text-blue-600 hover:bg-blue-50 dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-950/30 text-center"
           >
             View Details

@@ -18,8 +18,8 @@ export default function Header() {
       e.preventDefault();
       navigate(
         searchQuery.trim()
-          ? `/shop?q=${encodeURIComponent(searchQuery.trim())}`
-          : "/shop",
+          ? `/solution?q=${encodeURIComponent(searchQuery.trim())}`
+          : "/solution",
       );
       setSearchQuery("");
       setOpen(false);
