@@ -14,6 +14,10 @@ import ProductDetail from "./pages/ProductDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import SolutionIndustrial from "./pages/solution/SolutionIndustrial";
+import SolutionMedical from "./pages/solution/SolutionMedical";
+import SolutionHeavyDuty from "./pages/solution/SolutionHeavyDuty";
+import WhatWeDo from "./pages/WhatWeDo";
 
 export default function App() {
   return (
@@ -33,6 +37,12 @@ export default function App() {
           <Route path="/Solution/:slug" element={<ProductDetail />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/what-we-do" element={<WhatWeDo/>} />
+
+          {/* Solution pages */}
+          <Route path="/solution/industrial" element={<SolutionIndustrial />} />
+          <Route path="/solution/medical" element={<SolutionMedical />} />
+          <Route path="/solution/heavy-duty" element={<SolutionHeavyDuty />} />
         </Routes>
         <Footer />
       </Router>

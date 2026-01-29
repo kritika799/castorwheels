@@ -22,8 +22,9 @@ export default function () {
               <span className="font-bold text-lg">Casters Global</span>
             </div>
             <p className="text-sm text-text-sec-light leading-relaxed">
-              Leading manufacturer of industrial wheels and castors in India.
-              Providing mobility solutions since .
+              Engineered caster solutions delivering smooth, reliable mobility
+              across industries—built for performance, durability, and
+              real-world demands since 2018.
             </p>
           </div>
           <div className="col-span-1">
@@ -36,20 +37,26 @@ export default function () {
                   Home
                 </a>
               </li>
+
               <li>
-                <a className="hover:text-primary" href="Contact">
-                  Contact
+                <a className="hover:text-primary" href="About">
+                  Who We Are
                 </a>
               </li>
               <li>
                 <a className="hover:text-primary" href="About">
-                  About
+                  What we Do
                 </a>
               </li>
 
               <li>
                 <a className="hover:text-primary" href="product">
-                  Product
+                  Product Showcase
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-primary" href="Contact">
+                  Get in Touch
                 </a>
               </li>
             </ul>
@@ -91,8 +98,8 @@ export default function () {
                   <FaLocationDot />
                 </span>
                 <span>
-                  Regd.off Plot No.-298,3rd floor,sector
-                  10A,Gurgaon-122001,Haryana,India.
+                  Plot No.-298, 3rd Floor, Sector 10A, Gurgaon-122001, Haryana,
+                  India.
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -105,13 +112,13 @@ export default function () {
                 <span className="material-symbols-outlined text-lg">
                   <CiMail />
                 </span>
-                <span>sales@CastersGlobal.com</span>
+                <span>sales@castersglobal.com</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-sec-light">
-          <p>© 2026 CastersGlobal India Pvt Ltd. All rights reserved.</p>
+          <p>© 2018 Casters Global All rights reserved.</p>
           <div className="flex gap-4">
             <a className="hover:text-text-main-light p-2" href="/privacy">
               Privacy

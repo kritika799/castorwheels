@@ -56,22 +56,20 @@ export default function Home() {
                 </p>
                 <div className="mt-12 flex flex-wrap gap-5">
                   <a
+                    className="flex items-center justify-center  px-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-lg font-bold text-white hover:bg-white/20 transition-all duration-300 group"
+                    href="Shop"
+                  >
+                    Explore Catalog
+                    <IoArrowForwardOutline className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
+                  <a
                     className="flex items-center justify-center h-16 px-10 rounded-full accent-gradient text-lg font-bold shadow-2xl text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-200 hover:scale-105 hover:brightness-110 transition-all duration-300 border border-white/20"
                     href="#contact"
                   >
                     Get a Quote
-                    <span className="material-symbols-outlined ml-2 text-[24px]">
-                      <IoArrowForwardOutline />
-                    </span>
-                  </a>
-                  <a
-                    className="flex items-center justify-center h-16 px-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-lg font-bold text-white hover:bg-white/20 transition-all duration-300"
-                    href="Shop"
-                  >
-                    Explore Products
                   </a>
                 </div>
-                <div className="mt-12 grid grid-cols-3 gap-8">
+                <div className="mt-12 grid grid-cols-4 gap-8">
                   <div>
                     <p className="text-3xl font-black text-white">500+</p>
                     <p className="text-sm text-slate-400 font-medium">
@@ -79,15 +77,21 @@ export default function Home() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-3xl font-black text-white">25+</p>
+                    <p className="text-3xl font-black text-white">5+</p>
                     <p className="text-sm text-slate-400 font-medium">
                       Years Experience
                     </p>
                   </div>
                   <div>
-                    <p className="text-3xl font-black text-white">10M+</p>
+                    <p className="text-3xl font-black text-white">2.5L+</p>
                     <p className="text-sm text-slate-400 font-medium">
                       Units Shipped
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-3xl font-black text-white">ISO</p>
+                    <p className="text-sm text-slate-400 font-medium">
+                      Certified
                     </p>
                   </div>
                 </div>
@@ -100,7 +104,7 @@ export default function Home() {
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuASMfwCVXnv2T15BS2zFOXIQogm0KvT_0jICNsPfVvLV189vb4O5-Ujvx-wFFhouG0L9SER3_IVHaaZLEBt9TpkNSi_xkBwsykfxbAXNVYYXoWJOyERZORCWNxGQJ0279eK5tC-EQIsOIOcPy8Y4TAGp1bMMwuZt4Br-4KX93KGCGKkzfu1i3XywXX5Fgqj_KsENq_hE9XdCI9IbyeJKs_aTLXxjhRHg2a_IP0drlb7xUyi_y8JsY6h38etMzrikdmLCE8ufSDm724u"
                   />
                 </div> */}
-                <Carousel/>
+                <Carousel />
                 <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
                 <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px]"></div>
               </div>
@@ -146,7 +150,7 @@ export default function Home() {
                     />
                     <div className="absolute bottom-0 left-0 p-6 z-20">
                       <h3 className="text-2xl font-bold text-white mb-1">
-                        Industrial Series
+                        Automotive Assembly
                       </h3>
                       <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                         Heavy duty trolleys &amp; machinery
@@ -156,9 +160,10 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-semibold text-slate-500">
-                        24 Models Available
+                        {/* 24 Models Available */}
+                        Explore
                       </span>
-                      <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center text-slate-600 group-hover:text-white transition-colors">
+                      <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center  text-white transition-colors">
                         <span className="material-symbols-outlined text-lg ">
                           <MdArrowOutward />
                         </span>
@@ -179,7 +184,7 @@ export default function Home() {
                     />
                     <div className="absolute bottom-0 left-0 p-6 z-20">
                       <h3 className="text-2xl font-bold text-white mb-1">
-                        Medical Series
+                        Hospitality & Medical
                       </h3>
                       <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                         Hospital beds &amp; diagnostic carts
@@ -188,10 +193,11 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-semibold text-slate-500">
-                        18 Models Available
+                      <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
+                        {/* 18 Models Available */}
+                        Explore{" "}
                       </span>
-                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600  group-hover:text-white transition-colors">
+                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-white transition-colors">
                         <span className="material-symbols-outlined text-lg">
                           <MdArrowOutward />
                         </span>
@@ -203,8 +209,8 @@ export default function Home() {
                   className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                   href="#"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
+                  <div className="relative aspect-4/3 overflow-hidden">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
                     <img
                       alt="Furniture Series"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -212,7 +218,7 @@ export default function Home() {
                     />
                     <div className="absolute bottom-0 left-0 p-6 z-20">
                       <h3 className="text-2xl font-bold text-white mb-1">
-                        Furniture Series
+                        Retail & Shopping
                       </h3>
                       <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 ">
                         Office chairs &amp; home decor
@@ -222,9 +228,10 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-semibold text-slate-500">
-                        32 Models Available
+                        {/* 32 Models Available */}
+                        Explore
                       </span>
-                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-slate-600 group-hover:text-white transition-colors">
+                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center  text-white transition-colors">
                         <span className="material-symbols-outlined text-lg">
                           <MdArrowOutward />
                         </span>
@@ -253,11 +260,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Precision Engineering
+                  Premium Quality Materials
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Every Casters Global is manufactured with tight tolerances
-                  using high-grade steel and polymers for consistent
+                  Steel, PU, Nylon & Rubber wheels built for life-long
                   performance.
                 </p>
               </div>
@@ -268,11 +274,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Quality Assurance
+                  Global Standards Certified
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Rigorously tested for load capacity, abrasion resistance, and
-                  smooth swiveling. ISO 9001 Certified processes.
+                  Tested and compliant with international quality benchmarks.
                 </p>
               </div>
               <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
@@ -282,11 +287,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Dedicated Support
+                  Fast Delivery & Support
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  From product selection to after-sales service, our technical
-                  team ensures you find the perfect fit for your needs.
+                  Efficient logistics & responsive technical assistance.
                 </p>
               </div>
               <div className="group relative rounded-3xl bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-xl border border-slate-100 hover:border-blue-100">
@@ -296,11 +300,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Global presence
+                  Sustainable Manufacturing
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  From product selection to after-sales service, our technical
-                  team ensures you find the perfect fit for your needs.
+                  Eco-conscious processes and recyclable materials.
                 </p>
               </div>
             </div>
@@ -312,9 +315,9 @@ export default function Home() {
           className="py-24 bg-slate-900 text-white relative overflow-hidden"
           id="testimonials"
         >
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 h-[300px] w-[300px] rounded-full bg-blue-600/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-[300px] w-[300px] rounded-full bg-purple-600/20 blur-3xl"></div>
-          <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 h-75 w-75 rounded-full bg-blue-600/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-75 w-75 rounded-full bg-purple-600/20 blur-3xl"></div>
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                 Trusted Partners
