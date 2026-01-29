@@ -7,8 +7,6 @@ import { FaChevronDown } from "react-icons/fa";
 import React from "react";
 import { MdOutlineSchedule } from "react-icons/md";
 
-
-
 export default function Contact() {
   return (
     <section>
@@ -17,11 +15,12 @@ export default function Contact() {
           className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
           data-alt="Industrial factory floor with machinery"
           style={{
-            backgroundImage:"url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaJgGZZatbToKxXrct-Erneh_clnKrizuRQhVde15D83sIFboX6_L_9nDmJwjkHmMZGrcZn1v0z4vwvAmVyaRMLxP7-E3c9B9Abty8Y1LInUoB2DX4LTCAGsVW71yFNOdAMzb0Qn7Tmf-XujTAtXcEP4xXNqO8A6xMfD8nGGg4Ou1fmaFoxnB4Y_jIEcAKgClkAtkSeg_f9g6eYwkSWzpZzGmNVj6NG8wu4z82kVU8fCOjYiHRDfLAf1qFTaXVo7vmt5mCHs4rIVVZ')"
+            backgroundImage:
+              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaJgGZZatbToKxXrct-Erneh_clnKrizuRQhVde15D83sIFboX6_L_9nDmJwjkHmMZGrcZn1v0z4vwvAmVyaRMLxP7-E3c9B9Abty8Y1LInUoB2DX4LTCAGsVW71yFNOdAMzb0Qn7Tmf-XujTAtXcEP4xXNqO8A6xMfD8nGGg4Ou1fmaFoxnB4Y_jIEcAKgClkAtkSeg_f9g6eYwkSWzpZzGmNVj6NG8wu4z82kVU8fCOjYiHRDfLAf1qFTaXVo7vmt5mCHs4rIVVZ')",
           }}
-        //   style="
-        //   // background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaJgGZZatbToKxXrct-Erneh_clnKrizuRQhVde15D83sIFboX6_L_9nDmJwjkHmMZGrcZn1v0z4vwvAmVyaRMLxP7-E3c9B9Abty8Y1LInUoB2DX4LTCAGsVW71yFNOdAMzb0Qn7Tmf-XujTAtXcEP4xXNqO8A6xMfD8nGGg4Ou1fmaFoxnB4Y_jIEcAKgClkAtkSeg_f9g6eYwkSWzpZzGmNVj6NG8wu4z82kVU8fCOjYiHRDfLAf1qFTaXVo7vmt5mCHs4rIVVZ');
-        // "
+          //   style="
+          //   // background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaJgGZZatbToKxXrct-Erneh_clnKrizuRQhVde15D83sIFboX6_L_9nDmJwjkHmMZGrcZn1v0z4vwvAmVyaRMLxP7-E3c9B9Abty8Y1LInUoB2DX4LTCAGsVW71yFNOdAMzb0Qn7Tmf-XujTAtXcEP4xXNqO8A6xMfD8nGGg4Ou1fmaFoxnB4Y_jIEcAKgClkAtkSeg_f9g6eYwkSWzpZzGmNVj6NG8wu4z82kVU8fCOjYiHRDfLAf1qFTaXVo7vmt5mCHs4rIVVZ');
+          // "
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col justify-center min-h-[300px]">
@@ -49,9 +48,7 @@ export default function Contact() {
             <form className="bg-white  p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <label className="flex flex-col gap-2 ">
-                  <span className="text-black font-semibold">
-                    Full Name
-                  </span>
+                  <span className="text-black font-semibold">Full Name</span>
                   <input
                     className="w-full h-12 px-4 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                     placeholder="John Doe"
@@ -101,7 +98,7 @@ export default function Contact() {
                     <option disabled="" selected="" value="">
                       Select a topic
                     </option>
-                    
+
                     <option>Product Information</option>
                     <option>Collaboration Proposal</option>
                     <option>Technical Support</option>
@@ -123,7 +120,6 @@ export default function Contact() {
                 <div className="hidden md:flex items-center gap-2 text-slate-500 dark:text-slate-900 text-sm">
                   <span className="material-symbols-outlined text-lg text-green-600">
                     <MdOutlineVerified />
-
                   </span>
                   <span>Your information is secure</span>
                 </div>
@@ -152,20 +148,20 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">
-                          Our Location
+                          Office Address
                         </h4>
                         <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                          Plot No. 298, 3rd floor 10A ,
+                          Plot No. 298, 3rd Floor, Sector 10A,
                           <br />
-                          Gurugram, Haryana 122001,
-                          <br />
-                          India
+                          Gurugram, Haryana - 122001, India
                         </p>
                       </div>
                     </div>
                     <div className="flex gap-4">
                       <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span className="material-symbols-outlined"><FaPhoneAlt /></span>
+                        <span className="material-symbols-outlined">
+                          <FaPhoneAlt />
+                        </span>
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">
@@ -181,7 +177,9 @@ export default function Contact() {
                     </div>
                     <div className="flex gap-4">
                       <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span className="material-symbols-outlined"><CiMail /></span>
+                        <span className="material-symbols-outlined">
+                          <CiMail />
+                        </span>
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">
@@ -189,31 +187,33 @@ export default function Contact() {
                         </h4>
                         <a
                           className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary transition-colors"
-                          href="mailto:sales@comfortcastors.com"
+                          href="mailto:sales@castorglobal.com"
                         >
-                          sales@castorwheels.com
+                          sales@castorglobal.com
                         </a>
                         <a
                           className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary transition-colors"
-                          href="mailto:info@comfortcastors.com"
+                          href="mailto:info@castorglobal.com"
                         >
-                          info@castorwheels.com
+                          info@castorglobal.com
                         </a>
                       </div>
                     </div>
                     <div className="flex gap-4">
                       <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span className="material-symbols-outlined"><MdOutlineSchedule /></span>
+                        <span className="material-symbols-outlined">
+                          <MdOutlineSchedule />
+                        </span>
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">
-                          Opening Hours
+                          Office Hours
                         </h4>
                         <p className="text-slate-600 dark:text-slate-400 text-sm">
-                          Mon - Sat: 9:00 AM - 6:00 PM
+                          Mon - Sat : 9:00 AM - 6:00 PM
                         </p>
                         <p className="text-slate-600 dark:text-slate-400 text-sm">
-                          Sunday: Closed
+                          Sunday <span className="ml-4">: Closed</span>
                         </p>
                       </div>
                     </div>
@@ -284,14 +284,17 @@ export default function Contact() {
                   data-alt="Map showing location of factory in Gurgaon, India"
                   data-location="Gurgaon, India"
                   style={{
-                    backgroundImage:"url('./image.png')"
+                    backgroundImage: "url('./image.png')",
                   }}
-                //   style="
-                //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVheQR2T6lPWXUXuvSdFa6qdP4AN_Cs7TG_snln7i5WmUPnUr6UP96hWrMybFrnMAyNZ_F7svR1U0-w16uZ9tAPPBM7CbQLVzh2NBQMVBcr6URCT1LeMIjyU8z_TCBp3KNeAh69zwVXtx7M6WnM4bf2qjEcg4xYnb919L1YVELza2nPiB2iZFFVQ-w_u5muI87QHAyEiIAhE52FYlRIfv2m_qUSKhxH1M-C3zvbzFcVxQ_Q6kVJrLkR982XVqINsGbGad6uup83CFD');
-                // "
+                  //   style="
+                  //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVheQR2T6lPWXUXuvSdFa6qdP4AN_Cs7TG_snln7i5WmUPnUr6UP96hWrMybFrnMAyNZ_F7svR1U0-w16uZ9tAPPBM7CbQLVzh2NBQMVBcr6URCT1LeMIjyU8z_TCBp3KNeAh69zwVXtx7M6WnM4bf2qjEcg4xYnb919L1YVELza2nPiB2iZFFVQ-w_u5muI87QHAyEiIAhE52FYlRIfv2m_qUSKhxH1M-C3zvbzFcVxQ_Q6kVJrLkR982XVqINsGbGad6uup83CFD');
+                  // "
                 ></div>
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <a href="https://maps.app.goo.gl/FPmrcx5HvcMzmBH1A" className="bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2">
+                  <a
+                    href="https://maps.app.goo.gl/FPmrcx5HvcMzmBH1A"
+                    className="bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2"
+                  >
                     <span className="material-symbols-outlined text-primary text-sm">
                       <MdOpenInNew />
                     </span>
