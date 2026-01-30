@@ -98,7 +98,8 @@ export default function HeroCarousel() {
                     { value: "500+", label: "Product Variants" },
                     { value: "5+", label: "Years Experience" },
                     { value: "2.5L+", label: "Units Shipped" },
-                    { value: "ISO", label: "Certified" },
+                    { value: "ISO", label: "9001:2015 Certified" },
+                    // { value: "ISO", label: "14001:2015 Certified" },
                   ].map((stat, i) => (
                     <div key={i} className="space-y-1">
                       <p className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">

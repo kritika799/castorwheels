@@ -3,30 +3,39 @@ import {
   MdOutlineTrackChanges,
   MdVisibility,
   MdVerifiedUser,
+  MdPrecisionManufacturing,
+  MdTrendingUp,
+  MdShield,
 } from "react-icons/md";
 import EnquiryForm from "../components/EnquiryForm";
+
+const principles = [
+  {
+    icon: MdPrecisionManufacturing,
+    color: "blue",
+    title: "Precision",
+    description:
+      "Every component is engineered with exacting tolerances to perform exactly as intended — zero compromise on accuracy and fit.",
+  },
+  {
+    icon: MdShield,
+    color: "indigo",
+    title: "Reliability",
+    description:
+      "Built to deliver consistent, long-term performance — earning trust through proven durability and dependable partnerships.",
+  },
+  {
+    icon: MdTrendingUp,
+    color: "teal",
+    title: "Progress",
+    description:
+      "Constant evolution in materials, technology, manufacturing processes, sustainability practices, and customer experience.",
+  },
+];
 
 export default function About() {
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#0d131b] dark:text-white font-display overflow-x-hidden">
-       <a
-            aria-label="Chat on WhatsApp"
-            className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center justify-center group"
-            href="https://wa.me/8826883046?text=Hello%21%20I%20would%20like%20to%20know%20more%20about%20your%20castors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              className="w-7 h-7 md:w-8 md:h-8 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            <span className="ml-2 hidden md:inline font-semibold text-sm">
-              Chat with Us
-            </span>
-          </a>
-
       {/* Hero Section */}
       <div className="w-full">
         <div
@@ -81,25 +90,70 @@ export default function About() {
       </div>
 
       {/* who we are */}
-      <section className="py-14 bg-background-light dark:bg-background-dark">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-10">
-            Who We Are
-          </h2>
-          <div className="prose prose-lg prose-slate dark:prose-invert max-w-none text-lg">
-            <p>
-              <strong className="text-primary">Casters Global</strong> is a
-              forward-thinking manufacturer of high-performance caster wheels
-              and mobility solutions. We combine precision engineering, advanced
-              manufacturing, and deep industry knowledge to deliver products
-              that withstand the harshest conditions.
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+          {/* Heading with decorative underline */}
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              Who We Are
+            </h2>
+
+            {/* Underline accent */}
+            <div className="mt-4 inline-block h-1 w-24 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full"></div>
+          </div>
+
+          {/* Content */}
+          <div className="text-lg prose prose-lg md:prose-xl prose-slate dark:prose-invert mx-auto max-w-4xl text-center lg:text-left">
+            <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+              <strong className="text-blue-600 dark:text-blue-400 font-semibold">
+                Casters Global
+              </strong>{" "}
+              is a forward-thinking Indian manufacturer specializing in
+              high-performance caster wheels and advanced mobility solutions.
             </p>
-            <p>
-              From light-duty applications to heavy industrial use,
-              customization is at our core. We serve diverse industries
-              worldwide with one goal: to become the most trusted name in
-              industrial mobility.
+
+            <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+              We bring together precision engineering, modern manufacturing
+              processes, and deep application knowledge to create caster
+              products that deliver exceptional durability, smooth operation,
+              and long service life — even in the most demanding industrial
+              environments.
             </p>
+
+            <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+              Whether it's light-duty furniture castors, medium-duty medical
+              equipment wheels, or extreme heavy-duty industrial castors capable
+              of handling several tons,{" "}
+              <strong>customization is at the heart of what we do</strong>.
+            </p>
+
+            <p className="leading-relaxed text-gray-700 dark:text-gray-300 font-medium">
+              Serving clients across India and international markets, our
+              single-minded goal is clear:
+              <span className="text-blue-600 dark:text-blue-400">
+                {" "}
+                to become the most trusted and reliable name in industrial
+                mobility solutions.
+              </span>
+            </p>
+          </div>
+
+          {/* Optional trust signals / highlights */}
+          <div className="mt-12 md:mt-16 flex flex-wrap justify-center gap-4 md:gap-6">
+            {[
+              "ISO 9001:2015 Certified",
+              "ISO 14001:2015 Certified",
+              "Make in India",
+              "Custom Engineering",
+              "Pan-India Delivery",
+            ].map((badge) => (
+              <div
+                key={badge}
+                className="px-5 py-2.5 bg-white dark:bg-gray-800/80 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-sm"
+              >
+                {badge}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -107,16 +161,19 @@ export default function About() {
       {/* Our Story */}
       <section className="w-full py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-            <div className="flex-1 order-2 lg:order-1">
-              <div className="flex flex-col gap-5 ">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
+            {/* Text column – now fills height */}
+            <div className="flex-1 flex flex-col justify-between order-2 lg:order-1 min-h-[480px] lg:min-h-0">
+              {/* Top: Title + line */}
+              <div className="flex flex-col gap-5">
                 <h2 className="text-3xl lg:text-4xl font-bold dark:text-slate-900">
                   Engineering Mobility Since Day One
                 </h2>
                 <div className="h-1 w-20 bg-primary rounded-full"></div>
               </div>
 
-              <div className="mt-6 text-slate-600 dark:text-slate-900 text-lg leading-relaxed space-y-5">
+              {/* Middle: Text – grows to push badges down */}
+              <div className="mt-6 lg:mt-10 text-slate-600 dark:text-slate-900 text-lg leading-relaxed space-y-6 grow">
                 <p>
                   At Casters Global, we design and produce caster wheels that
                   combine precision engineering with industry-grade durability.
@@ -130,7 +187,24 @@ export default function About() {
                   control, and eco-friendly materials to deliver products that
                   perform under pressure — wherever they serve.
                 </p>
+                <p>
+                  We believe in mobility that empowers industries to move
+                  forward, safely and efficiently. Every caster we build is a
+                  testament to our commitment to quality, innovation, and
+                  customer success.
+                </p>
+
+                {/* <div className="mt-8 flex flex-wrap gap-4">
+                  <span className="px-5 py-2 bg-slate-100 text-white dark:bg-slate-800 rounded text-sm font-semibold border border-slate-200 dark:border-slate-700">
+                    ISO 9001:2015 Certified
+                  </span>
+                  <span className="px-5 py-2 text-white bg-slate-100 dark:bg-slate-800 rounded text-sm font-semibold border border-slate-200 dark:border-slate-700">
+                    Make In India
+                  </span>
+                </div> */}
               </div>
+
+              {/* Bottom: Badges */}
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <span className="px-5 py-2 bg-slate-100 dark:bg-slate-800 rounded text-sm font-semibold border border-slate-200 dark:border-slate-700">
@@ -142,14 +216,15 @@ export default function About() {
               </div>
             </div>
 
+            {/* Image column */}
             <div className="flex-1 order-1 lg:order-2 w-full">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-4/3 lg:aspect-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto h-full">
                 <img
                   alt="Close-up of precision heavy-duty castor wheel being manufactured"
                   className="object-cover w-full h-full"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSMDUEmZ4Fp8tHTJxXOOzizUnwLmH0ZE1FCPC3yk_qXX1XFsy1UfPJe4tQERvfSmaJCihFozt7IusWYuWnD4tBImmfuwlqHjz3LnS45QdvXhkF3ziOqZiXQz0NQ9j2U0BMncfcKCqjeBaqxMpfKy3hsjGbpNzcwZrQb7e5qlfYOxaVtZ-hVVqLiygz0ssOQJcA_z0BxCtjh_4XxoTnjE7xmRj-fOZ4XMsuMZgvFf5M2VNy8mmNUcpSEHn0LdhKfwvRTOUYRDU50ocJ"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                   <p className="text-white font-medium text-sm sm:text-base">
                     Precision engineered in our Bihar facility
                   </p>
@@ -161,132 +236,193 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="bg-gray-50 dark:bg-gray-900/50 py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+      <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 relative overflow-hidden">
+        {/* Subtle decorative background elements */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white">
               Our Core Principles
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              Three pillars guide everything we build and every partnership we
-              form.
+
+            <div className="mt-5 h-1.5 w-28 mx-auto bg-gradient-to-r from-blue-500 via-indigo-500 to-teal-500 rounded-full" />
+
+            <p className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Three foundational pillars shape every product we engineer, every
+              process we refine, and every relationship we build.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
-            {[
-              {
-                icon: MdOutlineTrackChanges,
-                title: "Precision",
-                desc: "Every component engineered to perform exactly as intended — no compromises.",
-              },
-              {
-                icon: MdVisibility,
-                title: "Reliability",
-                desc: "Built for long-term performance and trusted partnerships that last.",
-              },
-              {
-                icon: MdVerifiedUser,
-                title: "Progress",
-                desc: "Relentless improvement in technology, quality, sustainability and service.",
-              },
-            ].map((item, i) => (
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
+            {principles.map((principle, index) => (
               <div
-                key={i}
-                className="group bg-white dark:bg-gray-800/80 p-8 lg:p-10 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:shadow-2xl transition-all duration-300"
+                key={index}
+                className={`
+                group relative 
+                bg-white/70 dark:bg-gray-800/60 
+                backdrop-blur-sm 
+                border border-gray-200/80 dark:border-gray-700/70 
+                rounded-2xl lg:rounded-3xl 
+                p-7 md:p-8 lg:p-10 
+                shadow-sm hover:shadow-2xl 
+                transition-all duration-400 ease-out
+                hover:-translate-y-3 hover:scale-[1.02]
+                hover:border-${principle.color}-400/50 dark:hover:border-${principle.color}-500/50
+              `}
               >
-                <div className="flex items-center gap-4 mb-6 text-primary">
-                  <item.icon size={40} className="flex-shrink-0" />
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {item.title}
+                {/* Light colored gradient overlay on hover */}
+                <div
+                  className={`
+                  absolute inset-0 rounded-2xl lg:rounded-3xl 
+                  bg-gradient-to-br from-${principle.color}-50/40 via-white/10 to-transparent 
+                  opacity-0 group-hover:opacity-100 
+                  transition-opacity duration-500 pointer-events-none
+                `}
+                />
+
+                <div className="relative z-10">
+                  <div
+                    className={`
+                    inline-flex items-center justify-center 
+                    w-16 h-16 md:w-20 md:h-20 
+                    rounded-2xl bg-gradient-to-br 
+                    from-${principle.color}-500 to-${principle.color}-700 
+                    text-white mb-6 
+                    shadow-lg shadow-${principle.color}-700/30 
+                    group-hover:scale-110 group-hover:rotate-3 
+                    transition-all duration-400
+                  `}
+                  >
+                    <principle.icon size={36} className="md:size-40" />
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
+                    {principle.title}
                   </h3>
+
+                  <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+                    {principle.description}
+                  </p>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                  {item.desc}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="w-full py-16 lg:py-24 bg-background-light dark:bg-background-dark ">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-14 lg:mb-20">
-            <h2 className="text-3xl lg:text-4xl font-bold dark:text-black">
+          <div className="text-center mb-10 md:mb-14">
+            <h2 className="text-3.5xl sm:text-4xl md:text-5xl lg:text-5.5xl font-extrabold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent">
               Our Journey
             </h2>
-            <p className="mt-4 text-slate-600 dark:text-slate-900 max-w-2xl mx-auto">
-              Our journey began with a simple but powerful insight — industries
-              everywhere rely on mobility, yet often compromise on quality,
-              lifespan, or customization.
+
+            <div className="mt-4 h-1.5 w-24 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600" />
+
+            <p className="mt-5 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
+              From small workshop to modern manufacturing — focused on quality &
+              trust.
             </p>
           </div>
 
-          <div className="relative">
-            {/* Gradient Vertical Line */}
-            <div className="absolute left-4 sm:left-1/2 top-0 h-full w-1 bg-linear-to-b from-primary via-primary/60 to-transparent sm:-translate-x-1/2"></div>
-            {[
-              {
-                year: "2018",
-                title: "The Beginning",
-                desc: "Founded in a small workshop in New Delhi with a vision to build world-class castors.",
-                align: "left",
-              },
-              {
-                year: "2024",
-                title: "Going Global",
-                desc: "Secured our first major international partnership and expanded exports.",
-                align: "right",
-              },
-              {
-                year: "2025",
-                title: "Expansion to Bihar",
-                desc: "Inaugurated a 50,000 sq. ft. fully automated manufacturing facility.",
-                align: "left",
-              },
-              {
-                year: "2026",
-                title: "Sustainable Future",
-                desc: "Launched eco-friendly and sustainable castor solutions.",
-                align: "right",
-              },
-            ].map((milestone, index) => (
-              <div
-                key={index}
-                className={`relative mb-12 sm:mb-20 flex items-start sm:items-center ${
-                  milestone.align === "right" ? "sm:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-0 sm:left-1/2 z-10 transform sm:-translate-x-1/2">
-                  <div className="w-12 h-12 rounded-full bg-white dark:bg-[#0d1a27] border-4 border-primary shadow-lg flex items-center justify-center group hover:scale-110 transition-transform">
-                    <span className="w-4 h-4 rounded-full bg-primary"></span>
-                  </div>
-                </div>
+          {/* Timeline */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Desktop horizontal line with subtle gradient */}
+            <div className="hidden md:block absolute top-[2.6rem] left-6 right-6 h-1 bg-linear-to-r from-transparent via-gray-300/70 dark:via-gray-600/70 to-transparent rounded-full" />
 
-                {/* Card */}
+            <div className="grid md:grid-cols-4 gap-6 md:gap-4 lg:gap-6 relative">
+              {[
+                {
+                  year: "2018",
+                  title: "The Beginning",
+                  desc: "Founded in a small workshop in New Delhi with a vision to build world-class castors.",
+                  color: "blue",
+                },
+                {
+                  year: "2024",
+                  title: "Going Global",
+                  desc: "Secured our first major international partnership and expanded exports.",
+                  color: "indigo",
+                },
+                {
+                  year: "2025",
+                  title: "Expansion to Bihar",
+                  desc: "Inaugurated a 50,000 sq. ft. fully automated manufacturing facility.",
+                  color: "teal",
+                },
+                {
+                  year: "2026",
+                  title: "Sustainable Future",
+                  desc: "Launched eco-friendly and sustainable castor solutions.",
+                  color: "purple",
+                },
+              ].map((item, i) => (
                 <div
-                  className={`ml-16 sm:ml-0 w-full sm:w-5/12 rounded-2xl p-6 bg-white/80 dark:bg-[#1a2634] backdrop-blur border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all duration-300 ${
-                    milestone.align === "right"
-                      ? "sm:text-right sm:mr-14 lg:mr-16"
-                      : "sm:ml-14 lg:ml-15"
-                  }`}
+                  key={i}
+                  className={`
+              relative flex flex-col items-center group pb-4 md:pb-0
+              transition-all duration-400
+            `}
                 >
-                  <span className="inline-block text-primary font-bold text-sm mb-2">
-                    {milestone.year}
-                  </span>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 dark:text-white">
-                    {milestone.title}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                    {milestone.desc}
-                  </p>
+                  {/* Year circle – elevated look */}
+                  <div
+                    className={`
+                relative z-20 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16
+                rounded-full bg-gradient-to-br from-white to-gray-50 
+                dark:from-gray-800 dark:to-gray-900
+                border-4 border-${item.color}-600/80 dark:border-${item.color}-500/80
+                flex items-center justify-center shadow-lg shadow-${item.color}-900/20 dark:shadow-${item.color}-950/30
+                group-hover:scale-110 group-hover:shadow-${item.color}-600/40
+                transition-all duration-400 ease-out
+              `}
+                  >
+                    <span
+                      className={`
+                  text-base sm:text-lg md:text-base lg:text-lg font-bold 
+                  bg-gradient-to-br from-${item.color}-600 to-${item.color}-700 bg-clip-text text-black
+                `}
+                    >
+                      {item.year}
+                    </span>
+                  </div>
+
+                  {/* Card */}
+                  <div
+                    className={`
+                relative mt-5 md:h-36  md:mt-6 w-full max-w-[260px] sm:max-w-[280px]
+                rounded-2xl md:rounded-2.5xl p-5 sm:p-6 md:p-5 lg:p-6
+                bg-white/90 dark:bg-gray-800/85
+                backdrop-blur-sm border border-gray-200/70 dark:border-gray-700/60
+                shadow-md hover:shadow-xl hover:border-${item.color}-400/40
+                transition-all duration-400 group-hover:-translate-y-1
+              `}
+                  >
+                    <h3 className="text-base sm:text-lg md:text-base lg:text-lg font-bold text-gray-900 dark:text-white mb-2.5 tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm md:text-xs lg:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  {/* Mobile connector */}
+                  {i < 3 && (
+                    <div className="md:hidden absolute top-[3.5rem] left-1/2 w-0.5 h-20 bg-gray-300 dark:bg-gray-700 -translate-x-1/2 z-0" />
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          {/* Closing tagline */}
+          <p className="text-center mt-12 md:mt-16 text-sm sm:text-base text-gray-500 dark:text-gray-400 italic font-medium">
+            Building better mobility — every day since 2018
+          </p>
         </div>
       </section>
 
@@ -305,7 +441,7 @@ export default function About() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {[
               {
                 name: "Dharmapal Singh",
@@ -313,19 +449,25 @@ export default function About() {
                 img: "./leaders/Dharampal_singh.png",
               },
               {
+                name: "Pradeep Kumar",
+                role: "Co-Founder & Chief Business Officer",
+                img: "./leaders/Pradeep_kumar.png",
+              },
+              {
                 name: "Saurabh Suman Pandey",
-                role: "Head of Sales & Partnership",
+                role: "Head of Sales & Revenue",
                 img: "./leaders/Suman_sourav_panday.png",
               },
               {
                 name: "Seema Verma",
-                role: "Head of Sales & Partnership",
+                role: "Head of Business Operations",
                 img: "./leaders/Seema_verma.png",
               },
+
               {
-                name: "Pradeep Kumar",
-                role: "Co-Founder & Chief Business Officer",
-                img: "./leaders/Pradeep_kumar.png",
+                name: "Richa Verma",
+                role: "Head of Customer Experience",
+                img: "./leaders/Richa_verma.png",
               },
             ].map((person, i) => (
               <div
@@ -356,7 +498,7 @@ export default function About() {
         </div>
       </section>
 
-    <EnquiryForm/>
+      <EnquiryForm />
     </div>
   );
 }

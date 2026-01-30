@@ -88,84 +88,86 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5">
-            <img
-              src="./Casters_Global_Logo.png"
-              alt="Casters global logo"
-              className="h-20 w-full"
-            />
-          </Link>
+          <div className="flex items-center">
+            {/* Logo */}
+            <Link to="/" className="flex items-center">
+              <img
+                src="./Casters_Global_Logo.png"
+                alt="Casters global logo"
+                className="h-20 w-full"
+              />
+            </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {mainNavItems.map((item) =>
-              item.items ? (
-                <div
-                  key={item.label}
-                  className="relative"
-                  onMouseEnter={() => openDropdown(item.label)}
-                  onMouseLeave={closeDropdown}
-                >
-                  <button
-                    type="button"
-                    onClick={(e) => toggleDropdown(item.label, e)}
-                    className="flex items-center gap-1.5 text-base font-semibold text-slate-700 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                    aria-expanded={activeDropdown === item.label}
-                    aria-haspopup="true"
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex items-center gap-8">
+              {mainNavItems.map((item) =>
+                item.items ? (
+                  <div
+                    key={item.label}
+                    className="relative"
+                    onMouseEnter={() => openDropdown(item.label)}
+                    onMouseLeave={closeDropdown}
+                  >
+                    <button
+                      type="button"
+                      onClick={(e) => toggleDropdown(item.label, e)}
+                      className="flex items-center gap-1.5 text-base font-semibold text-slate-700 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      aria-expanded={activeDropdown === item.label}
+                      aria-haspopup="true"
+                    >
+                      {item.label}
+                      <svg
+                        className={`size-4 transition-transform ${activeDropdown === item.label ? "rotate-180" : ""}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+
+                    {/* Dropdown panel */}
+                    {activeDropdown === item.label && (
+                      <div
+                        className="absolute left-0 top-full z-10 mt-2 w-64 origin-top-left transition-all duration-150 ease-out"
+                        onMouseEnter={() => {
+                          if (timeoutRef.current)
+                            clearTimeout(timeoutRef.current);
+                        }}
+                        onMouseLeave={closeDropdown}
+                      >
+                        <div className="rounded-xl bg-white shadow-xl ring-1 ring-black/5 py-2">
+                          {item.items.map((sub) => (
+                            <Link
+                              key={sub.to}
+                              to={sub.to}
+                              className="block px-5 py-2.5 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className="text-base font-semibold text-slate-700 hover:text-blue-600 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   >
                     {item.label}
-                    <svg
-                      className={`size-4 transition-transform ${activeDropdown === item.label ? "rotate-180" : ""}`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-
-                  {/* Dropdown panel */}
-                  {activeDropdown === item.label && (
-                    <div
-                      className="absolute left-0 top-full z-10 mt-2 w-64 origin-top-left transition-all duration-150 ease-out"
-                      onMouseEnter={() => {
-                        if (timeoutRef.current)
-                          clearTimeout(timeoutRef.current);
-                      }}
-                      onMouseLeave={closeDropdown}
-                    >
-                      <div className="rounded-xl bg-white shadow-xl ring-1 ring-black/5 py-2">
-                        {item.items.map((sub) => (
-                          <Link
-                            key={sub.to}
-                            to={sub.to}
-                            className="block px-5 py-2.5 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {sub.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className="text-base font-semibold text-slate-700 hover:text-blue-600 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                >
-                  {item.label}
-                </Link>
-              ),
-            )}
-          </nav>
+                  </Link>
+                ),
+              )}
+            </nav>
+          </div>
 
           {/* Actions */}
           <div className="flex items-center gap-4">
