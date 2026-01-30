@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { IoCall } from "react-icons/io5";
 import { MdOutlineEngineering } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
+import { SlBadge } from "react-icons/sl";
+import { RiCustomerService2Line } from "react-icons/ri";
+import { GrCertificate } from "react-icons/gr";
+
 const url =
   "https://script.google.com/macros/s/AKfycbxYlm9XxT4sHvBjzqoXO5QtABq25v53Bfwk3Wjox8MqngjSjBIjgcrf7rnYnLDLCYAU/exec";
 
@@ -46,52 +50,73 @@ export default function EnquiryForm() {
 
   return (
     <section
-      className="py-24 bg-linear-to-br from-white to-slate-50"
+      className="py-24 bg-linear-to-br from-white to-slate-50 "
       id="contact"
     >
-      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-3xl bg-blue-400 shadow-2xl ring-1 ring-slate-900/5">
+      <div className=" w-full sm:px-6 lg:px-8">
+        <div className="overflow-hidden  bg-black shadow-2xl  ring-slate-900/5">
           <div className="flex flex-col lg:flex-row">
-            <div className="flex-1 bg-primary p-10 lg:p-16 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
-                <MdOutlineEngineering className="material-symbols-outlined text-[300px]" />
-              </div>
+            <div  
+            style={{
+              backgroundImage: "url('./side_image2.png')"
+            }}
+            className="flex-1 bg-black p-10 lg:p-16 text-white relative overflow-hidden bg-center bg-cover w-full 
+             object-cover
+             opacity-50 dark:opacity-40"
+             >
+                 <div className="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/80 to-background-dark/40"></div>
+        </div>
+        <div className="relative z-10 max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 
+        items-center">
+          <div className="lg:col-span-7 flex flex-col gap-6 text-white order-2 lg:order-1 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 w-fit backdrop-blur-md mx-auto lg:mx-0">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_#13ec13]"></span>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">
+                Agritech Innovation
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+              Cultivating the <br />
+              <span className="text-primary">Future of Food</span>
+            </h1>
+         </div>
+         </div>
+             
               <div className="relative z-10">
-                <h2 className="mb-6 text-3xl font-bold lg:text-4xl">
-                  Start Your Project
-                </h2>
-                <p className="mb-10 text-blue-100 text-lg leading-relaxed">
-                  Need technical datasheets, bulk pricing, or custom
-                  engineering? Our team is ready to assist you.
+                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+              WHY CASTOR WHEELS ?<br />
+              
+            </h1>
+                <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                 {/* Item 1 */}
+               <div className="flex flex-col items-center text-center">
+                 <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-orange-400">
+            <SlBadge  className="h-10 w-10 text-blue-700" />  
+               </div>
+               <p className="max-w[180px] text-base font-medium text-blue-700">
+                Unmatched Quality
                 </p>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur">
-                      <span className="material-symbols-outlined">
-                        <IoCall />
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">
-                        Phone
-                      </p>
-                      <p className="font-bold">+91 8826883046</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur">
-                      <span className="material-symbols-outlined">
-                        <IoIosMail />
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">
-                        Email
-                      </p>
-                      <p className="font-bold">sales@castorwheels.com</p>
-                    </div>
-                  </div>
+                 </div>
+                  <div className="flex flex-col items-center text-center">
+                 <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-orange-400">
+            <RiCustomerService2Line  className="h-10 w-10 text-blue-700" />  
+               </div>
+               <p className="max-w[180px] text-base font-medium text-blue-700">
+                Customer Service
+                </p>
+                 </div>
+                <div className="flex flex-col items-centre text-centre">
+                   <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-orange-400">
+            <GrCertificate   className="h-10 w-10 text-blue-700" />  
+               </div>
+               <p className="max-w-[180px] text-base font-medium text-blue-700">
+                Certified by leading quality standard
+                </p>
                 </div>
+                
+                 
+                 </div>
+               
               </div>
             </div>
             <div className="flex-1 p-10 lg:p-16 bg-white">
