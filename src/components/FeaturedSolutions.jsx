@@ -6,13 +6,13 @@ export default function FeaturedSolutions() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="pb-18 ">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
             Featured Solutions
           </h2>
-          <p className="mt-2 text-slate-500">
+          <p className="mt-5 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Browse technical specifications for our most popular models.
           </p>
         </div>
