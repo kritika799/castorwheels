@@ -2,25 +2,21 @@ import React from "react";
 import { CiMail } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosCall } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function () {
   return (
     <footer className="bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid  md:grid-cols-2 grid-cols-2 lg:grid-cols-4 gap-12 mb-12 place-items-center">
-          <div className="flex flex-col gap-4 col-span-2 md:col-span-1 place-items-center text-center md:place-items-start md:text-left">
-            <div className="flex items-center gap-2">
-              <div className="size-6 text-primary">
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
-                </svg>
-              </div>
-              <span className="font-bold text-lg">Casters Global</span>
-            </div>
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="grid  md:grid-cols-2 grid-cols-2 lg:grid-cols-4 gap-12 mb-12 place-items-center md:place-items-start">
+          <div className="flex flex-col   col-span-2 md:col-span-1 place-items-center text-center md:place-items-start md:text-left">
+            <Link to="/" >
+              <img
+                src="./Casters_Global_Logo.png"
+                alt="Casters global logo"
+                className="h-20 w-full"
+              />
+            </Link>
             <p className="text-sm text-text-sec-light leading-relaxed">
               Engineered caster solutions delivering smooth, reliable mobility
               across industries—built for performance, durability, and
@@ -50,7 +46,7 @@ export default function () {
               </li>
 
               <li>
-                <a className="hover:text-primary" href="product">
+                <a className="hover:text-primary" href="solution">
                   Product Showcase
                 </a>
               </li>

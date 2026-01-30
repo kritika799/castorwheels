@@ -4,10 +4,12 @@ import { CiMenuBurger } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 
 const solutions = [
-  { label: "Industrial Castors", to: "/solution/industrial" },
+  { label: "Automotive Assemble", to: "/solution/industrial" },
   { label: "Medical Castors", to: "/solution/medical" },
   { label: "Heavy Duty", to: "/solution/heavy-duty" },
   { label: "Custom Solutions", to: "/solution/custom" },
+  { label: "Warehouse & Logistics", to: "/solution/warehouse-logistics" },
+  { label: "Furniture", to: "/solution/furniture" },
 ];
 
 const mainNavItems = [
@@ -30,7 +32,9 @@ export default function Header() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   useEffect(() => {
@@ -86,7 +90,11 @@ export default function Header() {
         <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5">
-           <img src="./Casters_Global_Logo.png" alt="Casters global logo" className="h-20 w-full" />
+            <img
+              src="./Casters_Global_Logo.png"
+              alt="Casters global logo"
+              className="h-20 w-full"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -102,7 +110,7 @@ export default function Header() {
                   <button
                     type="button"
                     onClick={(e) => toggleDropdown(item.label, e)}
-                    className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="flex items-center gap-1.5 text-base font-semibold text-slate-700 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     aria-expanded={activeDropdown === item.label}
                     aria-haspopup="true"
                   >
@@ -113,16 +121,22 @@ export default function Header() {
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </button>
 
                   {/* Dropdown panel */}
-                  {(activeDropdown === item.label) && (
+                  {activeDropdown === item.label && (
                     <div
                       className="absolute left-0 top-full z-10 mt-2 w-64 origin-top-left transition-all duration-150 ease-out"
                       onMouseEnter={() => {
-                        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                        if (timeoutRef.current)
+                          clearTimeout(timeoutRef.current);
                       }}
                       onMouseLeave={closeDropdown}
                     >
@@ -145,11 +159,11 @@ export default function Header() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  className="text-base font-semibold text-slate-700 hover:text-blue-600 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
-              )
+              ),
             )}
           </nav>
 
@@ -187,13 +201,25 @@ export default function Header() {
 
       {/* Mobile Drawer – remains click-only */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-[9999] lg:hidden" role="dialog" aria-modal="true">
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeMobile} aria-hidden="true" />
+        <div
+          className="fixed inset-0 z-[9999] lg:hidden"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={closeMobile}
+            aria-hidden="true"
+          />
 
           <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
             <div className="flex items-center justify-between border-b border-slate-100 p-5">
               <h2 className="text-lg font-bold text-slate-900">Menu</h2>
-              <button onClick={closeMobile} className="rounded-lg p-2 hover:bg-slate-100" aria-label="Close menu">
+              <button
+                onClick={closeMobile}
+                className="rounded-lg p-2 hover:bg-slate-100"
+                aria-label="Close menu"
+              >
                 <X size={26} />
               </button>
             </div>
@@ -227,7 +253,12 @@ export default function Header() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
 
@@ -255,7 +286,7 @@ export default function Header() {
                   >
                     {item.label}
                   </Link>
-                )
+                ),
               )}
             </nav>
           </div>
