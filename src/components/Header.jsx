@@ -4,7 +4,7 @@ import { CiMenuBurger } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 
 const solutions = [
-  { label: "Automotive Assemble", to: "/solution/industrial" },
+  { label: "Automotive Assembly", to: "/solution/automotive" },
   { label: "Medical Castors", to: "/solution/medical" },
   { label: "Heavy Duty", to: "/solution/heavy-duty" },
   { label: "Custom Solutions", to: "/solution/custom" },
@@ -92,7 +92,7 @@ export default function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img
-                src="./Casters_Global_Logo.png"
+                src="/Casters_Global_Logo.png"
                 alt="Casters global logo"
                 className="h-20 w-full"
               />

@@ -12,7 +12,7 @@ export default function () {
           <div className="flex flex-col   col-span-2 md:col-span-1 place-items-center text-center md:place-items-start md:text-left">
             <Link to="/" >
               <img
-                src="./Casters_Global_Logo.png"
+                src="/Casters_Global_Logo.png"
                 alt="Casters global logo"
                 className="h-20 w-full"
               />

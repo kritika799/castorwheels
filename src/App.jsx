@@ -11,18 +11,20 @@ import ProductDetail from "./pages/ProductDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-import SolutionIndustrial from "./pages/solution/SolutionIndustrial";
-import SolutionMedical from "./pages/solution/SolutionMedical";
-import SolutionHeavyDuty from "./pages/solution/SolutionHeavyDuty";
+// import SolutionIndustrial from "./pages/solution/SolutionIndustrial";
+// import SolutionMedical from "./pages/solution/SolutionMedical";
+// import SolutionHeavyDuty from "./pages/solution/SolutionHeavyDuty";
 import WhatWeDo from "./pages/WhatWeDo";
 import Whatsapp from "./components/Whatsapp";
+import AutomotiveCastor from "./pages/solution/AutomotiveCastor";
+import MedicalCaster from "./pages/solution/MedicalCaster";
 
 export default function App() {
   return (
     <div className="font-display bg-background-light text-slate-800 antialiased selection:bg-blue-100 selection:text-primary">
       <Router>
         <ScrollToTop />
-        <Whatsapp/>
+        <Whatsapp />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,15 +35,19 @@ export default function App() {
           <Route path="/Solution/:slug" element={<ProductDetail />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsAndConditions />} />
-          <Route path="/what-we-do" element={<WhatWeDo/>} />
+          <Route path="/what-we-do" element={<WhatWeDo />} />
 
           {/* Solution pages */}
-          <Route path="/solution/industrial" element={<SolutionIndustrial />} />
-          <Route path="/solution/medical" element={<SolutionMedical />} />
-          <Route path="/solution/heavy-duty" element={<SolutionHeavyDuty />} />
+          {/* <Route path="/solution/industrial" element={<SolutionIndustrial />} /> */}
+          <Route path="/solution/automotive" element={<AutomotiveCastor />} />
+          <Route path="/solution/medical" element={<MedicalCaster />} />
+          {/* <Route path="/solution/heavy-duty" element={<SolutionHeavyDuty />} /> */}
         </Routes>
         <Footer />
       </Router>
     </div>
   );
 }
+
+// /solution/warehouse-logistics
+// /solution/furniture-castors

@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback, use } from "react";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMdFitness } from "react-icons/io";
 import {
@@ -10,12 +10,10 @@ import {
 } from "react-icons/md";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
-import { automotiveAssembly } from "../data/Products/Automotive_assembly";
-import { automotiveAssemblyContent } from "../data/Products/Automotive_assembly";
-
+import { automotiveAssembly } from "../../data/Products/Automotive_assembly";
 
 // ────────────────────────────────────────────────
-export default function Shop() {
+export default function AutomotiveCastor() {
   const [searchParams] = useSearchParams();
   const initialSearch = searchParams.get("q") || "";
 
@@ -134,8 +132,10 @@ export default function Shop() {
             Automotive Assembly Castors
           </h1>
           <p className="mt-3 text-base text-gray-600 dark:text-slate-400 max-w-3xl">
-            These caster wheels are engineered for precision material handling, heavy loads, and durability in automation and assembly environments. Each series is designed to support high productivity, reduced downtime, and smooth movement on plant floors.
-
+            These caster wheels are engineered for precision material handling,
+            heavy loads, and durability in automation and assembly environments.
+            Each series is designed to support high productivity, reduced
+            downtime, and smooth movement on plant floors.
           </p>
         </div>
       </header>
@@ -456,7 +456,7 @@ export default function Shop() {
                         Load Capacity
                       </dt>
                       <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.loadCapacityKg} kg
+                        {selectedProduct.load_capacity_kg} kg
                       </dd>
                     </div>
                     <div>
@@ -464,7 +464,7 @@ export default function Shop() {
                         Wheel Diameter
                       </dt>
                       <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.wheelDiameterMm} mm
+                        {selectedProduct.wheel_diameter_mm} mm
                       </dd>
                     </div>
                     <div>
@@ -472,7 +472,7 @@ export default function Shop() {
                         Material
                       </dt>
                       <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.wheelMaterial}
+                        {selectedProduct.wheel_material}
                       </dd>
                     </div>
                     {selectedProduct.heightMm && (
@@ -481,30 +481,30 @@ export default function Shop() {
                           Height
                         </dt>
                         <dd className="mt-1 text-xl font-semibold">
-                          {selectedProduct.heightMm} mm
+                          {selectedProduct.height_mm} mm
                         </dd>
                       </div>
                     )}
                   </dl>
 
-                  {selectedProduct.idealFor && (
+                  {selectedProduct.ideal_for && (
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white">
                         Ideal for
                       </h3>
                       <p className="mt-2 text-gray-700 dark:text-slate-300">
-                        {selectedProduct.idealFor}
+                        {selectedProduct.ideal_for}
                       </p>
                     </div>
                   )}
 
-                  {selectedProduct.keyFeatures?.length ? (
+                  {selectedProduct.key_features?.length ? (
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white">
                         Key Features
                       </h3>
                       <ul className="mt-3 space-y-2 pl-5 list-disc text-gray-700 dark:text-slate-300">
-                        {selectedProduct.keyFeatures.map((f, i) => (
+                        {selectedProduct.key_features.map((f, i) => (
                           <li key={i}>{f}</li>
                         ))}
                       </ul>
@@ -535,6 +535,7 @@ export default function Shop() {
 // ────────────────────────────────────────────────
 function ProductCard({ product, viewMode, onViewDetails }) {
   const isList = viewMode === "list";
+  console.log(product);
 
   return (
     <article
@@ -579,15 +580,15 @@ function ProductCard({ product, viewMode, onViewDetails }) {
         >
           <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
             <IoMdFitness className="text-gray-500 dark:text-slate-400" />
-            <span className="font-medium">{product.loadCapacityKg} kg</span>
+            <span className="font-medium">{product.load_capacity_kg} kg</span>
           </div>
           <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
             <MdDonutLarge className="text-gray-500 dark:text-slate-400" />
-            <span className="font-medium">{product.wheelDiameterMm} mm</span>
+            <span className="font-medium">{product.wheel_diameter_mm} mm</span>
           </div>
           <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
             <span className="text-gray-500 dark:text-slate-400">Mat:</span>
-            <span className="font-medium">{product.wheelMaterial}</span>
+            <span className="font-medium">{product.wheel_material}</span>
           </div>
         </div>
 
@@ -598,9 +599,9 @@ function ProductCard({ product, viewMode, onViewDetails }) {
           >
             View Details
           </button>
-          <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
+          {/* <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
             Inquire
-          </button>
+          </button> */}
         </div>
       </div>
     </article>
