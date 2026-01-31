@@ -90,20 +90,20 @@ export default function About() {
       </div>
 
       {/* who we are */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+      <section className="py-16  bg-linear-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Heading with decorative underline */}
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-12 ">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white">
               Who We Are
             </h2>
 
             {/* Underline accent */}
-            <div className="mt-4 inline-block h-1 w-24 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full"></div>
+            <div className="mt-4 inline-block h-1 w-24 bg-linear-to-r from-blue-500 to-blue-700 rounded-full"></div>
           </div>
 
           {/* Content */}
-          <div className="text-lg prose prose-lg md:prose-xl prose-slate dark:prose-invert mx-auto max-w-4xl text-center lg:text-left">
+          <div className="text-lg prose prose-lg md:prose-xl prose-slate dark:prose-invert mx-auto max-w-7xl text-center lg:text-left">
             <p className="leading-relaxed text-gray-700 dark:text-gray-300">
               <strong className="text-blue-600 dark:text-blue-400 font-semibold">
                 Casters Global
@@ -159,7 +159,7 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="w-full py-16 lg:py-20">
+      <section className="w-full py-16 ">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
             {/* Text column – now fills height */}
@@ -236,7 +236,7 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 relative overflow-hidden">
+      <section className="py-16 bg-linear-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 relative overflow-hidden">
         {/* Subtle decorative background elements */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3" />
@@ -314,7 +314,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+      <section className="py-16 bg-linear-to-b from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-10 md:mb-14">
@@ -427,7 +427,7 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="w-full bg-white dark:bg-[#0f172a] pb-16">
+      <section className="w-full bg-white dark:bg-[#0f172a] py-16">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="flex flex-col gap-4 mb-12 lg:mb-16 text-center ">
