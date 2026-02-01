@@ -173,7 +173,7 @@ export const automotiveAssembly = [
     slug: "apollo-ci-pu-300",
     category: "automotive-assembly",
     badge: "new",
-    image: "/src/assets/Automotive/Apollo CI-PU.png",
+    image: "./src/assets/Automotive/Apollo CI-PU.png",
     wheel_material: "Cast Iron + Polyurethane (PU)",
     wheel_diameter_mm: 300,
     tread_width_mm: 70,
