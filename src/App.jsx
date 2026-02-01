@@ -18,6 +18,10 @@ import WhatWeDo from "./pages/WhatWeDo";
 import Whatsapp from "./components/Whatsapp";
 import AutomotiveCastor from "./pages/solution/AutomotiveCastor";
 import MedicalCaster from "./pages/solution/MedicalCaster";
+import HeavyDuty from "./pages/solution/HeavyDuty";
+import WarehouseCastor from "./pages/solution/WarehouseCastor";
+import FurnitureCasters from "./pages/solution/FurnitureCastor";
+import CustomSolution from "./pages/solution/CustomSolution";
 
 export default function App() {
   return (
@@ -38,10 +42,12 @@ export default function App() {
           <Route path="/what-we-do" element={<WhatWeDo />} />
 
           {/* Solution pages */}
-          {/* <Route path="/solution/industrial" element={<SolutionIndustrial />} /> */}
+          <Route path="/solution/custom-solution" element={<CustomSolution/>} />
           <Route path="/solution/automotive" element={<AutomotiveCastor />} />
           <Route path="/solution/medical" element={<MedicalCaster />} />
-          {/* <Route path="/solution/heavy-duty" element={<SolutionHeavyDuty />} /> */}
+          <Route path="/solution/heavy-duty" element={<HeavyDuty/>} />
+          <Route path="/solution/warehouse-castor" element={<WarehouseCastor/>} />
+          <Route path="/solution/furniture-castors" element={<FurnitureCasters/>} />
         </Routes>
         <Footer />
       </Router>

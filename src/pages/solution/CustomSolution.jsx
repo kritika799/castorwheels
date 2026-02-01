@@ -1,6 +1,6 @@
-import React, { useState, useMemo, useEffect, useCallback, use } from "react";
-import { IoSearchSharp } from "react-icons/io5";
-import { IoMdFitness } from "react-icons/io";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
+import { IoSearchSharp} from "react-icons/io5";
+import {  IoMdFitness } from "react-icons/io";
 import {
   MdGridView,
   MdViewList,
@@ -11,12 +11,12 @@ import {
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 import {
-  warehouseLogistics,
-  warehouseLogisticsContent,
-} from "../../data/Products/Warehouse_logistic"; // adjust path as needed
+  mobilitySystems,
+  customContent,
+} from "../../data/Products/Custom_solution";
 
 // ────────────────────────────────────────────────
-export default function WarehouseCastor() {
+export default function CustomSolution() {
   const [searchParams] = useSearchParams();
   const initialSearch = searchParams.get("q") || "";
 
@@ -41,7 +41,7 @@ export default function WarehouseCastor() {
   }, []);
 
   const filteredAndSortedProducts = useMemo(() => {
-    let result = [...warehouseLogistics];
+    let result = [...mobilitySystems];
 
     // Search by name or code
     if (search.trim()) {
@@ -60,12 +60,12 @@ export default function WarehouseCastor() {
       );
     }
 
-    // Load range
+    // Load range (using max_load_capacity_kg)
     const min = loadRange.min ? Number(loadRange.min) : -Infinity;
     const max = loadRange.max ? Number(loadRange.max) : Infinity;
     if (Number.isFinite(min) || Number.isFinite(max)) {
       result = result.filter(
-        (p) => p.load_capacity_kg >= min && p.load_capacity_kg <= max,
+        (p) => p.max_load_capacity_kg >= min && p.max_load_capacity_kg <= max,
       );
     }
 
@@ -75,7 +75,7 @@ export default function WarehouseCastor() {
     } else if (sortBy === "name-desc") {
       result.sort((a, b) => b.name.localeCompare(a.name));
     } else if (sortBy === "load-desc") {
-      result.sort((a, b) => b.load_capacity_kg - a.load_capacity_kg);
+      result.sort((a, b) => b.max_load_capacity_kg - a.max_load_capacity_kg);
     }
 
     return result;
@@ -128,15 +128,15 @@ export default function WarehouseCastor() {
             </span>
             <MdOutlineChevronRight className="text-lg" aria-hidden="true" />
             <span className="font-medium text-gray-900 dark:text-white">
-              Warehouse & Logistics
+              Custom Mobility Solutions
             </span>
           </nav>
 
           <h1 className="mt-4 text-3xl font-black tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            {warehouseLogisticsContent.title}
+            {customContent.title}
           </h1>
           <p className="mt-3 text-base text-gray-600 dark:text-slate-400 max-w-3xl">
-            {warehouseLogisticsContent.description}
+            {customContent.description}
           </p>
         </div>
       </header>
@@ -158,20 +158,20 @@ export default function WarehouseCastor() {
               </button>
             </div>
 
-            {/* Wheel Material – actual values from warehouseLogistics data */}
+            {/* Wheel Material – actual values from mobilitySystems */}
             <section className="mt-6">
               <h4 className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-slate-400 mb-3">
                 Wheel Material
               </h4>
               {[
-                "Polyurethane / Polyamide / Cast Iron",
-                "Cast Iron Core + Polyurethane / Elastic PU",
-                "High-Performance Polyurethane / Polyamide",
-                "Polyamide / Polyurethane",
-                "Cold-Resistant Polyurethane / Nylon",
-                "Polyurethane / TPR",
-                "Noise-Dampening Polyurethane",
-                "Polyurethane / Cast Iron",
+                "Forged Steel / Cast Steel / Custom Composite",
+                "Elastic Polyurethane with Cast Iron Core",
+                "Forged Steel / Heat-Resistant Steel Alloys",
+                "Cast Iron Core with Polyurethane / Elastic PU Tread",
+                "Polyurethane / Polyamide / Stainless Steel",
+                "Conductive Polyurethane / Stainless Steel",
+                "Solid Rubber / PU-Elastic",
+                "Polyurethane / Cast Iron / Steel",
               ].map((mat) => (
                 <label
                   key={mat}
@@ -201,7 +201,7 @@ export default function WarehouseCastor() {
             {/* Load Capacity */}
             <section>
               <h4 className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-slate-400 mb-3">
-                Load Capacity (kg)
+                Max Load Capacity (kg)
               </h4>
               <div className="flex items-center gap-4">
                 <input
@@ -258,7 +258,7 @@ export default function WarehouseCastor() {
               <strong className="text-gray-900 dark:text-white">
                 {totalItems}
               </strong>{" "}
-              products
+              systems
             </p>
 
             <div className="flex flex-wrap items-center gap-5">
@@ -308,7 +308,7 @@ export default function WarehouseCastor() {
           {/* Products */}
           {totalItems === 0 ? (
             <div className="py-16 text-center text-gray-500 dark:text-slate-400">
-              No warehouse & logistics castors match your current filters.
+              No mobility systems match your current filters.
               <button
                 onClick={resetFilters}
                 className="ml-2 text-blue-600 hover:underline dark:text-blue-400"
@@ -424,19 +424,19 @@ export default function WarehouseCastor() {
             </button>
 
             <div className="p-6 md:p-10">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start justify-between gap-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                   {selectedProduct.name}
                 </h2>
                 {selectedProduct.badge && (
                   <span
                     className={`inline-block px-3 py-1 text-xs font-bold uppercase rounded-full text-white ${
-                      selectedProduct.badge === "top-seller"
+                      selectedProduct.badge.includes("top")
                         ? "bg-blue-600"
                         : "bg-green-600"
                     }`}
                   >
-                    {selectedProduct.badge.replace("-", " ")}
+                    {selectedProduct.badge}
                   </span>
                 )}
               </div>
@@ -463,23 +463,15 @@ export default function WarehouseCastor() {
                   <dl className="grid grid-cols-2 gap-5">
                     <div>
                       <dt className="text-sm text-gray-500 dark:text-slate-400">
-                        Load Capacity
+                        Max Load Capacity
                       </dt>
                       <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.load_capacity_kg} kg
+                        {selectedProduct.max_load_capacity_kg} kg
                       </dd>
                     </div>
                     <div>
                       <dt className="text-sm text-gray-500 dark:text-slate-400">
-                        Wheel Diameter
-                      </dt>
-                      <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.wheel_diameter_mm} mm
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">
-                        Material
+                        Wheel Material
                       </dt>
                       <dd className="mt-1 text-xl font-semibold">
                         {selectedProduct.wheel_material}
@@ -487,10 +479,18 @@ export default function WarehouseCastor() {
                     </div>
                     <div>
                       <dt className="text-sm text-gray-500 dark:text-slate-400">
-                        Height
+                        Available Sizes
                       </dt>
                       <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.height_mm} mm
+                        {selectedProduct.available_sizes_mm.join(" / ")} mm
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-sm text-gray-500 dark:text-slate-400">
+                        Customization
+                      </dt>
+                      <dd className="mt-1 text-xl font-semibold">
+                        {selectedProduct.customization ? "Yes" : "No"}
                       </dd>
                     </div>
                   </dl>
@@ -552,10 +552,12 @@ function ProductCard({ product, viewMode, onViewDetails }) {
         <div className="absolute top-3 left-3 z-10">
           <span
             className={`inline-block px-2.5 py-1 text-xs font-bold uppercase rounded-md text-white ${
-              product.badge === "top-seller" ? "bg-blue-600" : "bg-green-600"
+              product.badge.includes("top") || product.badge.includes("seller")
+                ? "bg-blue-600"
+                : "bg-green-600"
             }`}
           >
-            {product.badge.replace("-", " ")}
+            {product.badge}
           </span>
         </div>
       )}
@@ -601,15 +603,21 @@ function ProductCard({ product, viewMode, onViewDetails }) {
         >
           <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
             <IoMdFitness className="text-gray-500 dark:text-slate-400" />
-            <span className="font-medium">{product.load_capacity_kg} kg</span>
+            <span className="font-medium">
+              {product.max_load_capacity_kg} kg
+            </span>
           </div>
           <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
             <MdDonutLarge className="text-gray-500 dark:text-slate-400" />
-            <span className="font-medium">{product.wheel_diameter_mm} mm</span>
+            <span className="font-medium">
+              {product.available_sizes_mm.join(" / ")} mm
+            </span>
           </div>
           <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
             <span className="text-gray-500 dark:text-slate-400">Mat:</span>
-            <span className="font-medium">{product.wheel_material}</span>
+            <span className="font-medium truncate max-w-[140px]">
+              {product.wheel_material}
+            </span>
           </div>
         </div>
 
@@ -620,9 +628,9 @@ function ProductCard({ product, viewMode, onViewDetails }) {
           >
             View Details
           </button>
-          {/* <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
+          <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
             Inquire
-          </button> */}
+          </button>
         </div>
       </div>
     </article>

@@ -10,9 +10,10 @@ import {
 } from "react-icons/md";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
-import { medicalCaster, medicalHealthcareContent } from "../../data/Products/Medical_castor";
-
-
+import {
+  medicalCaster,
+  medicalHealthcareContent,
+} from "../../data/Products/Medical_castor";
 
 // ────────────────────────────────────────────────
 export default function MedicalCaster() {
@@ -40,7 +41,7 @@ export default function MedicalCaster() {
   }, []);
 
   const filteredAndSortedProducts = useMemo(() => {
-    let result = [...medicalCaster] ;
+    let result = [...medicalCaster];
 
     // Search (on name or code)
     if (search.trim()) {
@@ -48,14 +49,14 @@ export default function MedicalCaster() {
       result = result.filter(
         (p) =>
           p.name.toLowerCase().includes(term) ||
-          p.code.toLowerCase().includes(term)
+          p.code.toLowerCase().includes(term),
       );
     }
 
     // Materials filter
     if (selectedMaterials.length > 0) {
       result = result.filter((p) =>
-        selectedMaterials.some((m) => p.wheel_material.includes(m))
+        selectedMaterials.some((m) => p.wheel_material.includes(m)),
       );
     }
 
@@ -64,7 +65,7 @@ export default function MedicalCaster() {
     const max = loadRange.max ? Number(loadRange.max) : Infinity;
     if (Number.isFinite(min) || Number.isFinite(max)) {
       result = result.filter(
-        (p) => p.load_capacity_kg >= min && p.load_capacity_kg <= max
+        (p) => p.load_capacity_kg >= min && p.load_capacity_kg <= max,
       );
     }
 
@@ -89,9 +90,9 @@ export default function MedicalCaster() {
     () =>
       filteredAndSortedProducts.slice(
         (currentPage - 1) * ITEMS_PER_PAGE,
-        currentPage * ITEMS_PER_PAGE
+        currentPage * ITEMS_PER_PAGE,
       ),
-    [filteredAndSortedProducts, currentPage]
+    [filteredAndSortedProducts, currentPage],
   );
 
   const goToPage = (page) => {
@@ -115,7 +116,10 @@ export default function MedicalCaster() {
       <header className="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400">
-            <a href="#" className="hover:text-blue-600 dark:hover:text-blue-400">
+            <a
+              href="#"
+              className="hover:text-blue-600 dark:hover:text-blue-400"
+            >
               Home
             </a>
             <MdOutlineChevronRight className="text-lg" aria-hidden="true" />
@@ -143,7 +147,9 @@ export default function MedicalCaster() {
         <aside className="hidden lg:block lg:w-72 lg:shrink-0">
           <div className="sticky top-24 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-gray-200 dark:border-slate-800">
             <div className="flex items-center justify-between pb-5 border-b dark:border-slate-700">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-white">Filters</h3>
+              <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                Filters
+              </h3>
               <button
                 onClick={resetFilters}
                 className="text-sm font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
@@ -166,13 +172,18 @@ export default function MedicalCaster() {
                 "PU with noise-dampening core",
                 "Polyamide / PU",
               ].map((mat) => (
-                <label key={mat} className="flex items-center gap-3 py-1.5 cursor-pointer group">
+                <label
+                  key={mat}
+                  className="flex items-center gap-3 py-1.5 cursor-pointer group"
+                >
                   <input
                     type="checkbox"
                     checked={selectedMaterials.includes(mat)}
                     onChange={() =>
                       setSelectedMaterials((prev) =>
-                        prev.includes(mat) ? prev.filter((m) => m !== mat) : [...prev, mat]
+                        prev.includes(mat)
+                          ? prev.filter((m) => m !== mat)
+                          : [...prev, mat],
                       )
                     }
                     className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600"
@@ -197,7 +208,9 @@ export default function MedicalCaster() {
                   min={0}
                   placeholder="Min"
                   value={loadRange.min}
-                  onChange={(e) => setLoadRange((p) => ({ ...p, min: e.target.value }))}
+                  onChange={(e) =>
+                    setLoadRange((p) => ({ ...p, min: e.target.value }))
+                  }
                   className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-white"
                 />
                 <span className="text-gray-400 dark:text-slate-500">–</span>
@@ -206,7 +219,9 @@ export default function MedicalCaster() {
                   min={0}
                   placeholder="Max"
                   value={loadRange.max}
-                  onChange={(e) => setLoadRange((p) => ({ ...p, max: e.target.value }))}
+                  onChange={(e) =>
+                    setLoadRange((p) => ({ ...p, max: e.target.value }))
+                  }
                   className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-white"
                 />
               </div>
@@ -234,13 +249,22 @@ export default function MedicalCaster() {
           {/* Controls */}
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b pb-6 dark:border-slate-700">
             <p className="text-sm text-gray-600 dark:text-slate-400">
-              Showing <strong className="text-gray-900 dark:text-white">{startItem}–{endItem}</strong> of{" "}
-              <strong className="text-gray-900 dark:text-white">{totalItems}</strong> products
+              Showing{" "}
+              <strong className="text-gray-900 dark:text-white">
+                {startItem}–{endItem}
+              </strong>{" "}
+              of{" "}
+              <strong className="text-gray-900 dark:text-white">
+                {totalItems}
+              </strong>{" "}
+              products
             </p>
 
             <div className="flex flex-wrap items-center gap-5">
               <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-600 dark:text-slate-400 whitespace-nowrap">Sort by</label>
+                <label className="text-sm text-gray-600 dark:text-slate-400 whitespace-nowrap">
+                  Sort by
+                </label>
                 <div className="relative inline-block">
                   <select
                     value={sortBy}
@@ -252,7 +276,10 @@ export default function MedicalCaster() {
                     <option value="name-desc">Name Z–A</option>
                     <option value="load-desc">Load High to Low</option>
                   </select>
-                  <MdExpandMore className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" aria-hidden="true" />
+                  <MdExpandMore
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
 
@@ -281,12 +308,21 @@ export default function MedicalCaster() {
           {totalItems === 0 ? (
             <div className="py-16 text-center text-gray-500 dark:text-slate-400">
               No products match your filters.
-              <button onClick={resetFilters} className="ml-2 text-blue-600 hover:underline dark:text-blue-400">
+              <button
+                onClick={resetFilters}
+                className="ml-2 text-blue-600 hover:underline dark:text-blue-400"
+              >
                 Clear filters
               </button>
             </div>
           ) : (
-            <div className={viewMode === "grid" ? "grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8" : "flex flex-col gap-5"}>
+            <div
+              className={
+                viewMode === "grid"
+                  ? "grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
+                  : "flex flex-col gap-5"
+              }
+            >
               {paginatedProducts.map((product) => (
                 <ProductCard
                   key={product.code}
@@ -300,7 +336,10 @@ export default function MedicalCaster() {
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <nav aria-label="Pagination" className="mt-10 flex items-center justify-center gap-2 flex-wrap">
+            <nav
+              aria-label="Pagination"
+              className="mt-10 flex items-center justify-center gap-2 flex-wrap"
+            >
               <button
                 onClick={() => goToPage(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -315,15 +354,23 @@ export default function MedicalCaster() {
                   (page) =>
                     page === 1 ||
                     page === totalPages ||
-                    (page >= currentPage - 2 && page <= currentPage + 2)
+                    (page >= currentPage - 2 && page <= currentPage + 2),
                 )
                 .map((page, idx, arr) => {
-                  const showEllipsisBefore = idx > 0 && arr[idx - 1] !== page - 1 && page !== 1;
-                  const showEllipsisAfter = idx < arr.length - 1 && arr[idx + 1] !== page + 1 && page !== totalPages;
+                  const showEllipsisBefore =
+                    idx > 0 && arr[idx - 1] !== page - 1 && page !== 1;
+                  const showEllipsisAfter =
+                    idx < arr.length - 1 &&
+                    arr[idx + 1] !== page + 1 &&
+                    page !== totalPages;
 
                   return (
                     <React.Fragment key={page}>
-                      {showEllipsisBefore && <span className="flex h-10 w-10 items-center justify-center text-gray-400">…</span>}
+                      {showEllipsisBefore && (
+                        <span className="flex h-10 w-10 items-center justify-center text-gray-400">
+                          …
+                        </span>
+                      )}
                       <button
                         onClick={() => goToPage(page)}
                         aria-label={`Page ${page}`}
@@ -335,7 +382,11 @@ export default function MedicalCaster() {
                       >
                         {page}
                       </button>
-                      {showEllipsisAfter && <span className="flex h-10 w-10 items-center justify-center text-gray-400">…</span>}
+                      {showEllipsisAfter && (
+                        <span className="flex h-10 w-10 items-center justify-center text-gray-400">
+                          …
+                        </span>
+                      )}
                     </React.Fragment>
                   );
                 })}
@@ -372,14 +423,16 @@ export default function MedicalCaster() {
             </button>
 
             <div className="p-6 md:p-10">
-              <div className="flex items-start justify-between">
+              <div className="flex items-start gap-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                   {selectedProduct.name}
                 </h2>
                 {selectedProduct.badge && (
                   <span
                     className={`inline-block px-3 py-1 text-xs font-bold uppercase rounded-full text-white ${
-                      selectedProduct.badge === "top-seller" ? "bg-blue-600" : "bg-green-600"
+                      selectedProduct.badge === "top-seller"
+                        ? "bg-blue-600"
+                        : "bg-green-600"
                     }`}
                   >
                     {selectedProduct.badge.replace("-", " ")}
@@ -406,31 +459,53 @@ export default function MedicalCaster() {
                 <div className="space-y-6">
                   <dl className="grid grid-cols-2 gap-5">
                     <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">Load Capacity</dt>
-                      <dd className="mt-1 text-xl font-semibold">{selectedProduct.load_capacity_kg} kg</dd>
+                      <dt className="text-sm text-gray-500 dark:text-slate-400">
+                        Load Capacity
+                      </dt>
+                      <dd className="mt-1 text-xl font-semibold">
+                        {selectedProduct.load_capacity_kg} kg
+                      </dd>
                     </div>
                     <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">Wheel Diameter</dt>
-                      <dd className="mt-1 text-xl font-semibold">{selectedProduct.wheel_diameter_mm} mm</dd>
+                      <dt className="text-sm text-gray-500 dark:text-slate-400">
+                        Wheel Diameter
+                      </dt>
+                      <dd className="mt-1 text-xl font-semibold">
+                        {selectedProduct.wheel_diameter_mm} mm
+                      </dd>
                     </div>
                     <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">Material</dt>
-                      <dd className="mt-1 text-xl font-semibold">{selectedProduct.wheel_material}</dd>
+                      <dt className="text-sm text-gray-500 dark:text-slate-400">
+                        Material
+                      </dt>
+                      <dd className="mt-1 text-xl font-semibold">
+                        {selectedProduct.wheel_material}
+                      </dd>
                     </div>
                     <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">Height</dt>
-                      <dd className="mt-1 text-xl font-semibold">{selectedProduct.height_mm} mm</dd>
+                      <dt className="text-sm text-gray-500 dark:text-slate-400">
+                        Height
+                      </dt>
+                      <dd className="mt-1 text-xl font-semibold">
+                        {selectedProduct.height_mm} mm
+                      </dd>
                     </div>
                   </dl>
 
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Ideal for</h3>
-                    <p className="mt-2 text-gray-700 dark:text-slate-300">{selectedProduct.ideal_for}</p>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                      Ideal for
+                    </h3>
+                    <p className="mt-2 text-gray-700 dark:text-slate-300">
+                      {selectedProduct.ideal_for}
+                    </p>
                   </div>
 
                   {selectedProduct.key_features.length > 0 && (
                     <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white">Key Features</h3>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">
+                        Key Features
+                      </h3>
                       <ul className="mt-3 space-y-2 pl-5 list-disc text-gray-700 dark:text-slate-300">
                         {selectedProduct.key_features.map((f, i) => (
                           <li key={i}>{f}</li>
@@ -461,11 +536,7 @@ export default function MedicalCaster() {
 }
 
 // ────────────────────────────────────────────────
-function ProductCard({
-  product,
-  viewMode,
-  onViewDetails,
-}) {
+function ProductCard({ product, viewMode, onViewDetails }) {
   const isList = viewMode === "list";
 
   return (
@@ -488,7 +559,9 @@ function ProductCard({
 
       <div
         className={`relative overflow-hidden bg-gray-50 dark:bg-slate-800 ${
-          isList ? "h-36 w-36 shrink-0 rounded-lg" : "aspect-square rounded-t-xl"
+          isList
+            ? "h-36 w-36 shrink-0 rounded-lg"
+            : "aspect-square rounded-t-xl"
         }`}
       >
         {product.image ? (
@@ -508,7 +581,9 @@ function ProductCard({
       </div>
 
       <div className={`flex flex-1 flex-col p-5 ${isList ? "p-0 pr-5" : ""}`}>
-        <div className="text-xs text-gray-500 dark:text-slate-400">{product.code}</div>
+        <div className="text-xs text-gray-500 dark:text-slate-400">
+          {product.code}
+        </div>
 
         <h3
           className={`font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors ${
@@ -518,7 +593,9 @@ function ProductCard({
           {product.name}
         </h3>
 
-        <div className={`flex flex-wrap gap-2.5 text-sm mb-4 ${isList ? "mt-2" : "mt-1"}`}>
+        <div
+          className={`flex flex-wrap gap-2.5 text-sm mb-4 ${isList ? "mt-2" : "mt-1"}`}
+        >
           <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
             <IoMdFitness className="text-gray-500 dark:text-slate-400" />
             <span className="font-medium">{product.load_capacity_kg} kg</span>
@@ -539,9 +616,6 @@ function ProductCard({
             className="flex-1 rounded-lg border border-blue-600 px-5 py-2.5 text-sm font-semibold text-blue-600 hover:bg-blue-50 dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-950/40 transition-colors"
           >
             View Details
-          </button>
-          <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
-            Inquire
           </button>
         </div>
       </div>

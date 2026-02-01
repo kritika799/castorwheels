@@ -1,6 +1,7 @@
-import React, { useState, useMemo, useEffect, useCallback, use } from "react";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMdFitness } from "react-icons/io";
+
 import {
   MdGridView,
   MdViewList,
@@ -10,13 +11,10 @@ import {
 } from "react-icons/md";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
-import {
-  warehouseLogistics,
-  warehouseLogisticsContent,
-} from "../../data/Products/Warehouse_logistic"; // adjust path as needed
+import { heavyDuty, heavyDutyContent } from "../../data/Products/Heavy_duty"; 
 
 // ────────────────────────────────────────────────
-export default function WarehouseCastor() {
+export default function HeavyDuty() {
   const [searchParams] = useSearchParams();
   const initialSearch = searchParams.get("q") || "";
 
@@ -41,7 +39,7 @@ export default function WarehouseCastor() {
   }, []);
 
   const filteredAndSortedProducts = useMemo(() => {
-    let result = [...warehouseLogistics];
+    let result = [...heavyDuty];
 
     // Search by name or code
     if (search.trim()) {
@@ -128,15 +126,15 @@ export default function WarehouseCastor() {
             </span>
             <MdOutlineChevronRight className="text-lg" aria-hidden="true" />
             <span className="font-medium text-gray-900 dark:text-white">
-              Warehouse & Logistics
+              Heavy Duty / Ultra Heavy
             </span>
           </nav>
 
           <h1 className="mt-4 text-3xl font-black tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            {warehouseLogisticsContent.title}
+            {heavyDutyContent.title}
           </h1>
           <p className="mt-3 text-base text-gray-600 dark:text-slate-400 max-w-3xl">
-            {warehouseLogisticsContent.description}
+            {heavyDutyContent.description}
           </p>
         </div>
       </header>
@@ -158,20 +156,19 @@ export default function WarehouseCastor() {
               </button>
             </div>
 
-            {/* Wheel Material – actual values from warehouseLogistics data */}
+            {/* Wheel Material – matches actual values in heavyDuty data */}
             <section className="mt-6">
               <h4 className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-slate-400 mb-3">
                 Wheel Material
               </h4>
               {[
-                "Polyurethane / Polyamide / Cast Iron",
-                "Cast Iron Core + Polyurethane / Elastic PU",
-                "High-Performance Polyurethane / Polyamide",
-                "Polyamide / Polyurethane",
-                "Cold-Resistant Polyurethane / Nylon",
-                "Polyurethane / TPR",
-                "Noise-Dampening Polyurethane",
-                "Polyurethane / Cast Iron",
+                "Forged Steel / Cast Steel",
+                "Cast Iron",
+                "Cast Iron Core + Polyurethane Tread",
+                "Forged Steel",
+                "High-Strength Polyamide (PA)",
+                "Solid Rubber / PU-Elastic",
+                "Elastic PU with Cast Iron Core",
               ].map((mat) => (
                 <label
                   key={mat}
@@ -305,10 +302,10 @@ export default function WarehouseCastor() {
             </div>
           </div>
 
-          {/* Products */}
+          {/* Products Grid/List */}
           {totalItems === 0 ? (
             <div className="py-16 text-center text-gray-500 dark:text-slate-400">
-              No warehouse & logistics castors match your current filters.
+              No heavy-duty castors match your current filters.
               <button
                 onClick={resetFilters}
                 className="ml-2 text-blue-600 hover:underline dark:text-blue-400"
@@ -424,7 +421,7 @@ export default function WarehouseCastor() {
             </button>
 
             <div className="p-6 md:p-10">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start justify-between gap-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                   {selectedProduct.name}
                 </h2>
@@ -620,9 +617,9 @@ function ProductCard({ product, viewMode, onViewDetails }) {
           >
             View Details
           </button>
-          {/* <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
+          <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
             Inquire
-          </button> */}
+          </button>
         </div>
       </div>
     </article>

@@ -50,7 +50,7 @@ export default function AutomotiveCastor() {
     // Materials
     if (selectedMaterials.length > 0) {
       result = result.filter((p) =>
-        selectedMaterials.some((m) => p.wheelMaterial.includes(m)),
+        selectedMaterials.some((m) => p.wheel_material.includes(m)),
       );
     }
 
@@ -59,7 +59,7 @@ export default function AutomotiveCastor() {
     const max = loadRange.max ? Number(loadRange.max) : Infinity;
     if (Number.isFinite(min) || Number.isFinite(max)) {
       result = result.filter(
-        (p) => p.loadCapacityKg >= min && p.loadCapacityKg <= max,
+        (p) => p.loadCapacityKg >= min && p.load_capacity_kg <= max,
       );
     }
 
@@ -69,7 +69,7 @@ export default function AutomotiveCastor() {
     } else if (sortBy === "name-desc") {
       result.sort((a, b) => b.name.localeCompare(a.name));
     } else if (sortBy === "load-desc") {
-      result.sort((a, b) => b.loadCapacityKg - a.loadCapacityKg);
+      result.sort((a, b) => b.load_capacity_kg - a.load_capacity_kg);
     }
     // "popularity" → keep original order or implement later
 
@@ -535,7 +535,6 @@ export default function AutomotiveCastor() {
 // ────────────────────────────────────────────────
 function ProductCard({ product, viewMode, onViewDetails }) {
   const isList = viewMode === "list";
-  console.log(product);
 
   return (
     <article

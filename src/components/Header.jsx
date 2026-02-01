@@ -7,9 +7,9 @@ const solutions = [
   { label: "Automotive Assembly", to: "/solution/automotive" },
   { label: "Medical Castors", to: "/solution/medical" },
   { label: "Heavy Duty", to: "/solution/heavy-duty" },
-  { label: "Custom Solutions", to: "/solution/custom" },
-  { label: "Warehouse & Logistics", to: "/solution/warehouse-logistics" },
-  { label: "Furniture", to: "/solution/furniture" },
+  { label: "Custom Solutions", to: "/solution/custom-solution" },
+  { label: "Warehouse & Logistics", to: "/solution/warehouse-castor" },
+  { label: "Furniture", to: "/solution/furniture-castors" },
 ];
 
 const mainNavItems = [
