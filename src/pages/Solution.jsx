@@ -1,608 +1,285 @@
-import React, { useState, useMemo, useEffect, useCallback, use } from "react";
-import { IoSearchSharp } from "react-icons/io5";
-import { IoMdFitness } from "react-icons/io";
+import React, { useState, useMemo } from "react";
 import {
-  MdGridView,
-  MdViewList,
-  MdDonutLarge,
-  MdOutlineChevronRight,
-  MdExpandMore,
-} from "react-icons/md";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useSearchParams } from "react-router-dom";
-import { automotiveAssembly } from "../data/Products/Automotive_assembly";
-import { automotiveAssemblyContent } from "../data/Products/Automotive_assembly";
+  Check,
+  ChevronDown,
+  Filter,
+  ArrowRight,
+  BadgeCheck,
+  Weight,
+  Settings2,
+  Truck,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
+const PRODUCTS = [
+  {
+    title: "Heavy Duty Casters",
+    description: "For high load industrial equipment.",
+    features: ["500–2000 kg | Steel / PU", "Factories, Warehouses"],
+    imageSrc:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDAALxV1NRRCK0nSN4WBNkLCPzokOeMqAw-q9VTtl1dxenVnMwf2G3Xd4_l98USz2QtZirXlkVKjT4W2_ESIivVx14i_N-DfsyAmoKMU-tYHbI2J9Vy4xCsaVC6x7aFU6l7CWNyM0o61Pe70fMcWyNsRxOoVKJJ2JiMNAZNKe0BLid3Nfw-xFENaNrPCdOBiekHFMbKgdvXR-QOTzYgMoNsFUEIb2pzOlENt2AvKDQOj17fBI_rJa3cA7sp0q6tRAXTHsB1_jyQ89o",
+    alt: "Heavy Duty Caster",
+    loadRange: "Heavy (500kg+)",
+    wheelMaterial: ["Steel", "PU"],
+    category: "heavyDuty",
+    path: "heavy-duty",
+  },
 
-// ────────────────────────────────────────────────
-export default function Shop() {
-  const [searchParams] = useSearchParams();
-  const initialSearch = searchParams.get("q") || "";
+  {
+    title: "Automotive Assembly Casters",
+    description: "Designed for automotive assembly lines and production flow.",
+    features: ["High precision | PU / Nylon", "Assembly Lines"],
+    imageSrc: "/images/automotive-assembly.jpg",
+    alt: "Automotive Assembly Caster",
+    loadRange: "Medium–Heavy",
+    wheelMaterial: ["PU", "Nylon"],
+    category: "automotiveAssembly",
+    path: "automotive",
+  },
 
-  const [search, setSearch] = useState(initialSearch);
-  const [selectedMaterials, setSelectedMaterials] = useState([]);
-  const [loadRange, setLoadRange] = useState({ min: "", max: "" });
-  const [viewMode, setViewMode] = useState("grid");
-  const [sortBy, setSortBy] = useState("popularity");
-  const [currentPage, setCurrentPage] = useState(1);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  {
+    title: "Furniture Casters",
+    description: "Smooth rolling casters for furniture and interior use.",
+    features: ["Quiet movement | Rubber", "Home & Office Furniture"],
+    imageSrc: "/images/furniture-casters.jpg",
+    alt: "Furniture Caster",
+    loadRange: "Light–Medium",
+    wheelMaterial: ["Rubber"],
+    category: "furnitureCasters",
+    path: "furniture-castors",
+  },
 
-  const ITEMS_PER_PAGE = 9;
+  {
+    title: "Medical Casters",
+    description: "Hygienic and silent casters for medical environments.",
+    features: ["Non-marking | Lockable", "Hospitals, Labs"],
+    imageSrc: "/images/medical-casters.jpg",
+    alt: "Medical Caster",
+    loadRange: "Light–Medium",
+    wheelMaterial: ["TPR", "PU"],
+    category: "medicalCaster",
+    path: "medical",
+  },
 
-  // Reset page when filters/sort/search change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [search, selectedMaterials, loadRange, sortBy]);
+  {
+    title: "Warehouse & Logistics Casters",
+    description: "Built for continuous movement and heavy warehouse use.",
+    features: ["Shock resistant | PU / Nylon", "Logistics & Distribution"],
+    imageSrc: "/images/warehouse-logistics.jpg",
+    alt: "Warehouse Logistics Caster",
+    loadRange: "Medium–Heavy",
+    wheelMaterial: ["PU", "Nylon"],
+    category: "warehouseLogistics",
+    path: "warehouse-castor",
+  },
 
-  const resetFilters = useCallback(() => {
-    setSelectedMaterials([]);
-    setLoadRange({ min: "", max: "" });
-    setSearch("");
-  }, []);
+  {
+    title: "Custom Caster Solutions",
+    description: "Tailor-made caster solutions for unique requirements.",
+    features: ["Custom load & size", "Special applications"],
+    imageSrc: "/images/custom-solution.jpg",
+    alt: "Custom Caster Solution",
+    loadRange: "Custom",
+    wheelMaterial: ["Custom"],
+    category: "customsolution",
+    path: "custom-solution",
+  },
+];
 
-  const filteredAndSortedProducts = useMemo(() => {
-    let result = [...automotiveAssembly];
+export default function Solution() {
+  const [loadFilter, setLoadFilter] = useState("Load Capacity");
+  const [materialFilter, setMaterialFilter] = useState("Wheel Material");
+  const [typeFilter, setTypeFilter] = useState("Wheel Type");
 
-    // Search
-    if (search.trim()) {
-      const term = search.toLowerCase().trim();
-      result = result.filter((p) => p.name.toLowerCase().includes(term));
-    }
-
-    // Materials
-    if (selectedMaterials.length > 0) {
-      result = result.filter((p) =>
-        selectedMaterials.some((m) => p.wheelMaterial.includes(m)),
-      );
-    }
-
-    // Load range
-    const min = loadRange.min ? Number(loadRange.min) : -Infinity;
-    const max = loadRange.max ? Number(loadRange.max) : Infinity;
-    if (Number.isFinite(min) || Number.isFinite(max)) {
-      result = result.filter(
-        (p) => p.loadCapacityKg >= min && p.loadCapacityKg <= max,
-      );
-    }
-
-    // Sorting
-    if (sortBy === "name-asc") {
-      result.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === "name-desc") {
-      result.sort((a, b) => b.name.localeCompare(a.name));
-    } else if (sortBy === "load-desc") {
-      result.sort((a, b) => b.loadCapacityKg - a.loadCapacityKg);
-    }
-    // "popularity" → keep original order or implement later
-
-    return result;
-  }, [search, selectedMaterials, loadRange, sortBy]);
-
-  const totalItems = filteredAndSortedProducts.length;
-  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-  const startItem = (currentPage - 1) * ITEMS_PER_PAGE + 1;
-  const endItem = Math.min(currentPage * ITEMS_PER_PAGE, totalItems);
-
-  const paginatedProducts = useMemo(
-    () =>
-      filteredAndSortedProducts.slice(
-        (currentPage - 1) * ITEMS_PER_PAGE,
-        currentPage * ITEMS_PER_PAGE,
-      ),
-    [filteredAndSortedProducts, currentPage],
-  );
-
-  const goToPage = (page) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
-  // Close modal on Escape
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === "Escape") setSelectedProduct(null);
-    };
-    if (selectedProduct) window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, [selectedProduct]);
+  const filteredProducts = useMemo(() => {
+    return PRODUCTS.filter((p) => {
+      const matchLoad =
+        loadFilter === "Load Capacity" || p.loadRange?.includes(loadFilter);
+      const matchMaterial =
+        materialFilter === "Wheel Material" ||
+        p.wheelMaterial?.some((m) => m.includes(materialFilter));
+      // typeFilter not used yet — you can add logic later (swivel/fixed/braked)
+      return matchLoad && matchMaterial;
+    });
+  }, [loadFilter, materialFilter /* , typeFilter */]);
 
   return (
-    <main className="flex flex-col min-h-screen bg-gray-50 dark:bg-slate-950">
-      {/* ─── Header ─── */}
-      <header className="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400">
-            <a
-              href="#"
-              className="hover:text-blue-600 dark:hover:text-blue-400"
-            >
-              Home
-            </a>
-            <MdOutlineChevronRight className="text-lg" aria-hidden="true" />
-            <span className="font-medium text-gray-900 dark:text-white">
-              Castor Catalog
-            </span>
-            <MdOutlineChevronRight className="text-lg" aria-hidden="true" />
-            <span className="font-medium text-gray-900 dark:text-white">
-              Automotive Assembly
-            </span>
-          </nav>
+    <section className="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen">
+      <header className="relative pt-20 pb-40 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            alt="Industrial warehouse background"
+            className="w-full h-full object-cover opacity-10 dark:opacity-20"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG4nrclp4jBHSTIpn-33EPGKpSX8FAY3rvqx3QoQ-4Hx50tBjE5OW29PXedKo-8c61errj21WmhL9KmozF4Z7T6qdPrGk1U9YBjkBE4ZgJKXbyqMtrka_gBIbK4Ds_7r22687_m6O7oM-DdbriMzYi0S9xcRUeMXwhWK4Ic_BUjVuI1b8zrQt8kAfFRpp8W3e3_GXzDSJq-debHQonHRobHlqJ54WeJSAWSnqKeOcDDKeDr-abYd2D6YYDJcnwLlCNzJPdrwFiAJ8"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background-light dark:to-background-dark" />
+        </div>
 
-          <h1 className="mt-4 text-3xl font-black tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Automotive Assembly Castors
+        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+            Caster Wheel Categories
           </h1>
-          <p className="mt-3 text-base text-gray-600 dark:text-slate-400 max-w-3xl">
-            These caster wheels are engineered for precision material handling, heavy loads, and durability in automation and assembly environments. Each series is designed to support high productivity, reduced downtime, and smooth movement on plant floors.
-
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Explore our wide range of caster wheels designed for different
+            industries and load requirements.
           </p>
         </div>
       </header>
 
-      {/* ─── Main Content ─── */}
-      <div className="mx-auto w-full max-w-7xl grow px-4 py-8 sm:px-6 lg:flex lg:gap-8 lg:px-8">
-        {/* Filters Sidebar – visible on lg+ */}
-        <aside className="hidden lg:block lg:w-72 lg:shrink-0">
-          <div className="sticky top-24 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-gray-200 dark:border-slate-800">
-            <div className="flex items-center justify-between pb-5 border-b dark:border-slate-700">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                Filters
-              </h3>
-              <button
-                onClick={resetFilters}
-                className="text-sm font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+      <main className="max-w-7xl mx-auto px-4 -mt-32 relative z-20 pb-20">
+        {/* Filter Bar */}
+        <div className="glass-effect rounded-xl shadow-lg p-4 mb-10 flex flex-wrap gap-4 items-center justify-between">
+          <div className="flex flex-wrap gap-3 flex-1">
+            <div className="relative flex-1 min-w-[200px]">
+              <select
+                value={loadFilter}
+                onChange={(e) => setLoadFilter(e.target.value)}
+                className="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary focus:border-primary appearance-none cursor-pointer"
               >
-                Clear all
-              </button>
+                <option>Load Capacity</option>
+                <option>Light (0-150kg)</option>
+                <option>Medium (150-500kg)</option>
+                <option>Heavy (500kg+)</option>
+              </select>
+              <ChevronDown
+                size={18}
+                className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400"
+              />
             </div>
 
-            {/* Wheel Material */}
-            <section className="mt-6">
-              <h4 className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-slate-400 mb-3">
-                Wheel Material
-              </h4>
-              {["Polyamide (PA)", "Cast Iron + Polyurethane (PU)"].map(
-                (mat) => (
-                  <label
-                    key={mat}
-                    className="flex items-center gap-3 py-1.5 cursor-pointer group"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedMaterials.includes(mat)}
-                      onChange={() =>
-                        setSelectedMaterials((prev) =>
-                          prev.includes(mat)
-                            ? prev.filter((m) => m !== mat)
-                            : [...prev, mat],
-                        )
-                      }
-                      className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600"
-                    />
-                    <span className="text-sm text-gray-700 dark:text-slate-300 group-hover:text-blue-600">
-                      {mat}
-                    </span>
-                  </label>
-                ),
-              )}
-            </section>
+            <div className="relative flex-1 min-w-[200px]">
+              <select
+                value={materialFilter}
+                onChange={(e) => setMaterialFilter(e.target.value)}
+                className="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary focus:border-primary appearance-none cursor-pointer"
+              >
+                <option>Wheel Material</option>
+                <option>Polyurethane (PU)</option>
+                <option>Nylon</option>
+                <option>Rubber</option>
+                <option>Steel</option>
+              </select>
+              <ChevronDown
+                size={18}
+                className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400"
+              />
+            </div>
 
-            <hr className="my-6 border-gray-200 dark:border-slate-700" />
-
-            {/* Load Capacity */}
-            <section>
-              <h4 className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-slate-400 mb-3">
-                Load Capacity (kg)
-              </h4>
-              <div className="flex items-center gap-4">
-                <input
-                  type="number"
-                  min={0}
-                  placeholder="Min"
-                  value={loadRange.min}
-                  onChange={(e) =>
-                    setLoadRange((p) => ({ ...p, min: e.target.value }))
-                  }
-                  className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-white"
-                />
-                <span className="text-gray-400 dark:text-slate-500">–</span>
-                <input
-                  type="number"
-                  min={0}
-                  placeholder="Max"
-                  value={loadRange.max}
-                  onChange={(e) =>
-                    setLoadRange((p) => ({ ...p, max: e.target.value }))
-                  }
-                  className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-white"
-                />
-              </div>
-            </section>
-          </div>
-        </aside>
-
-        {/* Products + Controls */}
-        <div className="flex-1 flex flex-col gap-6">
-          {/* Search Bar */}
-          <div className="relative">
-            <IoSearchSharp
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-slate-500 text-xl pointer-events-none"
-              aria-hidden="true"
-            />
-            <input
-              type="search"
-              placeholder="Search castors by name..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 py-3 text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-700 dark:text-white dark:placeholder-slate-500"
-            />
-          </div>
-
-          {/* Result count + Sort + View toggle */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b pb-6 dark:border-slate-700">
-            <p className="text-sm text-gray-600 dark:text-slate-400">
-              Showing{" "}
-              <strong className="text-gray-900 dark:text-white">
-                {startItem}–{endItem}
-              </strong>{" "}
-              of{" "}
-              <strong className="text-gray-900 dark:text-white">
-                {totalItems}
-              </strong>{" "}
-              castors
-            </p>
-
-            <div className="flex flex-wrap items-center gap-5">
-              <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-600 dark:text-slate-400 whitespace-nowrap">
-                  Sort by
-                </label>
-                <div className="relative inline-block">
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="appearance-none rounded-lg bg-white py-2 pl-3 pr-9 text-sm font-medium text-gray-900 border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-slate-900 dark:text-white dark:border-slate-700"
-                  >
-                    <option value="popularity">Popularity</option>
-                    <option value="name-asc">Name A–Z</option>
-                    <option value="name-desc">Name Z–A</option>
-                    <option value="load-desc">Load High to Low</option>
-                  </select>
-                  <MdExpandMore
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
-
-              <div className="flex rounded-lg bg-gray-100 p-1 dark:bg-slate-800">
-                <button
-                  type="button"
-                  onClick={() => setViewMode("grid")}
-                  aria-label="Grid view"
-                  aria-pressed={viewMode === "grid"}
-                  className={`rounded p-2.5 transition-colors ${
-                    viewMode === "grid"
-                      ? "bg-white shadow dark:bg-slate-700"
-                      : "hover:bg-gray-200 dark:hover:bg-slate-700"
-                  }`}
-                >
-                  <MdGridView className="text-xl" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setViewMode("list")}
-                  aria-label="List view"
-                  aria-pressed={viewMode === "list"}
-                  className={`rounded p-2.5 transition-colors ${
-                    viewMode === "list"
-                      ? "bg-white shadow dark:bg-slate-700"
-                      : "hover:bg-gray-200 dark:hover:bg-slate-700"
-                  }`}
-                >
-                  <MdViewList className="text-xl" />
-                </button>
-              </div>
+            <div className="relative flex-1 min-w-[200px]">
+              <select
+                value={typeFilter}
+                onChange={(e) => setTypeFilter(e.target.value)}
+                className="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary focus:border-primary appearance-none cursor-pointer"
+              >
+                <option>Wheel Type</option>
+                <option>Swivel</option>
+                <option>Fixed</option>
+                <option>Braked</option>
+              </select>
+              <ChevronDown
+                size={18}
+                className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400"
+              />
             </div>
           </div>
 
-          {/* Products */}
-          {totalItems === 0 ? (
-            <div className="py-16 text-center text-gray-500 dark:text-slate-400">
-              No castors match your current filters.
-              <button
-                onClick={resetFilters}
-                className="ml-2 text-blue-600 hover:underline dark:text-blue-400"
-              >
-                Clear filters
-              </button>
-            </div>
-          ) : (
-            <div
-              className={
-                viewMode === "grid"
-                  ? "grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
-                  : "flex flex-col gap-5"
-              }
-            >
-              {paginatedProducts.map((product) => (
-                <ProductCard
-                  key={product.name}
-                  product={product}
-                  viewMode={viewMode}
-                  onViewDetails={() => setSelectedProduct(product)}
-                />
-              ))}
-            </div>
-          )}
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <nav
-              aria-label="Pagination"
-              className="mt-10 flex items-center justify-center gap-2 flex-wrap"
-            >
-              <button
-                onClick={() => goToPage(currentPage - 1)}
-                disabled={currentPage === 1}
-                aria-label="Previous page"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:pointer-events-none dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800"
-              >
-                <FaChevronLeft className="text-sm" />
-              </button>
-
-              {Array.from({ length: totalPages }, (_, i) => i + 1)
-                .filter(
-                  (page) =>
-                    page === 1 ||
-                    page === totalPages ||
-                    (page >= currentPage - 2 && page <= currentPage + 2),
-                )
-                .map((page, idx, arr) => {
-                  const showEllipsisBefore =
-                    idx > 0 && arr[idx - 1] !== page - 1 && page !== 1;
-                  const showEllipsisAfter =
-                    idx < arr.length - 1 &&
-                    arr[idx + 1] !== page + 1 &&
-                    page !== totalPages;
-
-                  return (
-                    <React.Fragment key={page}>
-                      {showEllipsisBefore && (
-                        <span className="flex h-10 w-10 items-center justify-center text-gray-400">
-                          …
-                        </span>
-                      )}
-                      <button
-                        onClick={() => goToPage(page)}
-                        aria-label={`Go to page ${page}`}
-                        aria-current={page === currentPage ? "page" : undefined}
-                        className={`flex h-10 w-10 items-center justify-center rounded-lg border text-sm font-medium transition-colors ${
-                          page === currentPage
-                            ? "border-blue-600 bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:border-blue-500 dark:text-blue-400"
-                            : "border-gray-200 text-gray-700 hover:bg-gray-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
-                        }`}
-                      >
-                        {page}
-                      </button>
-                      {showEllipsisAfter && (
-                        <span className="flex h-10 w-10 items-center justify-center text-gray-400">
-                          …
-                        </span>
-                      )}
-                    </React.Fragment>
-                  );
-                })}
-
-              <button
-                onClick={() => goToPage(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                aria-label="Next page"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:pointer-events-none dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800"
-              >
-                <FaChevronRight className="text-sm" />
-              </button>
-            </nav>
-          )}
-        </div>
-      </div>
-
-      {/* ─── Product Detail Modal ─── */}
-      {selectedProduct && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
-          onClick={() => setSelectedProduct(null)} // click outside to close
-        >
-          <div
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white dark:bg-slate-900 shadow-2xl"
-            onClick={(e) => e.stopPropagation()} // prevent close on content click
-          >
-            <button
-              onClick={() => setSelectedProduct(null)}
-              aria-label="Close modal"
-              className="absolute top-5 right-5 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 transition-colors"
-            >
-              ✕
+          <div className="flex gap-2">
+            <button className="bg-primary hover:bg-secondary text-white px-8 py-2.5 rounded-lg font-medium transition-all flex items-center gap-2 shadow-sm hover:shadow">
+              <Filter size={18} />
+              Filter
             </button>
-
-            <div className="p-6 md:p-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                {selectedProduct.name}
-              </h2>
-
-              <div className="mt-8 grid gap-10 md:grid-cols-2">
-                {/* Image */}
-                <div className="flex items-center justify-center bg-gray-50 dark:bg-slate-800 rounded-xl overflow-hidden aspect-square">
-                  {selectedProduct.image ? (
-                    <img
-                      src={selectedProduct.image}
-                      alt={selectedProduct.name}
-                      className="max-h-full max-w-full object-contain"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="text-gray-400 dark:text-slate-500 text-center p-12">
-                      Image not available
-                    </div>
-                  )}
-                </div>
-
-                {/* Details */}
-                <div className="space-y-6">
-                  <dl className="grid grid-cols-2 gap-5">
-                    <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">
-                        Load Capacity
-                      </dt>
-                      <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.loadCapacityKg} kg
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">
-                        Wheel Diameter
-                      </dt>
-                      <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.wheelDiameterMm} mm
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-gray-500 dark:text-slate-400">
-                        Material
-                      </dt>
-                      <dd className="mt-1 text-xl font-semibold">
-                        {selectedProduct.wheelMaterial}
-                      </dd>
-                    </div>
-                    {selectedProduct.heightMm && (
-                      <div>
-                        <dt className="text-sm text-gray-500 dark:text-slate-400">
-                          Height
-                        </dt>
-                        <dd className="mt-1 text-xl font-semibold">
-                          {selectedProduct.heightMm} mm
-                        </dd>
-                      </div>
-                    )}
-                  </dl>
-
-                  {selectedProduct.idealFor && (
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white">
-                        Ideal for
-                      </h3>
-                      <p className="mt-2 text-gray-700 dark:text-slate-300">
-                        {selectedProduct.idealFor}
-                      </p>
-                    </div>
-                  )}
-
-                  {selectedProduct.keyFeatures?.length ? (
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white">
-                        Key Features
-                      </h3>
-                      <ul className="mt-3 space-y-2 pl-5 list-disc text-gray-700 dark:text-slate-300">
-                        {selectedProduct.keyFeatures.map((f, i) => (
-                          <li key={i}>{f}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </div>
-              </div>
-
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-end">
-                <button
-                  onClick={() => setSelectedProduct(null)}
-                  className="px-8 py-3 rounded-xl border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
-                >
-                  Close
-                </button>
-                <button className="px-8 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
-                  Inquire Now
-                </button>
-              </div>
-            </div>
+            <button
+              aria-label="More filters"
+              className="p-2.5 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+            >
+              <Filter size={20} />
+            </button>
           </div>
         </div>
-      )}
-    </main>
+
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProducts.length === 0 ? (
+            <p className="col-span-full text-center text-slate-500 dark:text-slate-400 py-12">
+              No products match the selected filters.
+            </p>
+          ) : (
+            filteredProducts.map((product, idx) => (
+              <ProductCard key={idx} {...product} />
+            ))
+          )}
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="mt-24 text-center">
+          <h2 className="text-3xl font-bold mb-10 text-slate-900 dark:text-white">
+            Why Choose Our Casters?
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div className="flex flex-col items-center gap-3">
+              <BadgeCheck size={40} className="text-primary" />
+              <span className="font-medium">ISO Certified</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Weight size={40} className="text-primary" />
+              <span className="font-medium">High Load Tested</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Settings2 size={40} className="text-primary" />
+              <span className="font-medium">Custom Solutions</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Truck size={40} className="text-primary" />
+              <span className="font-medium">Bulk & OEM Support</span>
+            </div>
+          </div>
+
+          <Link
+            to="/contact"
+            className="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg font-medium transition-colors inline-block mt-4"
+          >
+            Contact Our Experts
+          </Link>
+        </div>
+      </main>
+    </section>
   );
 }
 
-// ────────────────────────────────────────────────
-function ProductCard({ product, viewMode, onViewDetails }) {
-  const isList = viewMode === "list";
-
+// Extracted reusable card
+function ProductCard({ title, description, features, imageSrc, alt, path }) {
   return (
-    <article
-      className={`group relative flex overflow-hidden rounded-xl border border-gray-200 bg-white transition-all hover:shadow-md hover:border-gray-300 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600 ${
-        isList ? "flex-row items-center gap-6 p-5" : "flex-col"
-      }`}
-    >
-      <div
-        className={`relative overflow-hidden bg-gray-50 dark:bg-slate-800 ${
-          isList
-            ? "h-36 w-36 shrink-0 rounded-lg"
-            : "aspect-square rounded-t-xl"
-        }`}
+    <div className="product-card glass-effect rounded-2xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+      <div className="bg-white/50 dark:bg-slate-900/50 rounded-xl p-4 mb-6 flex justify-center min-h-[200px] items-center">
+        <img
+          alt={alt}
+          className="h-48 w-auto object-contain mix-blend-multiply dark:mix-blend-normal"
+          src={imageSrc}
+          loading="lazy"
+        />
+      </div>
+
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
+        {description}
+      </p>
+
+      <ul className="space-y-2 mb-8 flex-grow">
+        {features.map((feature, i) => (
+          <li key={i} className="flex items-center text-sm gap-2">
+            <Check size={18} className="text-primary flex-shrink-0" />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      <Link
+        to={`/solution/${path}`}
+        className="mt-auto inline-flex items-center gap-2 text-primary font-medium hover:underline"
       >
-        {product.image ? (
-          <img
-            src={product.image}
-            alt={product.name}
-            className={`h-full w-full object-contain transition-transform duration-300 group-hover:scale-105 ${
-              isList ? "p-3" : ""
-            }`}
-            loading="lazy"
-          />
-        ) : (
-          <div className="h-full w-full flex items-center justify-center text-gray-400 dark:text-slate-500 text-sm">
-            No image
-          </div>
-        )}
-      </div>
-
-      <div className={`flex flex-1 flex-col p-5 ${isList ? "p-0 pr-5" : ""}`}>
-        <h3
-          className={`font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors ${
-            isList ? "text-xl" : "text-lg mb-1.5"
-          }`}
-        >
-          {product.name}
-        </h3>
-
-        <div
-          className={`flex flex-wrap gap-2.5 text-sm mb-4 ${isList ? "mt-2" : "mt-1"}`}
-        >
-          <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
-            <IoMdFitness className="text-gray-500 dark:text-slate-400" />
-            <span className="font-medium">{product.loadCapacityKg} kg</span>
-          </div>
-          <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
-            <MdDonutLarge className="text-gray-500 dark:text-slate-400" />
-            <span className="font-medium">{product.wheelDiameterMm} mm</span>
-          </div>
-          <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 dark:bg-slate-800">
-            <span className="text-gray-500 dark:text-slate-400">Mat:</span>
-            <span className="font-medium">{product.wheelMaterial}</span>
-          </div>
-        </div>
-
-        <div className="mt-auto flex gap-3 pt-4 border-t border-gray-200 dark:border-slate-700">
-          <button
-            onClick={onViewDetails}
-            className="flex-1 rounded-lg border border-blue-600 px-5 py-2.5 text-sm font-semibold text-blue-600 hover:bg-blue-50 dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-950/40 transition-colors"
-          >
-            View Details
-          </button>
-          <button className="flex-1 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
-            Inquire
-          </button>
-        </div>
-      </div>
-    </article>
+        view details
+      </Link>
+    </div>
   );
 }

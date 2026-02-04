@@ -77,7 +77,7 @@ export default function HeroCarousel() {
             {/* CTAs – better stacking & sizing on mobile */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a
-                href="/catalog"
+                href="/solution"
                 className="group flex items-center justify-center gap-2.5 rounded-full bg-white/10 px-8 py-4 text-base sm:text-lg font-semibold text-white backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
               >
                 Explore Catalog

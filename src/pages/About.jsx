@@ -8,6 +8,7 @@ import {
   MdShield,
 } from "react-icons/md";
 import EnquiryForm from "../components/EnquiryForm";
+import { Link } from "react-router-dom";
 
 const principles = [
   {
@@ -58,9 +59,12 @@ export default function About() {
             </h2>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <button className="h-12 px-8 bg-primary text-white rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-md">
-                Explore products
-              </button>
+              <Link
+                href="/solution"
+                className="py-4 px-8 bg-primary text-white rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-md"
+              >
+                Explore Catalog
+              </Link>
             </div>
           </div>
         </div>

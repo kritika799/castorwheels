@@ -6,6 +6,7 @@ import EnquiryForm from "../components/EnquiryForm";
 import Carousel from "../components/Carousel";
 import WhyChooseUs from "../components/WhyChooseUs";
 import { IoMdStar, IoMdStarHalf } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const testimonials = [
   {
@@ -62,7 +63,6 @@ export default function Home() {
                   Explore by Category
                 </h2>
               </div>
-              
             </div>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <a
@@ -85,19 +85,20 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-semibold text-slate-500">
-                      {/* 24 Models Available */}
-                      Explore
-                    </span>
-                    <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center  text-white transition-colors">
-                      <span className="material-symbols-outlined text-lg ">
-                        <MdArrowOutward />
+                <Link to="/solution/automotive-assembly">
+                  <div className="p-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
+                        Explore
                       </span>
+                      <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center  text-white transition-colors">
+                        <span className="material-symbols-outlined text-lg rotate-45 group-hover:rotate-0 transition-transform duration-300">
+                          <MdArrowOutward />
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </a>
               <a
                 className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
@@ -119,19 +120,20 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
-                      {/* 18 Models Available */}
-                      Explore{" "}
-                    </span>
-                    <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-white transition-colors">
-                      <span className="material-symbols-outlined text-lg">
-                        <MdArrowOutward />
+                <Link to="/solution/medical">
+                  <div className="p-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
+                        Explore
                       </span>
+                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-white transition-colors">
+                        <span className="material-symbols-outlined text-lg rotate-45 group-hover:rotate-0 transition-transform duration-300">
+                          <MdArrowOutward />
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </a>
               <a
                 className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
@@ -153,19 +155,20 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-semibold text-slate-500">
-                      {/* 32 Models Available */}
-                      Explore
-                    </span>
-                    <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center  text-white transition-colors">
-                      <span className="material-symbols-outlined text-lg">
-                        <MdArrowOutward />
+                <Link to="/solution/furniture-castors">
+                  <div className="p-6">
+                    <div className="flex justify-between items-center group">
+                      <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
+                        Explore
                       </span>
+                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center  text-white ">
+                        <span className="material-symbols-outlined text-lg rotate-45 group-hover:rotate-0 transition-transform duration-300">
+                          <MdArrowOutward className="" />
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </a>
             </div>
           </div>

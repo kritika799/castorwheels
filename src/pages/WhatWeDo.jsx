@@ -95,7 +95,7 @@ export default function WhatWeDo() {
               <MdArrowForward className="text-xl group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="/products"
+              href="/solution"
               className="inline-flex items-center px-10 py-5 border-2 border-white/70 text-white font-semibold text-lg rounded-xl hover:bg-white/10 transition-all duration-300"
             >
               Explore Products
