@@ -109,10 +109,10 @@ export default function Solution() {
         <div className="absolute inset-0 z-0">
           <img
             alt="Industrial warehouse background"
-            className="w-full h-full object-cover opacity-10 dark:opacity-20"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG4nrclp4jBHSTIpn-33EPGKpSX8FAY3rvqx3QoQ-4Hx50tBjE5OW29PXedKo-8c61errj21WmhL9KmozF4Z7T6qdPrGk1U9YBjkBE4ZgJKXbyqMtrka_gBIbK4Ds_7r22687_m6O7oM-DdbriMzYi0S9xcRUeMXwhWK4Ic_BUjVuI1b8zrQt8kAfFRpp8W3e3_GXzDSJq-debHQonHRobHlqJ54WeJSAWSnqKeOcDDKeDr-abYd2D6YYDJcnwLlCNzJPdrwFiAJ8"
+            className="w-full h-full object-cover "
+            src="./hero-image/hero-image2.png"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background-light dark:to-background-dark" />
+          <div className="absolute inset-0 bg-white/50 " />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
@@ -183,18 +183,7 @@ export default function Solution() {
             </div>
           </div>
 
-          <div className="flex gap-2">
-            <button className="bg-primary hover:bg-secondary text-white px-8 py-2.5 rounded-lg font-medium transition-all flex items-center gap-2 shadow-sm hover:shadow">
-              <Filter size={18} />
-              Filter
-            </button>
-            <button
-              aria-label="More filters"
-              className="p-2.5 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-            >
-              <Filter size={20} />
-            </button>
-          </div>
+          
         </div>
 
         {/* Product Grid */}
