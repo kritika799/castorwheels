@@ -1,6 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { IoArrowForwardOutline } from "react-icons/io5";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  IoArrowForwardOutline,
+  IoChevronBackOutline,
+  IoChevronForwardOutline,
+} from "react-icons/io5";
 
 export default function HeroCarousel() {
   const images = [
@@ -11,6 +15,33 @@ export default function HeroCarousel() {
   ];
 
   const [current, setCurrent] = useState(0);
+  const timeoutRef = useRef(null);
+
+  const resetAutoplay = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+  };
+
+  useEffect(() => {
+    resetAutoplay();
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [current]);
+
+  const goToSlide = (index) => {
+    setCurrent(index);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,6 +70,39 @@ export default function HeroCarousel() {
                 decoding="async"
               />
             </div>
+          ))}
+        </div>
+        {/* Gradient overlay */}
+        {/* <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent" /> */}
+
+        {/* Prev / Next buttons */}
+        <button
+          onClick={prevSlide}
+          aria-label="Previous slide"
+          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 hidden sm:flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition"
+        >
+          <IoChevronBackOutline size={22} />
+        </button>
+
+        <button
+          onClick={nextSlide}
+          aria-label="Next slide"
+          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 hidden sm:flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition"
+        >
+          <IoChevronForwardOutline size={22} />
+        </button>
+
+        {/* Dots */}
+        <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goToSlide(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+                current === i ? "bg-white w-6" : "bg-white/40 hover:bg-white/70"
+              }`}
+            />
           ))}
         </div>
 
@@ -86,7 +150,7 @@ export default function HeroCarousel() {
 
               <a
                 href="#contact"
-                className="flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-10 py-4 text-base sm:text-lg font-bold text-white shadow-xl hover:shadow-2xl hover:brightness-110 transition-all duration-300 active:scale-95 border border-blue-400/30"
+                className="flex items-center justify-center rounded-full bg-linear-to-r from-blue-500 to-blue-600 px-10 py-4 text-base sm:text-lg font-bold text-white shadow-xl hover:shadow-2xl hover:brightness-110 transition-all duration-300 active:scale-95 border border-blue-400/30"
               >
                 Get a Quote
               </a>

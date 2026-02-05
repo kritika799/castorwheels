@@ -28,7 +28,7 @@ export default function App() {
     <div className="font-display bg-background-light text-slate-800 antialiased selection:bg-blue-100 selection:text-primary">
       <Router>
         <ScrollToTop />
-        <Whatsapp />
+        {/* <Whatsapp /> */}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

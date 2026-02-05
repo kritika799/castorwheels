@@ -73,10 +73,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 py-10 lg:py-14">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-10 text-center">
             {[
-              { num: "5+", label: "Years of Engineering" },
-              { num: "50+", label: "Global Partners" },
-              { num: "2.5L+", label: "Units Engineered/Year" },
-              { num: "10+", label: "Export Destinations" },
+              { num: "500+", label: "Product Variants" },
+              { num: "5+", label: "years Experience" },
+              { num: "2.5L+", label: "Units Shipped" },
+              { num: "ISO", label: "9001:2015 Certified" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col gap-2">
                 <p className="text-primary text-4xl sm:text-5xl font-black">
@@ -448,11 +448,11 @@ export default function About() {
               {
                 name: "Pradeep Kumar",
                 role: "Founder & CEO",
-                img: "./leaders/pradeep.png",
+                img: "./leaders/pradeep_kumar.jpeg",
               },
               {
                 name: "Dharmapal Singh",
-                role: "Managing Director",
+                role: "Co-founder & Managing Director",
                 img: "./leaders/Dharampal_singh.png",
               },
 
@@ -478,16 +478,16 @@ export default function About() {
                 className="group relative rounded-2xl overflow-hidden bg-white dark:bg-[#1a2634] border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all duration-300"
               >
                 {/* Image */}
-                <div className="relative overflow-hidden aspect-square  ">
+                <div className="relative overflow-hidden aspect-3/4  ">
                   <img
                     src={person.img}
                     alt={`${person.name} - ${person.role}`}
-                    className="w-full h-fit object-cover object-center"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="p-6 text-center">
+                <div className="p-3 text-center">
                   <h3 className="text-lg font-bold dark:text-white">
                     {person.name}
                   </h3>

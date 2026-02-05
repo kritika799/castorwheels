@@ -50,129 +50,115 @@ export default function Home() {
         <Carousel />
 
         <section
-          className="py-24 bg-slate-50 border-t border-slate-200"
           id="portfolio"
+          className="relative py-24 bg-slate-50 border-t border-slate-200"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            {/* Header */}
+            <div className="mb-14 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <span className="text-primary font-bold tracking-wider uppercase text-sm">
+                <span className="inline-block text-primary font-bold tracking-widest uppercase text-xs">
                   Our Portfolio
                 </span>
-                <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                  Explore by Category
+                <h2 className="mt-2 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+                  Explore by Industry
                 </h2>
+                <p className="mt-3 max-w-xl text-slate-600">
+                  Precision-engineered castor solutions tailored for diverse
+                  industrial and commercial applications.
+                </p>
               </div>
+
+              {/* Explore All Button */}
+              <Link
+                to="/solution"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-all duration-300 hover:bg-slate-900 hover:text-white hover:border-slate-900 active:scale-95"
+              >
+                Explore All Solutions
+                <MdArrowOutward className="text-lg transition-transform duration-300 group-hover:translate-x-0.5" />
+              </Link>
             </div>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <a
-                className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                href="#"
-              >
-                <div className="relative aspect-4/3 overflow-hidden">
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
-                  <img
-                    alt="Industrial Series"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="./featured-product/automotive assembly.png"
-                  />
-                  <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      Automotive Assembly
-                    </h3>
-                    <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                      Heavy duty trolleys &amp; machinery
-                    </p>
+
+            {/* Grid */}
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  title: "Automotive Assembly",
+                  desc: "Heavy-duty trolleys & machinery",
+                  image: "./featured-product/automotive assembly.png",
+                  link: "/solution/automotive-assembly",
+                  tag: "Industrial",
+                },
+                {
+                  title: "Hospitality & Medical",
+                  desc: "Hospital beds & diagnostic carts",
+                  image: "./featured-product/twin wheel for medical brake.png",
+                  link: "/solution/medical",
+                  tag: "Medical",
+                },
+                {
+                  title: "Retail & Shopping",
+                  desc: "Shopping carts & retail fixtures",
+                  image:
+                    "./featured-product/soft rubber caster for furniture.png",
+                  link: "/solution/furniture-castors",
+                  tag: "Retail",
+                },
+                {
+                  title: "Warehousing & Logistics",
+                  desc: "Pallet trucks & material handling",
+                  image: "./featured-product/nylon swivel pro.png",
+                  link: "/solution/warehouse-castor",
+                  tag: "Logistics",
+                },
+              ].map((item, i) => (
+                <Link
+                  key={i}
+                  to={item.link}
+                  className="group relative overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                >
+                  {/* Image */}
+                  <div className="relative aspect-3/4 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="h-full w-full object-cover  transition-transform duration-700 group-hover:scale-110"
+                    />
+
+                    {/* Gradient */}
+                    <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-60" />
+
+                    {/* Tag */}
+                    <span className="absolute top-4 left-4 z-20 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-800 backdrop-blur">
+                      {item.tag}
+                    </span>
+
+                    {/* Title */}
+                    <div className="absolute bottom-0 left-0 right-0 z-20 p-6">
+                      <h3 className="text-xl font-bold text-white leading-tight">
+                        {item.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-slate-200 opacity-0 translate-y-3 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <Link to="/solution/automotive-assembly">
-                  <div className="p-6">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
-                        Explore
-                      </span>
-                      <div className="h-8 w-8 rounded-full  bg-black flex items-center justify-center  text-white transition-colors">
-                        <span className="material-symbols-outlined text-lg rotate-45 group-hover:rotate-0 transition-transform duration-300">
-                          <MdArrowOutward />
-                        </span>
-                      </div>
+
+                  {/* Footer */}
+                  <div className="flex items-center justify-between p-6">
+                    <span className="text-sm font-semibold text-slate-600">
+                      Explore solutions
+                    </span>
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-white transition-all duration-300 group-hover:bg-primary group-hover:rotate-0 rotate-45">
+                      <MdArrowOutward className="text-lg transition-transform duration-300 group-hover:scale-110" />
                     </div>
                   </div>
                 </Link>
-              </a>
-              <a
-                className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                href="#"
-              >
-                <div className="relative aspect-4/3 overflow-hidden">
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
-                  <img
-                    alt="Medical Series"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="./featured-product/twin wheel for medical brake.png"
-                  />
-                  <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      Hospitality & Medical
-                    </h3>
-                    <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                      Hospital beds &amp; diagnostic carts
-                    </p>
-                  </div>
-                </div>
-                <Link to="/solution/medical">
-                  <div className="p-6">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
-                        Explore
-                      </span>
-                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center text-white transition-colors">
-                        <span className="material-symbols-outlined text-lg rotate-45 group-hover:rotate-0 transition-transform duration-300">
-                          <MdArrowOutward />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </a>
-              <a
-                className="group relative block overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                href="#"
-              >
-                <div className="relative aspect-4/3 overflow-hidden">
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity group-hover:opacity-40"></div>
-                  <img
-                    alt="Furniture Series"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src="./featured-product/soft rubber caster for furniture.png"
-                  />
-                  <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      Retail & Shopping
-                    </h3>
-                    <p className="text-sm text-slate-200 opacity-0 transform translate-y-4 transition-all duration-300 ">
-                      Office chairs &amp; home decor
-                    </p>
-                  </div>
-                </div>
-                <Link to="/solution/furniture-castors">
-                  <div className="p-6">
-                    <div className="flex justify-between items-center group">
-                      <span className="text-sm font-semibold text-slate-500 flex items-center gap-2">
-                        Explore
-                      </span>
-                      <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center  text-white ">
-                        <span className="material-symbols-outlined text-lg rotate-45 group-hover:rotate-0 transition-transform duration-300">
-                          <MdArrowOutward className="" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </a>
+              ))}
             </div>
           </div>
         </section>
+
         <WhyChooseUs />
 
         <FeaturedSolutions />
