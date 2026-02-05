@@ -130,7 +130,7 @@ export default function Solution() {
         {/* Filter Bar */}
         <div className="glass-effect rounded-xl shadow-lg p-4 mb-10 flex flex-wrap gap-4 items-center justify-between">
           <div className="flex flex-wrap gap-3 flex-1">
-            <div className="relative flex-1 min-w-[200px]">
+            <div className="relative flex-1 min-w-50">
               <select
                 value={loadFilter}
                 onChange={(e) => setLoadFilter(e.target.value)}
@@ -147,7 +147,7 @@ export default function Solution() {
               />
             </div>
 
-            <div className="relative flex-1 min-w-[200px]">
+            <div className="relative flex-1 min-w-50">
               <select
                 value={materialFilter}
                 onChange={(e) => setMaterialFilter(e.target.value)}
@@ -165,7 +165,7 @@ export default function Solution() {
               />
             </div>
 
-            <div className="relative flex-1 min-w-[200px]">
+            <div className="relative flex-1 min-w-50">
               <select
                 value={typeFilter}
                 onChange={(e) => setTypeFilter(e.target.value)}
@@ -240,7 +240,7 @@ export default function Solution() {
 function ProductCard({ title, description, features, imageSrc, alt, path }) {
   return (
     <div className="product-card glass-effect rounded-2xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
-      <div className="bg-white/50 dark:bg-slate-900/50 rounded-xl p-4 mb-6 flex justify-center min-h-[200px] items-center">
+      <div className="bg-white/50 dark:bg-slate-900/50 rounded-xl p-4 mb-6 flex justify-center min-h-50 items-center">
         <img
           alt={alt}
           className="h-48 w-auto object-contain mix-blend-multiply dark:mix-blend-normal"
@@ -254,10 +254,10 @@ function ProductCard({ title, description, features, imageSrc, alt, path }) {
         {description}
       </p>
 
-      <ul className="space-y-2 mb-8 flex-grow">
+      <ul className="space-y-2 mb-8 grow">
         {features.map((feature, i) => (
           <li key={i} className="flex items-center text-sm gap-2">
-            <Check size={18} className="text-primary flex-shrink-0" />
+            <Check size={18} className="text-primary shrink-0" />
             <span>{feature}</span>
           </li>
         ))}

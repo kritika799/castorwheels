@@ -165,7 +165,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
             {/* Text column – now fills height */}
-            <div className="flex-1 flex flex-col justify-between order-2 lg:order-1 min-h-[480px] lg:min-h-0">
+            <div className="flex-1 flex flex-col justify-between order-2 lg:order-1 min-h-120 lg:min-h-0">
               {/* Top: Title + line */}
               <div className="flex flex-col gap-5">
                 <h2 className="text-3xl lg:text-4xl font-bold dark:text-slate-900">
@@ -220,13 +220,13 @@ export default function About() {
 
             {/* Image column */}
             <div className="flex-1 order-1 lg:order-2 w-full">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto h-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-4/3 lg:aspect-auto h-full">
                 <img
                   alt="Close-up of precision heavy-duty castor wheel being manufactured"
                   className="object-cover w-full h-full"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSMDUEmZ4Fp8tHTJxXOOzizUnwLmH0ZE1FCPC3yk_qXX1XFsy1UfPJe4tQERvfSmaJCihFozt7IusWYuWnD4tBImmfuwlqHjz3LnS45QdvXhkF3ziOqZiXQz0NQ9j2U0BMncfcKCqjeBaqxMpfKy3hsjGbpNzcwZrQb7e5qlfYOxaVtZ-hVVqLiygz0ssOQJcA_z0BxCtjh_4XxoTnjE7xmRj-fOZ4XMsuMZgvFf5M2VNy8mmNUcpSEHn0LdhKfwvRTOUYRDU50ocJ"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6">
                   <p className="text-white font-medium text-sm sm:text-base">
                     Precision engineered in our Bihar facility
                   </p>
@@ -251,7 +251,7 @@ export default function About() {
               Our Core Principles
             </h2>
 
-            <div className="mt-5 h-1.5 w-28 mx-auto bg-gradient-to-r from-blue-500 via-indigo-500 to-teal-500 rounded-full" />
+            <div className="mt-5 h-1.5 w-28 mx-auto bg-linear-to-r from-blue-500 via-indigo-500 to-teal-500 rounded-full" />
 
             <p className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Three foundational pillars shape every product we engineer, every
@@ -276,11 +276,11 @@ export default function About() {
                 hover:border-${principle.color}-400/50 dark:hover:border-${principle.color}-500/50
               `}
               >
-                {/* Light colored gradient overlay on hover */}
+                {/* Light colored linear overlay on hover */}
                 <div
                   className={`
                   absolute inset-0 rounded-2xl lg:rounded-3xl 
-                  bg-gradient-to-br from-${principle.color}-50/40 via-white/10 to-transparent 
+                  bg-linear-to-br from-${principle.color}-50/40 via-white/10 to-transparent 
                   opacity-0 group-hover:opacity-100 
                   transition-opacity duration-500 pointer-events-none
                 `}
@@ -291,7 +291,7 @@ export default function About() {
                     className={`
                     inline-flex items-center justify-center 
                     w-16 h-16 md:w-20 md:h-20 
-                    rounded-2xl bg-gradient-to-br 
+                    rounded-2xl bg-linear-to-br 
                     from-${principle.color}-500 to-${principle.color}-700 
                     text-white mb-6 
                     shadow-lg shadow-${principle.color}-700/30 
@@ -320,11 +320,11 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-10 md:mb-14">
-            <h2 className="text-3.5xl sm:text-4xl md:text-5xl lg:text-5.5xl font-extrabold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent">
+            <h2 className="text-3.5xl sm:text-4xl md:text-5xl lg:text-5.5xl font-extrabold tracking-tight bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent">
               Our Journey
             </h2>
 
-            <div className="mt-4 h-1.5 w-24 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600" />
+            <div className="mt-4 h-1.5 w-24 mx-auto rounded-full bg-linear-to-r from-blue-500 via-indigo-600 to-purple-600" />
 
             <p className="mt-5 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
               From small workshop to modern manufacturing — focused on quality &
@@ -334,7 +334,7 @@ export default function About() {
 
           {/* Timeline */}
           <div className="relative max-w-5xl mx-auto">
-            {/* Desktop horizontal line with subtle gradient */}
+            {/* Desktop horizontal line with subtle linear */}
             <div className="hidden md:block absolute top-[2.6rem] left-6 right-6 h-1 bg-linear-to-r from-transparent via-gray-300/70 dark:via-gray-600/70 to-transparent rounded-full" />
 
             <div className="grid md:grid-cols-4 gap-6 md:gap-4 lg:gap-6 relative">
@@ -375,7 +375,7 @@ export default function About() {
                   <div
                     className={`
                 relative z-20 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16
-                rounded-full bg-gradient-to-br from-white to-gray-50 
+                rounded-full bg-linear-to-br from-white to-gray-50 
                 dark:from-gray-800 dark:to-gray-900
                 border-4 border-${item.color}-600/80 dark:border-${item.color}-500/80
                 flex items-center justify-center shadow-lg shadow-${item.color}-900/20 dark:shadow-${item.color}-950/30
@@ -386,7 +386,7 @@ export default function About() {
                     <span
                       className={`
                   text-base sm:text-lg md:text-base lg:text-lg font-bold 
-                  bg-gradient-to-br from-${item.color}-600 to-${item.color}-700 bg-clip-text dark:text-gray-100 text-black
+                  bg-linear-to-br from-${item.color}-600 to-${item.color}-700 bg-clip-text dark:text-gray-100 text-black
                 `}
                     >
                       {item.year}
@@ -396,7 +396,7 @@ export default function About() {
                   {/* Card */}
                   <div
                     className={`
-                relative mt-5 md:h-36  md:mt-6 w-full max-w-[260px] sm:max-w-[280px]
+                relative mt-5 md:h-36  md:mt-6 w-full max-w-65 sm:max-w-70
                 rounded-2xl md:rounded-2.5xl p-5 sm:p-6 md:p-5 lg:p-6
                 bg-white/90 dark:bg-gray-800/85
                 backdrop-blur-sm border border-gray-200/70 dark:border-gray-700/60
@@ -414,7 +414,7 @@ export default function About() {
 
                   {/* Mobile connector */}
                   {i < 3 && (
-                    <div className="md:hidden absolute top-[3.5rem] left-1/2 w-0.5 h-20 bg-gray-300 dark:bg-gray-700 -translate-x-1/2 z-0" />
+                    <div className="md:hidden absolute top-14 left-1/2 w-0.5 h-20 bg-gray-300 dark:bg-gray-700 -translate-x-1/2 z-0" />
                   )}
                 </div>
               ))}
