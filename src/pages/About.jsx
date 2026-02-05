@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  MdOutlineTrackChanges,
-  MdVisibility,
-  MdVerifiedUser,
+
   MdPrecisionManufacturing,
   MdTrendingUp,
   MdShield,
@@ -94,11 +92,11 @@ export default function About() {
       </div>
 
       {/* who we are */}
-      <section className="py-16  bg-linear-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
+      <section className="py-16  bg-gray-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Heading with decorative underline */}
           <div className="text-center mb-12 ">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 ">
               Who We Are
             </h2>
 
@@ -108,7 +106,7 @@ export default function About() {
 
           {/* Content */}
           <div className="text-lg prose prose-lg md:prose-xl prose-slate dark:prose-invert mx-auto max-w-7xl text-center lg:text-left">
-            <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+            <p className="leading-relaxed text-gray-700 ">
               <strong className="text-blue-600 dark:text-blue-400 font-semibold">
                 Casters Global
               </strong>{" "}
@@ -116,7 +114,7 @@ export default function About() {
               high-performance caster wheels and advanced mobility solutions.
             </p>
 
-            <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+            <p className="leading-relaxed text-gray-700 ">
               We bring together precision engineering, modern manufacturing
               processes, and deep application knowledge to create caster
               products that deliver exceptional durability, smooth operation,
@@ -124,14 +122,14 @@ export default function About() {
               environments.
             </p>
 
-            <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+            <p className="leading-relaxed text-gray-700 ">
               Whether it's light-duty furniture castors, medium-duty medical
               equipment wheels, or extreme heavy-duty industrial castors capable
               of handling several tons,{" "}
               <strong>customization is at the heart of what we do</strong>.
             </p>
 
-            <p className="leading-relaxed text-gray-700 dark:text-gray-300 font-medium">
+            <p className="leading-relaxed text-gray-700  font-medium">
               Serving clients across India and international markets, our
               single-minded goal is clear:
               <span className="text-blue-600 dark:text-blue-400">
@@ -153,7 +151,7 @@ export default function About() {
             ].map((badge) => (
               <div
                 key={badge}
-                className="px-5 py-2.5 bg-white dark:bg-gray-800/80 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-sm"
+                className="px-5 py-2.5 bg-white dark:bg-gray-800/80 rounded-full text-sm font-medium text-gray-700 dark:text-gray-100 border border-gray-200 dark:border-gray-700 shadow-sm"
               >
                 {badge}
               </div>
@@ -388,7 +386,7 @@ export default function About() {
                     <span
                       className={`
                   text-base sm:text-lg md:text-base lg:text-lg font-bold 
-                  bg-gradient-to-br from-${item.color}-600 to-${item.color}-700 bg-clip-text text-black
+                  bg-gradient-to-br from-${item.color}-600 to-${item.color}-700 bg-clip-text dark:text-gray-100 text-black
                 `}
                     >
                       {item.year}
@@ -448,24 +446,25 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {[
               {
+                name: "Pradeep Kumar",
+                role: "Founder & CEO",
+                img: "./leaders/pradeep.png",
+              },
+              {
                 name: "Dharmapal Singh",
-                role: "Founder & Managing Director",
+                role: "Managing Director",
                 img: "./leaders/Dharampal_singh.png",
               },
-              {
-                name: "Pradeep Kumar",
-                role: "Co-Founder & Chief Business Officer",
-                img: "./leaders/Pradeep_kumar.png",
-              },
-              {
-                name: "Saurabh Suman Pandey",
-                role: "Head of Sales & Revenue",
-                img: "./leaders/Suman_sourav_panday.png",
-              },
+
               {
                 name: "Seema Verma",
                 role: "Head of Business Operations",
                 img: "./leaders/Seema_verma.png",
+              },
+              {
+                name: "Saurabh Suman ",
+                role: "Head of Sales & Revenue",
+                img: "./leaders/Suman_sourav_panday.png",
               },
 
               {
